@@ -81,7 +81,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why SummitUSA's Subscription Program Wins
+              Why SummitUSA&apos;s Subscription Program Wins
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-4">
               Tired of unpredictable IT bills, recurring tech issues, or outdated support models? Our all-inclusive IT subscription program gives you the technology, cybersecurity, strategy, and support you need — all for one predictable cost.
@@ -100,7 +100,7 @@ export default function Index() {
                 <ul className="space-y-3 text-gray-300">
                   <li>• Charges you for every fix</li>
                   <li>• Solves problems after they occur</li>
-                  <li>• Doesn't align with long-term goals</li>
+                  <li>• Doesn&apos;t align with long-term goals</li>
                   <li>• Charges extra for upgrades and strategy</li>
                   <li>• Inconsistent response times</li>
                 </ul>
@@ -252,7 +252,7 @@ export default function Index() {
                 <span className="text-white text-2xl font-bold">03</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Migrate & Go</h3>
-              <p className="text-gray-300">We'll transition your systems, train your team, and provide ongoing support.</p>
+              <p className="text-gray-300">We&apos;ll transition your systems, train your team, and provide ongoing support.</p>
             </div>
           </div>
         </div>
@@ -270,21 +270,21 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-900/40 to-black p-8 rounded-2xl border border-purple-500/30">
               <p className="text-gray-300 mb-6 italic">
-                "SummitUSA saved us thousands in IT costs and doubled our uptime. Their team is basically our internal IT department now."
+                &quot;SummitUSA saved us thousands in IT costs and doubled our uptime. Their team is basically our internal IT department now.&quot;
               </p>
               <p className="text-purple-400 font-semibold">– Laura D.</p>
             </div>
             
             <div className="bg-gradient-to-br from-blue-900/40 to-black p-8 rounded-2xl border border-blue-500/30">
               <p className="text-gray-300 mb-6 italic">
-                "They're fast, friendly, and laser-focused on keeping our systems secure and efficient."
+                &quot;They&apos;re fast, friendly, and laser-focused on keeping our systems secure and efficient.&quot;
               </p>
               <p className="text-blue-400 font-semibold">– Michael T.</p>
             </div>
             
             <div className="bg-gradient-to-br from-purple-900/40 to-black p-8 rounded-2xl border border-purple-500/30">
               <p className="text-gray-300 mb-6 italic">
-                "Finally — an IT company that plans ahead and talks business goals, not just tech problems."
+                &quot;Finally — an IT company that plans ahead and talks business goals, not just tech problems.&quot;
               </p>
               <p className="text-purple-400 font-semibold">– Sandra V.</p>
             </div>
