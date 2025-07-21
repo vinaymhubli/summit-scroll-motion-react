@@ -122,7 +122,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30">
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30">
               <div className="text-4xl mb-4">🌟</div>
               <h3 className="text-2xl font-bold text-white mb-4">Change Management</h3>
               <p className="text-gray-300">
