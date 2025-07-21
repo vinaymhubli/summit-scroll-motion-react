@@ -13,7 +13,7 @@ const Header = () => {
           <Link to="/" className="text-gray-300 hover:text-purple-400 transition-colors">Home</Link>
           <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">Services</a>
           <Link to="/about" className="text-gray-300 hover:text-purple-400 transition-colors">About</Link>
-          <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">Contact</a>
+          <Link to="/contact" className="text-gray-300 hover:text-purple-400 transition-colors">Contact</Link>
         </nav>
         <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:scale-105 transition-all duration-300">
           Get Started
