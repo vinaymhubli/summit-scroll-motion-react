@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -81,7 +80,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-2xl md:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Transforming Businesses Through Strategic Innovation and Peak Performance Solutions
+            The Future of IT Starts with Predictable, Scalable Support
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-12 py-4 rounded-full text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50 whitespace-nowrap cursor-pointer">
