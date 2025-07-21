@@ -20,7 +20,7 @@ export default function Index() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-6">
-              Unlock your organization&apos;s full potential with our comprehensive suite of strategic consulting and technology solutions
+              Unlock your organization's full potential with our comprehensive suite of strategic consulting and technology solutions
             </p>
             <p className="text-lg text-purple-300 font-semibold mb-10">
               Drive Growth. Optimize Performance. Lead Your Industry.
@@ -140,7 +140,7 @@ export default function Index() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-200 mb-10 leading-relaxed">
-            Join the companies that have already discovered the SummitUSA advantage. Let&apos;s discuss how we can accelerate your success and drive meaningful results for your organization.
+            Join the companies that have already discovered the SummitUSA advantage. Let's discuss how we can accelerate your success and drive meaningful results for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link 
