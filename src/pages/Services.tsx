@@ -14,180 +14,203 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Our 
+              SummitUSA 
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Services
               </span>
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive solutions designed to accelerate your business growth and drive sustainable success 
-              in today's competitive marketplace.
+              Comprehensive technology solutions and strategic consulting services designed to accelerate 
+              your business growth and drive digital transformation in today's competitive marketplace.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Services */}
+      {/* Core Technology Services */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-12 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 cursor-pointer">
-              <div 
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://readdy.ai/api/search-image?query=Strategic%20business%20consulting%20meeting%20with%20executives%20analyzing%20charts%20and%20data%2C%20modern%20conference%20room%20with%20purple%20accent%20lighting%2C%20professional%20strategy%20session%2C%20corporate%20consulting%20environment&width=600&height=300&seq=strategy-service-1&orientation=landscape')`
-                }}
-              ></div>
-              <h2 className="text-3xl font-bold text-white mb-6">Strategic Consulting</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Transform your business with data-driven strategies that align with market opportunities 
-                and organizational capabilities. Our strategic consulting services help you navigate complex 
-                business challenges and identify growth opportunities.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Market Analysis & Competitive Intelligence</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Business Model Innovation</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Growth Strategy Development</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Organizational Restructuring</p>
-                </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              SummitUSA delivers cutting-edge technology services that transform your business operations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
               </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Software Development</h3>
+              <p className="text-gray-300 mb-6">
+                Custom software solutions built with modern technologies to meet your specific business requirements.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Web Application Development</li>
+                <li>• Mobile App Development</li>
+                <li>• API Development & Integration</li>
+                <li>• Database Design & Optimization</li>
+              </ul>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-12 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer">
-              <div 
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://readdy.ai/api/search-image?query=Digital%20transformation%20technology%20workspace%20with%20modern%20screens%20and%20digital%20interfaces%2C%20blue%20accent%20lighting%2C%20futuristic%20corporate%20environment%2C%20high-tech%20business%20setting&width=600&height=300&seq=digital-service-1&orientation=landscape')`
-                }}
-              ></div>
-              <h2 className="text-3xl font-bold text-white mb-6">Digital Transformation</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Accelerate your digital evolution with cutting-edge technology solutions and process optimization. 
-                We help organizations leverage technology to improve efficiency, enhance customer experience, 
-                and create new revenue streams.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Process Automation & Optimization</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Cloud Migration & Integration</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Data Analytics & Business Intelligence</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Digital Customer Experience</p>
-                </div>
+
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
               </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Cloud Solutions</h3>
+              <p className="text-gray-300 mb-6">
+                Comprehensive cloud services to modernize your infrastructure and improve scalability.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Cloud Migration & Strategy</li>
+                <li>• AWS, Azure, GCP Services</li>
+                <li>• DevOps & CI/CD Implementation</li>
+                <li>• Cloud Security & Compliance</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
+              <p className="text-gray-300 mb-6">
+                Protect your business with comprehensive security solutions and risk management strategies.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Security Assessments</li>
+                <li>• Penetration Testing</li>
+                <li>• Compliance & Risk Management</li>
+                <li>• Incident Response Planning</li>
+              </ul>
             </div>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-12 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 cursor-pointer">
-              <div 
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://readdy.ai/api/search-image?query=Operational%20excellence%20manufacturing%20facility%20with%20modern%20equipment%20and%20purple%20lighting%2C%20efficient%20production%20line%2C%20high-tech%20industrial%20environment%2C%20quality%20management%20systems&width=600&height=300&seq=operations-service-1&orientation=landscape')`
-                }}
-              ></div>
-              <h2 className="text-3xl font-bold text-white mb-6">Operational Excellence</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Optimize your operations for maximum efficiency and profitability. Our operational excellence 
-                services focus on streamlining processes, reducing costs, and improving overall performance 
-                across your organization.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Supply Chain Optimization</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Quality Management Systems</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Performance Management</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Risk Management & Compliance</p>
-                </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Data Analytics & AI</h3>
+              <p className="text-gray-300 mb-6">
+                Harness the power of data with advanced analytics and artificial intelligence solutions.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Business Intelligence & Reporting</li>
+                <li>• Machine Learning Implementation</li>
+                <li>• Data Warehousing Solutions</li>
+                <li>• Predictive Analytics</li>
+              </ul>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-12 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer">
-              <div 
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://readdy.ai/api/search-image?query=Executive%20leadership%20development%20seminar%20with%20business%20leaders%20in%20modern%20training%20room%2C%20blue%20accent%20lighting%2C%20professional%20coaching%20environment%2C%20corporate%20leadership%20training%20session&width=600&height=300&seq=leadership-service-1&orientation=landscape')`
-                }}
-              ></div>
-              <h2 className="text-3xl font-bold text-white mb-6">Leadership Development</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Build stronger leadership capabilities across your organization. Our leadership development 
-                programs are designed to enhance executive skills, improve team performance, and create 
-                a culture of continuous improvement.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Executive Coaching & Mentoring</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Team Building & Collaboration</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Change Management</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">Organizational Culture Development</p>
-                </div>
+
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+                </svg>
               </div>
+              <h3 className="text-2xl font-bold text-white mb-4">IT Infrastructure</h3>
+              <p className="text-gray-300 mb-6">
+                Build robust, scalable IT infrastructure that supports your business growth and operations.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Network Design & Implementation</li>
+                <li>• Server Management & Virtualization</li>
+                <li>• Disaster Recovery Planning</li>
+                <li>• IT Support & Maintenance</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Industries We Serve */}
       <section className="py-24 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Process
+              Industries We Serve
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology that ensures successful project delivery and measurable results
+              SummitUSA provides specialized solutions across diverse industries
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20">
+              <h3 className="text-xl font-bold text-white mb-3">Financial Services</h3>
+              <p className="text-gray-300">Banking, Insurance, Investment Management</p>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20">
+              <h3 className="text-xl font-bold text-white mb-3">Healthcare</h3>
+              <p className="text-gray-300">Hospitals, Clinics, Health Tech Companies</p>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20">
+              <h3 className="text-xl font-bold text-white mb-3">Manufacturing</h3>
+              <p className="text-gray-300">Industrial Automation, Supply Chain</p>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20">
+              <h3 className="text-xl font-bold text-white mb-3">Retail & E-commerce</h3>
+              <p className="text-gray-300">Online Stores, Point-of-Sale Systems</p>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20">
+              <h3 className="text-xl font-bold text-white mb-3">Education</h3>
+              <p className="text-gray-300">Universities, K-12 Schools, EdTech</p>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20">
+              <h3 className="text-xl font-bold text-white mb-3">Government</h3>
+              <p className="text-gray-300">Federal, State, and Local Agencies</p>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20">
+              <h3 className="text-xl font-bold text-white mb-3">Energy & Utilities</h3>
+              <p className="text-gray-300">Power Generation, Smart Grid Solutions</p>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20">
+              <h3 className="text-xl font-bold text-white mb-3">Transportation</h3>
+              <p className="text-gray-300">Logistics, Fleet Management, Transit</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SummitUSA Process */}
+      <section className="py-24 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              The SummitUSA Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our proven methodology ensures successful project delivery and measurable results
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Discovery</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Discovery & Analysis</h3>
               <p className="text-gray-300 leading-relaxed">
-                We begin by understanding your business, challenges, goals, and current state through comprehensive analysis and stakeholder interviews.
+                SummitUSA conducts comprehensive analysis of your business requirements, current technology stack, and strategic objectives.
               </p>
             </div>
             
@@ -195,9 +218,9 @@ export default function Services() {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Strategy</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Solution Design</h3>
               <p className="text-gray-300 leading-relaxed">
-                Based on our findings, we develop a customized strategy with clear objectives, timelines, and success metrics tailored to your needs.
+                Our team designs customized technology solutions with clear architecture, timelines, and success metrics.
               </p>
             </div>
             
@@ -205,9 +228,9 @@ export default function Services() {
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Implementation</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Development & Implementation</h3>
               <p className="text-gray-300 leading-relaxed">
-                We work closely with your team to execute the strategy, providing hands-on support and ensuring smooth implementation of all initiatives.
+                SummitUSA executes the solution with agile methodologies, ensuring quality and continuous stakeholder communication.
               </p>
             </div>
             
@@ -215,55 +238,51 @@ export default function Services() {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Optimization</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Support & Optimization</h3>
               <p className="text-gray-300 leading-relaxed">
-                We continuously monitor results, gather feedback, and optimize the solution to ensure maximum impact and sustainable long-term success.
+                We provide ongoing support, monitoring, and continuous optimization to ensure maximum ROI and system performance.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Service Areas with Map */}
-      <section className="py-24 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+      {/* Technologies */}
+      <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Global Service Coverage
+              Technologies We Master
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Delivering excellence across major business hubs worldwide
+              SummitUSA leverages cutting-edge technologies to build robust, scalable solutions
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-6 rounded-2xl border border-purple-500/30">
-                <h3 className="text-xl font-bold text-white mb-3">North America</h3>
-                <p className="text-gray-300">New York, San Francisco, Toronto, Chicago</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/30 p-6 rounded-2xl border border-blue-500/30">
-                <h3 className="text-xl font-bold text-white mb-3">Europe</h3>
-                <p className="text-gray-300">London, Frankfurt, Paris, Amsterdam</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-6 rounded-2xl border border-purple-500/30">
-                <h3 className="text-xl font-bold text-white mb-3">Asia Pacific</h3>
-                <p className="text-gray-300">Singapore, Tokyo, Sydney, Hong Kong</p>
-              </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10">
+              <h4 className="text-white font-semibold mb-2">React</h4>
+              <p className="text-gray-400 text-sm">Frontend Development</p>
             </div>
-            
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24176596.36415098!2d-98.5795!3d39.8283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10">
+              <h4 className="text-white font-semibold mb-2">Node.js</h4>
+              <p className="text-gray-400 text-sm">Backend Development</p>
+            </div>
+            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10">
+              <h4 className="text-white font-semibold mb-2">Python</h4>
+              <p className="text-gray-400 text-sm">AI & Data Science</p>
+            </div>
+            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10">
+              <h4 className="text-white font-semibold mb-2">AWS</h4>
+              <p className="text-gray-400 text-sm">Cloud Platform</p>
+            </div>
+            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10">
+              <h4 className="text-white font-semibold mb-2">Docker</h4>
+              <p className="text-gray-400 text-sm">Containerization</p>
+            </div>
+            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10">
+              <h4 className="text-white font-semibold mb-2">Kubernetes</h4>
+              <p className="text-gray-400 text-sm">Orchestration</p>
             </div>
           </div>
         </div>
@@ -273,14 +292,14 @@ export default function Services() {
       <section className="py-24 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Partner with SummitUSA?
           </h2>
           <p className="text-xl text-gray-200 mb-10 leading-relaxed">
-            Let's discuss how our services can help you achieve your goals and drive meaningful growth. 
-            Contact us today for a consultation.
+            Let's discuss how SummitUSA can transform your business with our comprehensive technology solutions. 
+            Contact us today for a free consultation.
           </p>
           <button className="bg-white text-purple-900 px-12 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer">
-            Get Started
+            Start Your Project
           </button>
         </div>
       </section>
