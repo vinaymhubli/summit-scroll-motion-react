@@ -14,279 +14,232 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              The Future of IT Starts with
+              Transform Your Business with
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent block">
-                Predictable, Scalable Support
+                Next-Generation Solutions
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-6">
-              Our IT Subscription Program Outperforms Traditional Managed Services
+              Unlock your organization&apos;s full potential with our comprehensive suite of strategic consulting and technology solutions
             </p>
             <p className="text-lg text-purple-300 font-semibold mb-10">
-              Eliminate Downtime. Cut Confusion. Stop Unexpected IT Costs.
+              Drive Growth. Optimize Performance. Lead Your Industry.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link 
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 whitespace-nowrap"
               >
-                Schedule Free Assessment
+                Get Started Today
               </Link>
               <Link 
                 to="/services"
                 className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 whitespace-nowrap"
               >
-                Explore Solutions
+                Explore Services
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Statistics */}
+      {/* Key Benefits */}
       <section className="py-16 bg-gradient-to-r from-black via-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Stop reacting to IT issues. Start preventing them.</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Why Leading Companies Choose SummitUSA</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="text-center bg-gradient-to-br from-red-900/30 to-black p-6 rounded-2xl border border-red-500/20">
-              <h3 className="text-4xl font-bold text-red-400 mb-2">76%</h3>
-              <p className="text-gray-300">of businesses face downtime resulting in data loss</p>
-            </div>
-            <div className="text-center bg-gradient-to-br from-yellow-900/30 to-black p-6 rounded-2xl border border-yellow-500/20">
-              <h3 className="text-4xl font-bold text-yellow-400 mb-2">$150-$500</h3>
-              <p className="text-gray-300">lost every minute during IT outages for SMBs</p>
-            </div>
-            <div className="text-center bg-gradient-to-br from-red-900/30 to-black p-6 rounded-2xl border border-red-500/20">
-              <h3 className="text-4xl font-bold text-red-400 mb-2">$100K+</h3>
-              <p className="text-gray-300">cost of 60% of IT outages</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center bg-gradient-to-br from-purple-900/30 to-black p-6 rounded-2xl border border-purple-500/20">
-              <h3 className="text-4xl font-bold text-purple-400 mb-2">$8,600+</h3>
-              <p className="text-gray-300">monthly cost of internal IT employee</p>
+              <h3 className="text-4xl font-bold text-purple-400 mb-2">10x</h3>
+              <p className="text-gray-300">Faster decision-making with data-driven insights</p>
             </div>
             <div className="text-center bg-gradient-to-br from-blue-900/30 to-black p-6 rounded-2xl border border-blue-500/20">
-              <h3 className="text-4xl font-bold text-blue-400 mb-2">$250</h3>
-              <p className="text-gray-300">average IT budget per employee per month</p>
+              <h3 className="text-4xl font-bold text-blue-400 mb-2">50%</h3>
+              <p className="text-gray-300">Reduction in operational costs through optimization</p>
+            </div>
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-black p-6 rounded-2xl border border-purple-500/20">
+              <h3 className="text-4xl font-bold text-purple-400 mb-2">99.9%</h3>
+              <p className="text-gray-300">Client satisfaction rate across all services</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why SummitUSA Wins */}
+      {/* Services Overview */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why SummitUSA&apos;s Subscription Program Wins
+              Comprehensive Solutions for Modern Business
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-4">
-              Tired of unpredictable IT bills, recurring tech issues, or outdated support models? Our all-inclusive IT subscription program gives you the technology, cybersecurity, strategy, and support you need — all for one predictable cost.
+              From strategic planning to digital transformation, we provide end-to-end solutions that drive measurable results and sustainable growth.
             </p>
             <p className="text-lg text-purple-300 font-semibold">
-              No surprises. No patchwork. No headaches.
+              Your success is our mission.
             </p>
           </div>
           
-          {/* Comparison Table */}
-          <div className="bg-gradient-to-br from-purple-900/20 to-black p-8 rounded-3xl border border-purple-500/30">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Why Choose SummitUSA?</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-xl font-bold text-red-400 mb-4">Managed IT Services</h4>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Charges you for every fix</li>
-                  <li>• Solves problems after they occur</li>
-                  <li>• Doesn&apos;t align with long-term goals</li>
-                  <li>• Charges extra for upgrades and strategy</li>
-                  <li>• Inconsistent response times</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-green-400 mb-4">SummitUSA IT Subscription Program</h4>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Unlimited support with one monthly fee</li>
-                  <li>• Prevents issues before they affect your business</li>
-                  <li>• Strategically plans 36–48 months ahead</li>
-                  <li>• Upgrades and IT strategy are included</li>
-                  <li>• 24/7 expert support guaranteed</li>
-                </ul>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Strategic Consulting</h3>
+              <p className="text-gray-300">
+                Transform your business strategy with expert guidance, market analysis, and growth planning tailored to your industry.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30">
+              <div className="text-4xl mb-4">💡</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Digital Innovation</h3>
+              <p className="text-gray-300">
+                Leverage cutting-edge technology to modernize operations, enhance customer experience, and stay ahead of competition.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Data Analytics</h3>
+              <p className="text-gray-300">
+                Turn data into actionable insights with advanced analytics, reporting, and business intelligence solutions.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Process Optimization</h3>
+              <p className="text-gray-300">
+                Streamline operations, eliminate inefficiencies, and maximize productivity across all business functions.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Performance Management</h3>
+              <p className="text-gray-300">
+                Implement robust performance tracking systems to measure success and drive continuous improvement.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30">
+              <div className="text-4xl mb-4">🌟</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Change Management</h3>
+              <p className="text-gray-300">
+                Navigate organizational transformation smoothly with expert change management and leadership development.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Industry Solutions */}
+      {/* Industry Expertise */}
       <section className="py-24 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              The Right IT Support — Built for Your Industry
+              Industry-Specific Expertise
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Every industry has unique challenges. We help you overcome them with proactive, compliant, secure, and scalable IT solutions.
+              Deep domain knowledge across key industries ensures solutions that understand your unique challenges and opportunities.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
-              <h3 className="text-xl font-bold text-purple-400 mb-3">Healthcare</h3>
-              <p className="text-gray-300">HIPAA compliance, secure data, EMR support</p>
+              <h3 className="text-xl font-bold text-purple-400 mb-3">Technology</h3>
+              <p className="text-gray-300">Accelerate innovation and scale operations</p>
             </div>
             <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-6 rounded-2xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
-              <h3 className="text-xl font-bold text-blue-400 mb-3">Construction</h3>
-              <p className="text-gray-300">On-site support, project mobility, data backups</p>
+              <h3 className="text-xl font-bold text-blue-400 mb-3">Healthcare</h3>
+              <p className="text-gray-300">Improve patient outcomes and operational efficiency</p>
             </div>
             <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
-              <h3 className="text-xl font-bold text-purple-400 mb-3">Staffing/Recruiting</h3>
-              <p className="text-gray-300">System uptime, secure applicant tracking</p>
+              <h3 className="text-xl font-bold text-purple-400 mb-3">Financial Services</h3>
+              <p className="text-gray-300">Navigate regulatory compliance and digital transformation</p>
             </div>
             <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-6 rounded-2xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
-              <h3 className="text-xl font-bold text-blue-400 mb-3">Non-Profits</h3>
-              <p className="text-gray-300">Budget-friendly solutions with full compliance</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
-              <h3 className="text-xl font-bold text-purple-400 mb-3">Wealth Management</h3>
-              <p className="text-gray-300">SEC-compliant systems and cybersecurity</p>
-            </div>
-            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-6 rounded-2xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
-              <h3 className="text-xl font-bold text-blue-400 mb-3">Property Management</h3>
-              <p className="text-gray-300">Centralized communication and access</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
-              <h3 className="text-xl font-bold text-purple-400 mb-3">Accounting Firms</h3>
-              <p className="text-gray-300">Secure, always-on access to financial data</p>
+              <h3 className="text-xl font-bold text-blue-400 mb-3">Manufacturing</h3>
+              <p className="text-gray-300">Optimize supply chain and production processes</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* IT Solutions */}
-      <section className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Explore Our IT Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide the flexibility and depth your organization needs to scale with confidence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30">
-              <div className="text-4xl mb-4">🔐</div>
-              <h3 className="text-2xl font-bold text-white mb-4">TotalCare Cloud (Subscription)</h3>
-              <p className="text-gray-300">
-                All-inclusive support: cybersecurity, strategy, on-site & remote help, backups, new hardware every 3 years — all covered in one monthly subscription.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30">
-              <div className="text-4xl mb-4">🧰</div>
-              <h3 className="text-2xl font-bold text-white mb-4">TotalCare (MSP Service)</h3>
-              <p className="text-gray-300">
-                Traditional managed service with fixed monthly support.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Infrastructure as a Service (IaaS)</h3>
-              <p className="text-gray-300">
-                Virtualize your servers, storage, and network — all managed by SummitUSA.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30">
-              <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-2xl font-bold text-white mb-4">IT Security</h3>
-              <p className="text-gray-300">
-                Robust, layered defense with SOC-level monitoring and endpoint protection.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30">
-              <div className="text-4xl mb-4">✅</div>
-              <h3 className="text-2xl font-bold text-white mb-4">IT Compliance</h3>
-              <p className="text-gray-300">
-                Ensure ongoing compliance across HIPAA, FINRA, GDPR, ISO standards.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Getting Started */}
+      {/* Process */}
       <section className="py-24 bg-gradient-to-br from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Getting Started is Simple
+              Our Proven Process
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">01</span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Schedule a Free IT Assessment</h3>
-              <p className="text-gray-300">Let us understand your goals, risks, and current infrastructure.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Discovery</h3>
+              <p className="text-gray-300">Understand your business, challenges, and objectives through comprehensive analysis.</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">02</span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Subscribe</h3>
-              <p className="text-gray-300">We become your full-time IT department — including helpdesk, compliance, strategy, and updates.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Strategy</h3>
+              <p className="text-gray-300">Develop tailored solutions and roadmaps aligned with your business goals.</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">03</span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Migrate & Go</h3>
-              <p className="text-gray-300">We&apos;ll transition your systems, train your team, and provide ongoing support.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Implementation</h3>
+              <p className="text-gray-300">Execute solutions with precision, managing change and minimizing disruption.</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl font-bold">04</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Optimization</h3>
+              <p className="text-gray-300">Continuously monitor, measure, and optimize for sustained success.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Client Reviews */}
+      {/* Testimonials */}
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Client Reviews
+              What Our Clients Say
             </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-900/40 to-black p-8 rounded-2xl border border-purple-500/30">
               <p className="text-gray-300 mb-6 italic">
-                &quot;SummitUSA saved us thousands in IT costs and doubled our uptime. Their team is basically our internal IT department now.&quot;
+                &quot;SummitUSA transformed our entire operation. Their strategic approach and technical expertise delivered results beyond our expectations.&quot;
               </p>
-              <p className="text-purple-400 font-semibold">– Laura D.</p>
+              <p className="text-purple-400 font-semibold">– Sarah Johnson, CEO</p>
             </div>
             
             <div className="bg-gradient-to-br from-blue-900/40 to-black p-8 rounded-2xl border border-blue-500/30">
               <p className="text-gray-300 mb-6 italic">
-                &quot;They&apos;re fast, friendly, and laser-focused on keeping our systems secure and efficient.&quot;
+                &quot;The team at SummitUSA doesn&apos;t just provide solutions – they become true partners in driving business success.&quot;
               </p>
-              <p className="text-blue-400 font-semibold">– Michael T.</p>
+              <p className="text-blue-400 font-semibold">– David Chen, CTO</p>
             </div>
             
             <div className="bg-gradient-to-br from-purple-900/40 to-black p-8 rounded-2xl border border-purple-500/30">
               <p className="text-gray-300 mb-6 italic">
-                &quot;Finally — an IT company that plans ahead and talks business goals, not just tech problems.&quot;
+                &quot;Outstanding results, professional service, and innovative thinking. SummitUSA exceeded every expectation.&quot;
               </p>
-              <p className="text-purple-400 font-semibold">– Sandra V.</p>
+              <p className="text-purple-400 font-semibold">– Maria Rodriguez, Director</p>
             </div>
           </div>
         </div>
@@ -296,24 +249,24 @@ export default function Index() {
       <section className="py-24 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            We Plan Tech the Way You Plan Growth
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-200 mb-10 leading-relaxed">
-            Unlike traditional IT vendors that only look 12 months ahead, our program is built around long-term alignment, with 48-month strategies and quarterly reviews. We align your IT with your mission — not just your inbox tickets.
+            Join the companies that have already discovered the SummitUSA advantage. Let&apos;s discuss how we can accelerate your success and drive meaningful results for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link 
               to="/contact"
               className="bg-white text-purple-900 px-12 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap"
             >
-              Schedule Free Assessment
+              Start Your Transformation
             </Link>
-            <a 
-              href="tel:877-329-2129"
+            <Link 
+              to="/services"
               className="border border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 whitespace-nowrap"
             >
-              Call 877-329-2129
-            </a>
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
