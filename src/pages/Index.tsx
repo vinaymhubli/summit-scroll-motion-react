@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Index = () => {
+export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -36,7 +36,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <style jsx global>{`
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .scroll-animate,
         .scroll-animate-left,
         .scroll-animate-right,
@@ -58,7 +59,8 @@ const Index = () => {
         .stagger-2 { transition-delay: 0.2s; }
         .stagger-3 { transition-delay: 0.3s; }
         .stagger-4 { transition-delay: 0.4s; }
-      `}</style>
+        `
+      }} />
 
       <Header />
 
@@ -392,6 +394,4 @@ const Index = () => {
       <Footer />
     </div>
   );
-};
-
-export default Index;
+}
