@@ -5,9 +5,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold">
-          <span className="text-white">Summit</span>
-          <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">USA</span>
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/5b4c32a0-57f9-4a9a-9716-66ae356fde0f.png" 
+            alt="Summit Services Logo" 
+            className="h-8 w-auto"
+          />
         </Link>
         <nav className="hidden md:flex space-x-8">
           <Link to="/" className="text-gray-300 hover:text-purple-400 transition-colors">Home</Link>
