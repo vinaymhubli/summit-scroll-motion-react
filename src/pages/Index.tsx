@@ -49,7 +49,7 @@ export default function Index() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-6">Stop reacting to IT issues. Start preventing them.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center bg-gradient-to-br from-red-900/30 to-black p-6 rounded-2xl border border-red-500/20">
               <h3 className="text-4xl font-bold text-red-400 mb-2">76%</h3>
               <p className="text-gray-300">of businesses face downtime resulting in data loss</p>
@@ -63,7 +63,7 @@ export default function Index() {
               <p className="text-gray-300">cost of 60% of IT outages</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="text-center bg-gradient-to-br from-purple-900/30 to-black p-6 rounded-2xl border border-purple-500/20">
               <h3 className="text-4xl font-bold text-purple-400 mb-2">$8,600+</h3>
               <p className="text-gray-300">monthly cost of internal IT employee</p>
@@ -83,10 +83,10 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why SummitUSA's Subscription Program Wins
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-4">
               Tired of unpredictable IT bills, recurring tech issues, or outdated support models? Our all-inclusive IT subscription program gives you the technology, cybersecurity, strategy, and support you need — all for one predictable cost.
             </p>
-            <p className="text-lg text-purple-300 font-semibold mt-4">
+            <p className="text-lg text-purple-300 font-semibold">
               No surprises. No patchwork. No headaches.
             </p>
           </div>
@@ -133,20 +133,34 @@ export default function Index() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { industry: "Healthcare", description: "HIPAA compliance, secure data, EMR support" },
-              { industry: "Construction", description: "On-site support, project mobility, data backups" },
-              { industry: "Staffing/Recruiting", description: "System uptime, secure applicant tracking" },
-              { industry: "Non-Profits", description: "Budget-friendly solutions with full compliance" },
-              { industry: "Wealth Management", description: "SEC-compliant systems and cybersecurity" },
-              { industry: "Property Management", description: "Centralized communication and access" },
-              { industry: "Accounting Firms", description: "Secure, always-on access to financial data" }
-            ].map((item, index) => (
-              <div key={index} className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
-                <h3 className="text-xl font-bold text-purple-400 mb-3">{item.industry}</h3>
-                <p className="text-gray-300">{item.description}</p>
-              </div>
-            ))}
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+              <h3 className="text-xl font-bold text-purple-400 mb-3">Healthcare</h3>
+              <p className="text-gray-300">HIPAA compliance, secure data, EMR support</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-6 rounded-2xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
+              <h3 className="text-xl font-bold text-blue-400 mb-3">Construction</h3>
+              <p className="text-gray-300">On-site support, project mobility, data backups</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+              <h3 className="text-xl font-bold text-purple-400 mb-3">Staffing/Recruiting</h3>
+              <p className="text-gray-300">System uptime, secure applicant tracking</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-6 rounded-2xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
+              <h3 className="text-xl font-bold text-blue-400 mb-3">Non-Profits</h3>
+              <p className="text-gray-300">Budget-friendly solutions with full compliance</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+              <h3 className="text-xl font-bold text-purple-400 mb-3">Wealth Management</h3>
+              <p className="text-gray-300">SEC-compliant systems and cybersecurity</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-6 rounded-2xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
+              <h3 className="text-xl font-bold text-blue-400 mb-3">Property Management</h3>
+              <p className="text-gray-300">Centralized communication and access</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+              <h3 className="text-xl font-bold text-purple-400 mb-3">Accounting Firms</h3>
+              <p className="text-gray-300">Secure, always-on access to financial data</p>
+            </div>
           </div>
         </div>
       </section>
