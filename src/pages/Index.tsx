@@ -90,12 +90,6 @@ export default function Home() {
               Learn More
             </button>
           </div>
-
-          <div className="flex justify-center space-x-8 text-gray-300">
-            <span className="hover:text-purple-400 transition-colors cursor-pointer text-lg">Facebook</span>
-            <span className="hover:text-purple-400 transition-colors cursor-pointer text-lg">LinkedIn</span>
-            <span className="hover:text-purple-400 transition-colors cursor-pointer text-lg">Twitter</span>
-          </div>
         </div>
       </section>
 
