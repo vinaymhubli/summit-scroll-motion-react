@@ -14,27 +14,27 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Complete Network &
+              Enterprise Network
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent block">
-                Technology Solutions
+                Infrastructure Solutions
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-10">
-              SummitUSA provides comprehensive managed IT services, network solutions, 
-              and technology support to keep your business running efficiently and securely.
+              Professional network design, implementation, and managed services for businesses 
+              that demand reliable, secure, and scalable technology infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link 
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 whitespace-nowrap"
               >
-                Get Started Today
+                Get Network Assessment
               </Link>
               <Link 
                 to="/services"
                 className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 whitespace-nowrap"
               >
-                View Our Services
+                View Solutions
               </Link>
             </div>
           </div>
@@ -50,8 +50,8 @@ export default function Index() {
               <p className="text-gray-300">Years Experience</p>
             </div>
             <div className="text-center bg-gradient-to-br from-blue-900/30 to-black p-6 rounded-2xl border border-blue-500/20">
-              <h3 className="text-4xl font-bold text-blue-400 mb-2">1000+</h3>
-              <p className="text-gray-300">Projects Completed</p>
+              <h3 className="text-4xl font-bold text-blue-400 mb-2">500+</h3>
+              <p className="text-gray-300">Networks Deployed</p>
             </div>
             <div className="text-center bg-gradient-to-br from-purple-900/30 to-black p-6 rounded-2xl border border-purple-500/20">
               <h3 className="text-4xl font-bold text-purple-400 mb-2">24/7</h3>
@@ -59,22 +59,22 @@ export default function Index() {
             </div>
             <div className="text-center bg-gradient-to-br from-blue-900/30 to-black p-6 rounded-2xl border border-blue-500/20">
               <h3 className="text-4xl font-bold text-blue-400 mb-2">99.9%</h3>
-              <p className="text-gray-300">Uptime Achieved</p>
+              <p className="text-gray-300">Uptime Guarantee</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
+      {/* Core Services */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Network Technology Solutions
+              Complete Network Technology Stack
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From network infrastructure design to ongoing support, we provide comprehensive 
-              technology solutions that keep your business connected and secure.
+              From network design to ongoing management, we deliver enterprise-grade 
+              solutions that scale with your business growth.
             </p>
           </div>
           
@@ -85,15 +85,15 @@ export default function Index() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Network Design & Installation</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Network Infrastructure</h3>
               <p className="text-gray-300 mb-4">
-                Custom network infrastructure design and professional installation services 
-                tailored to your business requirements.
+                Complete network design and deployment including structured cabling, 
+                switching, routing, and wireless solutions.
               </p>
               <ul className="text-gray-400 text-sm space-y-1">
+                <li>• Enterprise Switching & Routing</li>
                 <li>• Structured Cabling Systems</li>
-                <li>• Wireless Network Design</li>
-                <li>• Network Equipment Installation</li>
+                <li>• WiFi 6/6E Implementation</li>
               </ul>
             </div>
             
@@ -103,15 +103,15 @@ export default function Index() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Network Security</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Security & Compliance</h3>
               <p className="text-gray-300 mb-4">
-                Comprehensive security solutions to protect your network infrastructure 
-                from cyber threats and unauthorized access.
+                Multi-layered security architecture with advanced threat protection, 
+                monitoring, and compliance management.
               </p>
               <ul className="text-gray-400 text-sm space-y-1">
-                <li>• Firewall Configuration</li>
-                <li>• Intrusion Detection Systems</li>
-                <li>• VPN Solutions</li>
+                <li>• Next-Gen Firewalls</li>
+                <li>• Zero Trust Architecture</li>
+                <li>• Compliance Auditing</li>
               </ul>
             </div>
             
@@ -121,43 +121,43 @@ export default function Index() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Network Monitoring & Support</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Managed Services</h3>
               <p className="text-gray-300 mb-4">
-                24/7 network monitoring and technical support to ensure optimal 
-                performance and quick resolution of any issues.
+                Proactive 24/7 monitoring, maintenance, and support to ensure 
+                optimal network performance and reliability.
               </p>
               <ul className="text-gray-400 text-sm space-y-1">
-                <li>• Real-time Network Monitoring</li>
-                <li>• Performance Optimization</li>
-                <li>• Emergency Response</li>
+                <li>• 24/7 NOC Monitoring</li>
+                <li>• Proactive Maintenance</li>
+                <li>• Performance Analytics</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Call to Action */}
       <section className="py-24 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Upgrade Your Network Infrastructure?
+            Ready to Transform Your Network Infrastructure?
           </h2>
           <p className="text-xl text-gray-200 mb-10 leading-relaxed">
-            Let SummitUSA design and implement a network solution that grows with your business. 
-            Contact us today for a free network assessment and consultation.
+            Get a comprehensive network assessment and discover how SummitUSA can optimize 
+            your technology infrastructure for peak performance and security.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link 
               to="/contact"
               className="bg-white text-purple-900 px-12 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap"
             >
-              Get Free Assessment
+              Schedule Assessment
             </Link>
             <Link 
               to="/services"
               className="border border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 whitespace-nowrap"
             >
-              View All Services
+              Explore Services
             </Link>
           </div>
         </div>
