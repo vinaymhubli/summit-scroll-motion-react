@@ -287,66 +287,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* SummitUSA Global Presence */}
-      <section className="py-24 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 scroll-animate">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              SummitUSA Offices Worldwide
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Strategically positioned to serve our global clientele with local SummitUSA expertise and support
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="space-y-8 scroll-animate-left">
-              <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-8 rounded-3xl border border-purple-500/30">
-                <div 
-                  className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('https://readdy.ai/api/search-image?query=Modern%20New%20York%20City%20office%20building%20at%20night%20with%20purple%20and%20blue%20lighting%2C%20Manhattan%20skyline%2C%20corporate%20headquarters%20exterior%2C%20professional%20business%20architecture%2C%20urban%20corporate%20environment&width=600&height=300&seq=ny-summit-office-1&orientation=landscape')`
-                  }}
-                ></div>
-                <h3 className="text-2xl font-bold text-white mb-4">SummitUSA New York Headquarters</h3>
-                <p className="text-gray-300 mb-2">1234 Summit Street</p>
-                <p className="text-gray-300 mb-4">New York, NY 10001</p>
-                <p className="text-gray-400">
-                  Our flagship SummitUSA office in Manhattan serves as the global command center for strategic operations and client services.
-                </p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/30 p-8 rounded-3xl border border-blue-500/30">
-                <div 
-                  className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('https://readdy.ai/api/search-image?query=San%20Francisco%20modern%20tech%20office%20building%20with%20blue%20accent%20lighting%2C%20Silicon%20Valley%20architecture%2C%20contemporary%20corporate%20building%20exterior%2C%20innovation%20hub%20environment&width=600&height=300&seq=sf-summit-office-1&orientation=landscape')`
-                  }}
-                ></div>
-                <h3 className="text-2xl font-bold text-white mb-4">SummitUSA Innovation Hub</h3>
-                <p className="text-gray-300 mb-2">567 Tech Valley Drive</p>
-                <p className="text-gray-300 mb-4">San Francisco, CA 94105</p>
-                <p className="text-gray-400">
-                  Our West Coast SummitUSA center focuses on emerging technologies, AI solutions, and digital transformation initiatives.
-                </p>
-              </div>
-            </div>
-            
-            <div className="rounded-3xl overflow-hidden shadow-2xl scroll-animate-right">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12091.492959883815!2d-74.005941!3d40.7589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
-                width="100%"
-                height="600"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose SummitUSA */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
