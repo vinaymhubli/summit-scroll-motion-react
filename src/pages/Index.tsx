@@ -329,50 +329,63 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-8 rounded-3xl border border-orange-500/30 text-center scroll-animate-scale stagger-1">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
-                76%
-              </div>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                of organizations experience downtime that leads to data loss.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left side - Image */}
+            <div className="scroll-animate-left">
+              <div
+                className="w-full h-96 rounded-3xl bg-cover bg-center shadow-2xl"
+                style={{
+                  backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+                }}
+              ></div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-8 rounded-3xl border border-blue-500/30 text-center scroll-animate-scale stagger-2">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
-                $137-$427
+            {/* Right side - Statistics */}
+            <div className="space-y-6 scroll-animate-right">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-6 rounded-2xl border border-orange-500/30">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+                  76%
+                </div>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  of organizations experience downtime that leads to data loss.
+                </p>
               </div>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The costs of IT downtime for SMBs range per minute.
-              </p>
-            </div>
 
-            <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-8 rounded-3xl border border-orange-500/30 text-center scroll-animate-scale stagger-3">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
-                60%
+              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-6 rounded-2xl border border-blue-500/30">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+                  $137-$427
+                </div>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  The costs of IT downtime for SMBs range per minute.
+                </p>
               </div>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Over 60% of outages cost more than $100,000.
-              </p>
-            </div>
 
-            <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-8 rounded-3xl border border-blue-500/30 text-center scroll-animate-scale stagger-4">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
-                $8,600
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-6 rounded-2xl border border-orange-500/30">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+                  60%
+                </div>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Over 60% of outages cost more than $100,000.
+                </p>
               </div>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The average internal IT employee costs organizations per month.
-              </p>
-            </div>
 
-            <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-8 rounded-3xl border border-orange-500/30 text-center scroll-animate-scale stagger-5 md:col-span-2 lg:col-span-1">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
-                $250
+              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-6 rounded-2xl border border-blue-500/30">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+                  $8,600
+                </div>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  The average internal IT employee costs organizations per month.
+                </p>
               </div>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Total IT budgets average per employee per month in Small/Medium Business.
-              </p>
+
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-6 rounded-2xl border border-orange-500/30">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+                  $250
+                </div>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Total IT budgets average per employee per month in Small/Medium Business.
+                </p>
+              </div>
             </div>
           </div>
         </div>
