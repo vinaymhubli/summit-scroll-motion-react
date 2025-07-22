@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -288,7 +287,6 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 scroll-animate">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Visit Our Office</h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300">Located in Lynnwood, Washington</p>
           </div>
           
           <div className="rounded-2xl overflow-hidden shadow-2xl scroll-animate-scale">
