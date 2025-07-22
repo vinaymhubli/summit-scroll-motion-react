@@ -135,7 +135,7 @@ export default function Home() {
               Why Choose SummitUSA?
             </h2>
             <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
-              We deliver exceptional results through proven methodologies and innovative approaches that transform businesses across every industry
+              We deliver cutting-edge IT solutions through proven technologies and innovative approaches that transform businesses across every industry
             </p>
           </div>
 
@@ -144,18 +144,18 @@ export default function Home() {
               <div
                 className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+                  backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
                 }}
               ></div>
-              <h3 className="text-3xl font-bold text-white mb-6">Strategic Excellence</h3>
+              <h3 className="text-3xl font-bold text-white mb-6">Cloud Solutions</h3>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Our team of experts crafts tailored strategies that align with your business goals and market dynamics, ensuring sustainable growth and competitive advantage.
+                Comprehensive cloud infrastructure and migration services that scale with your business needs, ensuring maximum uptime and performance optimization.
               </p>
               <ul className="text-gray-300 space-y-2">
-                <li>• Custom strategy development</li>
-                <li>• Market analysis & insights</li>
-                <li>• Competitive positioning</li>
-                <li>• Growth optimization</li>
+                <li>• AWS, Azure, Google Cloud</li>
+                <li>• Cloud migration & optimization</li>
+                <li>• Scalable infrastructure</li>
+                <li>• 24/7 monitoring & support</li>
               </ul>
             </div>
 
@@ -163,18 +163,18 @@ export default function Home() {
               <div
                 className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1518186233392-c232efbf2373?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80')`
+                  backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
                 }}
               ></div>
-              <h3 className="text-3xl font-bold text-white mb-6">Innovation Focus</h3>
+              <h3 className="text-3xl font-bold text-white mb-6">Cybersecurity</h3>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                We leverage cutting-edge technology and innovative methodologies to keep your business ahead of the curve in an ever-evolving marketplace.
+                Advanced security solutions to protect your digital assets with multi-layered defense strategies and real-time threat monitoring.
               </p>
               <ul className="text-gray-300 space-y-2">
-                <li>• Digital transformation</li>
-                <li>• Technology integration</li>
-                <li>• Process automation</li>
-                <li>• Future-ready solutions</li>
+                <li>• Network security & firewalls</li>
+                <li>• Data encryption & protection</li>
+                <li>• Threat detection & response</li>
+                <li>• Compliance & risk management</li>
               </ul>
             </div>
 
@@ -182,18 +182,18 @@ export default function Home() {
               <div
                 className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80')`
+                  backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
                 }}
               ></div>
-              <h3 className="text-3xl font-bold text-white mb-6">Proven Results</h3>
+              <h3 className="text-3xl font-bold text-white mb-6">Custom Development</h3>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                With a track record of success across diverse industries, we deliver measurable outcomes that drive real business transformation and growth.
+                Tailored software solutions and applications built with modern technologies to streamline your business processes and enhance productivity.
               </p>
               <ul className="text-gray-300 space-y-2">
-                <li>• Measurable ROI</li>
-                <li>• Performance tracking</li>
-                <li>• Continuous improvement</li>
-                <li>• Long-term partnerships</li>
+                <li>• Web & mobile applications</li>
+                <li>• API development & integration</li>
+                <li>• Database design & optimization</li>
+                <li>• Agile development processes</li>
               </ul>
             </div>
           </div>
@@ -305,7 +305,7 @@ export default function Home() {
               <h3 className="text-xl font-bold text-white mb-4">Mobile Development</h3>
               <p className="text-gray-400">iOS, Android, Cross-Platform</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-6">
+            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-6">
               <h3 className="text-xl font-bold text-white mb-4">IT Consulting</h3>
               <p className="text-gray-400">Digital Strategy, Tech Advisory</p>
             </div>
