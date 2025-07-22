@@ -1,13 +1,15 @@
-
 const Footer = () => {
   return (
     <footer className="bg-black py-16 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <div className="text-2xl font-bold mb-6">
-              <span className="text-white">Summit</span>
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">USA</span>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/c06908fd-29e6-4b5c-9036-ad02cecd4549.png" 
+                alt="Summit Services Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6">
               Transforming businesses through strategic innovation and peak performance solutions.
