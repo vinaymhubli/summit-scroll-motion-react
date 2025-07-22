@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -29,7 +30,7 @@ const Header = () => {
         </nav>
         
         {/* Desktop CTA Button */}
-        <button className="hidden md:block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full hover:scale-105 transition-all duration-300 text-sm">
+        <button className="hidden md:block bg-gradient-to-r from-orange-500 to-blue-900 text-white px-6 py-2 rounded-full hover:scale-105 transition-all duration-300 text-sm">
           Get Started
         </button>
 
@@ -75,7 +76,7 @@ const Header = () => {
             >
               Contact
             </Link>
-            <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 mt-4">
+            <button className="w-full bg-gradient-to-r from-orange-500 to-blue-900 text-white px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 mt-4">
               Get Started
             </button>
           </nav>
