@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -11,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+    <header className="fixed top-0 w-full z-50 bg-white backdrop-blur-sm border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img 
@@ -30,7 +29,7 @@ const Header = () => {
         </nav>
         
         {/* Desktop CTA Button */}
-        <button className="hidden md:block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:scale-105 transition-all duration-300 text-sm">
+        <button className="hidden md:block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full hover:scale-105 transition-all duration-300 text-sm">
           Get Started
         </button>
 
@@ -46,7 +45,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
+        <div className="md:hidden bg-white backdrop-blur-sm border-t border-gray-200">
           <nav className="px-4 py-4 space-y-4">
             <Link 
               to="/" 
@@ -76,7 +75,7 @@ const Header = () => {
             >
               Contact
             </Link>
-            <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 mt-4">
+            <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 mt-4">
               Get Started
             </button>
           </nav>
