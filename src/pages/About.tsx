@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -81,12 +80,12 @@ export default function About() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-500 via-blue-900 to-black">
+      <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-500 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center scroll-animate">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
               About 
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                 SummitUSA
               </span>
             </h1>
@@ -99,7 +98,7 @@ export default function About() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-orange-500/20 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="scroll-animate-left order-2 lg:order-1">
@@ -148,7 +147,7 @@ export default function About() {
       </section>
 
       {/* Mission, Vision & Values */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-orange-500/20 via-blue-900/20 to-black">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-orange-500/20 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 scroll-animate">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
@@ -160,7 +159,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
-            <div className="bg-gradient-to-br from-orange-500/50 to-blue-900/40 p-6 sm:p-8 lg:p-12 rounded-3xl border border-orange-500/30 scroll-animate-left">
+            <div className="bg-gradient-to-br from-orange-500/50 to-black/40 p-6 sm:p-8 lg:p-12 rounded-3xl border border-orange-500/30 scroll-animate-left">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Our Mission</h3>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 SummitUSA empowers businesses to achieve extraordinary growth through innovative technology 
@@ -169,7 +168,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-500/50 to-blue-900/40 p-6 sm:p-8 lg:p-12 rounded-3xl border border-orange-500/30 scroll-animate-right">
+            <div className="bg-gradient-to-br from-orange-500/50 to-black/40 p-6 sm:p-8 lg:p-12 rounded-3xl border border-orange-500/30 scroll-animate-right">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Our Vision</h3>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 To be the premier technology consulting partner that organizations worldwide trust to navigate 
@@ -206,7 +205,7 @@ export default function About() {
                 description: "We believe in continuous learning and development, both for the SummitUSA team and our clients, fostering an environment of perpetual growth and technological advancement."
               }
             ].map((value, index) => (
-              <div key={index} className={`bg-gradient-to-br ${index % 2 === 0 ? 'from-orange-500/50 to-blue-900/40' : 'from-orange-500/50 to-blue-900/40'} p-6 sm:p-8 rounded-2xl border ${index % 2 === 0 ? 'border-orange-500/30' : 'border-orange-500/30'} scroll-animate-scale`}>
+              <div key={index} className="bg-gradient-to-br from-orange-500/50 to-black/40 p-6 sm:p-8 rounded-2xl border border-orange-500/30 scroll-animate-scale">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{value.title}</h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   {value.description}
@@ -218,7 +217,7 @@ export default function About() {
       </section>
 
       {/* Why Choose SummitUSA */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-orange-500/20 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 scroll-animate">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
@@ -230,7 +229,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-            <div className="bg-gradient-to-br from-orange-500/50 to-blue-900/40 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left">
+            <div className="bg-gradient-to-br from-orange-500/50 to-black/40 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Proven Track Record</h3>
               <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
                 SummitUSA has successfully delivered over 500 technology projects across 15+ industries, 
@@ -244,7 +243,7 @@ export default function About() {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-500/50 to-blue-900/40 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-right">
+            <div className="bg-gradient-to-br from-orange-500/50 to-black/40 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-right">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Expert Team</h3>
               <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
                 Our SummitUSA team consists of certified professionals, industry experts, and thought leaders 
