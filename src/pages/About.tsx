@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -84,13 +83,13 @@ export default function About() {
       <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-600 via-blue-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center scroll-animate">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
               About 
               <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
                 SummitUSA
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
               SummitUSA is a leading technology consulting firm dedicated to helping businesses reach their peak 
               performance through innovative solutions, digital transformation, and strategic technology partnerships.
             </p>
@@ -104,8 +103,8 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="scroll-animate-left order-2 lg:order-1">
               <div className="text-center lg:text-left">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">The SummitUSA Story</h2>
-                <div className="space-y-4 sm:space-y-6 text-gray-300 text-base sm:text-lg leading-relaxed">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">The SummitUSA Story</h2>
+                <div className="space-y-4 sm:space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
                   <p>
                     Founded in 2015, SummitUSA emerged from a vision to bridge the gap between business ambitions 
                     and technological possibilities. Our founders, seasoned technology executives with decades of 
@@ -126,12 +125,12 @@ export default function About() {
                 
                 <div className="grid grid-cols-2 gap-4 sm:gap-8 max-w-md mx-auto lg:mx-0">
                   <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-4 sm:p-6 rounded-2xl border border-orange-500/20">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">500+</h3>
-                    <p className="text-gray-300 text-sm sm:text-base">Successful Projects</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-orange-400 mb-2">500+</h3>
+                    <p className="text-gray-300 text-xs sm:text-sm">Successful Projects</p>
                   </div>
                   <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 p-4 sm:p-6 rounded-2xl border border-blue-500/20">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-blue-400 mb-2">15+</h3>
-                    <p className="text-gray-300 text-sm sm:text-base">Industries Served</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-blue-400 mb-2">15+</h3>
+                    <p className="text-gray-300 text-xs sm:text-sm">Industries Served</p>
                   </div>
                 </div>
               </div>
@@ -151,18 +150,18 @@ export default function About() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 scroll-animate">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
               SummitUSA Mission & Values
             </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto px-4">
               Our core principles guide every decision and shape every client relationship at SummitUSA
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 lg:p-12 rounded-3xl border border-orange-500/30 scroll-animate-left">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Our Mission</h3>
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">Our Mission</h3>
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                 SummitUSA empowers businesses to achieve extraordinary growth through innovative technology 
                 solutions, strategic consulting, and unwavering commitment to excellence. We transform 
                 complex challenges into competitive advantages, helping our clients reach new summits of success.
@@ -170,8 +169,8 @@ export default function About() {
             </div>
             
             <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 lg:p-12 rounded-3xl border border-blue-500/30 scroll-animate-right">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Our Vision</h3>
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">Our Vision</h3>
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                 To be the premier technology consulting partner that organizations worldwide trust to navigate 
                 digital transformation, drive innovation, and achieve sustainable competitive advantages in 
                 an increasingly complex technological landscape.
@@ -207,8 +206,8 @@ export default function About() {
               }
             ].map((value, index) => (
               <div key={index} className={`${index % 2 === 0 ? 'bg-gradient-to-br from-orange-900/30 to-blue-900/20' : 'bg-gradient-to-br from-blue-900/30 to-orange-900/20'} p-6 sm:p-8 rounded-2xl border ${index % 2 === 0 ? 'border-orange-500/20' : 'border-blue-500/20'} scroll-animate-scale`}>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{value.title}</h3>
-                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-3 sm:mb-4">{value.title}</h3>
+                <p className="text-gray-300 leading-relaxed text-xs sm:text-sm">
                   {value.description}
                 </p>
               </div>
@@ -221,22 +220,22 @@ export default function About() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 scroll-animate">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
               Why Choose SummitUSA?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto px-4">
               SummitUSA delivers unmatched value through our comprehensive approach to technology consulting
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Proven Track Record</h3>
-              <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-3 sm:mb-4">Proven Track Record</h3>
+              <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-xs sm:text-sm">
                 SummitUSA has successfully delivered over 500 technology projects across 15+ industries, 
                 with a 98% client satisfaction rate and measurable ROI for every engagement.
               </p>
-              <ul className="space-y-1 sm:space-y-2 text-gray-300 text-sm sm:text-base">
+              <ul className="space-y-1 sm:space-y-2 text-gray-300 text-xs sm:text-sm">
                 <li>• 500+ Successful Project Deliveries</li>
                 <li>• 98% Client Satisfaction Rate</li>
                 <li>• Average 300% ROI for Clients</li>
@@ -245,12 +244,12 @@ export default function About() {
             </div>
             
             <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 scroll-animate-right">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Expert Team</h3>
-              <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-3 sm:mb-4">Expert Team</h3>
+              <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-xs sm:text-sm">
                 Our SummitUSA team consists of certified professionals, industry experts, and thought leaders 
                 with deep expertise across all major technology platforms and business domains.
               </p>
-              <ul className="space-y-1 sm:space-y-2 text-gray-300 text-sm sm:text-base">
+              <ul className="space-y-1 sm:space-y-2 text-gray-300 text-xs sm:text-sm">
                 <li>• 50+ Certified Technology Experts</li>
                 <li>• Average 12+ Years Industry Experience</li>
                 <li>• Multi-Industry Domain Expertise</li>
