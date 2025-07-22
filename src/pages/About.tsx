@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -135,7 +136,7 @@ export default function About() {
             </div>
             <div className="relative scroll-animate-right">
               <img
-                src="https://readdy.ai/api/search-image?query=Modern%20corporate%20technology%20team%20meeting%20in%20sleek%20boardroom%20with%20city%20skyline%20view%2C%20professional%20business%20people%20collaborating%20around%20conference%20table%20with%20laptops%20and%20displays%2C%20dark%20elegant%20office%20interior%20with%20purple%20accent%20lighting%2C%20contemporary%20business%20environment%2C%20high-end%20corporate%20photography%20style&width=600&height=800&seq=summit-team-1&orientation=portrait"
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=800&fit=crop&crop=face"
                 alt="SummitUSA Technology Team"
                 className="rounded-2xl shadow-2xl object-cover w-full h-96 lg:h-full object-top"
               />
