@@ -1,11 +1,27 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const [typedText, setTypedText] = useState('');
+  const fullText = 'Summit';
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setTypedText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 200);
+
+    return () => clearInterval(typingInterval);
+  }, []);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -73,6 +89,17 @@ export default function Home() {
             transform: scale(1.1);
           }
         }
+
+        .typing-cursor::after {
+          content: '|';
+          animation: blink 1s infinite;
+          color: #a855f7;
+        }
+
+        @keyframes blink {
+          0%, 50% { opacity: 1; }
+          51%, 100% { opacity: 0; }
+        }
         `
       }} />
 
@@ -93,7 +120,7 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center py-32">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-            Summit
+            <span className="typing-cursor">{typedText}</span>
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               USA
             </span>
