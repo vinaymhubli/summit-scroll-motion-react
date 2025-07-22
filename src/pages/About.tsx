@@ -147,7 +147,7 @@ export default function About() {
       </section>
 
       {/* Mission, Vision & Values */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-orange-500/20 via-blue-900/20 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 scroll-animate">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
