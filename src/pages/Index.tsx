@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -318,22 +319,22 @@ export default function Home() {
       </section>
 
       {/* IT Confusion and Costs Section */}
-      <section className="py-32 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+      <section className="py-24 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-animate">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Eliminate IT Confusion and Costs
             </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Stop downtime and faulty IT before they damage your organization.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Image */}
             <div className="scroll-animate-left">
               <div
-                className="w-full h-96 rounded-3xl bg-cover bg-center shadow-2xl"
+                className="w-full h-80 rounded-3xl bg-cover bg-center shadow-2xl"
                 style={{
                   backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
                 }}
@@ -341,48 +342,48 @@ export default function Home() {
             </div>
 
             {/* Right side - Statistics */}
-            <div className="space-y-6 scroll-animate-right">
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-6 rounded-2xl border border-orange-500/30">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+            <div className="space-y-4 scroll-animate-right">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-4 rounded-2xl border border-orange-500/30">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   76%
                 </div>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-base text-gray-300 leading-relaxed">
                   of organizations experience downtime that leads to data loss.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-6 rounded-2xl border border-blue-500/30">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-4 rounded-2xl border border-blue-500/30">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   $137-$427
                 </div>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-base text-gray-300 leading-relaxed">
                   The costs of IT downtime for SMBs range per minute.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-6 rounded-2xl border border-orange-500/30">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-4 rounded-2xl border border-orange-500/30">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   60%
                 </div>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-base text-gray-300 leading-relaxed">
                   Over 60% of outages cost more than $100,000.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-6 rounded-2xl border border-blue-500/30">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-4 rounded-2xl border border-blue-500/30">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   $8,600
                 </div>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-base text-gray-300 leading-relaxed">
                   The average internal IT employee costs organizations per month.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-6 rounded-2xl border border-orange-500/30">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-3">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-4 rounded-2xl border border-orange-500/30">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   $250
                 </div>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-base text-gray-300 leading-relaxed">
                   Total IT budgets average per employee per month in Small/Medium Business.
                 </p>
               </div>
