@@ -40,7 +40,7 @@ export default function Home() {
 
     const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale');
     elements.forEach((el) => {
-      el.classList.add('animate-in');
+      el.classList.remove('animate-in');
       observerRef.current?.observe(el);
     });
 
@@ -57,9 +57,24 @@ export default function Home() {
         .scroll-animate-left,
         .scroll-animate-right,
         .scroll-animate-scale {
-          opacity: 1;
-          transform: none;
+          opacity: 0;
           transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scroll-animate {
+          transform: translateY(50px);
+        }
+
+        .scroll-animate-left {
+          transform: translateX(-50px);
+        }
+
+        .scroll-animate-right {
+          transform: translateX(50px);
+        }
+
+        .scroll-animate-scale {
+          transform: scale(0.9);
         }
 
         .scroll-animate.animate-in,
