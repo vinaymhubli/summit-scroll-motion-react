@@ -131,7 +131,7 @@ export default function Home() {
             backgroundRepeat: 'no-repeat'
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center py-32">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
