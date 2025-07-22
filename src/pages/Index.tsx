@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -135,7 +134,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center py-32">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-8 leading-tight">
             <span className="typing-cursor">
               <span className="text-white">{typedText.slice(0, 6)}</span>
               <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
