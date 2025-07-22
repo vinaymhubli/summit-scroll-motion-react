@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -443,7 +444,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900">
+      <section className="py-32 bg-gradient-to-r from-orange-500 via-blue-900 to-orange-600">
         <div className="max-w-5xl mx-auto px-6 text-center scroll-animate">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
             Ready to Summit Your Goals?
