@@ -1,4 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+'use client';
+
+import { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -81,232 +83,310 @@ export default function About() {
       <section className="relative pt-24 pb-16 bg-gradient-to-br from-purple-900 via-blue-900 to-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center scroll-animate">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               About 
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 SummitUSA
               </span>
             </h1>
-            <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Pioneering business transformation through strategic innovation and unparalleled expertise
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              SummitUSA is a leading technology consulting firm dedicated to helping businesses reach their peak 
+              performance through innovative solutions, digital transformation, and strategic technology partnerships.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Company Story */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+      {/* Company Overview */}
+      <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="scroll-animate-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Story</h2>
-              <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                Founded in 2015, SummitUSA began with a simple yet powerful vision: to help businesses 
-                reach their peak performance through strategic consulting and innovative solutions. 
-                What started as a small team of passionate consultants has grown into a leading 
-                consulting firm trusted by Fortune 500 companies and emerging startups alike.
-              </p>
-              <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                Our journey has been marked by continuous learning, adaptation, and an unwavering 
-                commitment to our clients' success. We've navigated economic uncertainties, 
-                technological disruptions, and market transformations alongside our clients, 
-                emerging stronger and more capable with each challenge.
-              </p>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                Today, we stand as a testament to the power of strategic thinking, innovative 
-                problem-solving, and collaborative partnerships. Our success is measured not just 
-                in numbers, but in the lasting impact we create for our clients and their communities.
-              </p>
-            </div>
-            
-            <div className="scroll-animate-right">
-              <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 p-8 rounded-3xl border border-purple-500/20">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white mb-2">500+</div>
-                    <div className="text-xs text-gray-300">Projects Completed</div>
+              <div className="text-center">
+                <h2 className="text-4xl font-bold text-white mb-6">The SummitUSA Story</h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  Founded in 2015, SummitUSA emerged from a vision to bridge the gap between business ambitions 
+                  and technological possibilities. Our founders, seasoned technology executives with decades of 
+                  combined experience, recognized that many organizations struggle to harness the full potential 
+                  of modern technology solutions.
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  Today, SummitUSA stands as a trusted technology partner to over 500 companies across various 
+                  industries, from innovative startups to Fortune 500 enterprises. Our comprehensive approach 
+                  combines strategic thinking, technical expertise, and deep industry knowledge to deliver 
+                  solutions that create lasting competitive advantages.
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                  At SummitUSA, every client engagement is an opportunity to push technological boundaries, 
+                  challenge conventional thinking, and unlock new possibilities for growth and innovation.
+                </p>
+                
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-6 rounded-2xl border border-purple-500/20">
+                    <h3 className="text-3xl font-bold text-purple-400 mb-2">500+</h3>
+                    <p className="text-gray-300">Successful Projects</p>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white mb-2">150+</div>
-                    <div className="text-xs text-gray-300">Expert Consultants</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white mb-2">98%</div>
-                    <div className="text-xs text-gray-300">Client Satisfaction</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white mb-2">25+</div>
-                    <div className="text-xs text-gray-300">Industries Served</div>
+                  <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-6 rounded-2xl border border-blue-500/20">
+                    <h3 className="text-3xl font-bold text-blue-400 mb-2">15+</h3>
+                    <p className="text-gray-300">Industries Served</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission, Vision, Values */}
-      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center scroll-animate-left">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Mission</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                To empower businesses with strategic insights and innovative solutions that drive 
-                sustainable growth, operational excellence, and competitive advantage in an 
-                ever-evolving marketplace.
-              </p>
-            </div>
-            
-            <div className="text-center scroll-animate">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Vision</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                To be the world's most trusted consulting partner, recognized for our ability to 
-                transform businesses and create lasting value through strategic innovation and 
-                unparalleled expertise.
-              </p>
-            </div>
-            
-            <div className="text-center scroll-animate-right">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Values</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                Excellence, integrity, collaboration, and innovation guide everything we do. We 
-                believe in building long-term partnerships based on trust, transparency, and 
-                mutual success.
-              </p>
+            <div className="relative scroll-animate-right">
+              <img
+                src="https://readdy.ai/api/search-image?query=Modern%20corporate%20technology%20team%20meeting%20in%20sleek%20boardroom%20with%20city%20skyline%20view%2C%20professional%20business%20people%20collaborating%20around%20conference%20table%20with%20laptops%20and%20displays%2C%20dark%20elegant%20office%20interior%20with%20purple%20accent%20lighting%2C%20contemporary%20business%20environment%2C%20high-end%20corporate%20photography%20style&width=600&height=800&seq=summit-team-1&orientation=portrait"
+                alt="SummitUSA Technology Team"
+                className="rounded-2xl shadow-2xl object-cover w-full h-96 lg:h-full object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-blue-900/10 rounded-2xl"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      {/* Mission, Vision & Values */}
+      <section className="py-24 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 scroll-animate">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Meet Our Leadership</h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Experienced leaders driving innovation and excellence
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              SummitUSA Mission & Values
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our core principles guide every decision and shape every client relationship at SummitUSA
             </p>
           </div>
           
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-12 rounded-3xl border border-purple-500/30 scroll-animate-left">
+              <h3 className="text-3xl font-bold text-white mb-6">Our Mission</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                SummitUSA empowers businesses to achieve extraordinary growth through innovative technology 
+                solutions, strategic consulting, and unwavering commitment to excellence. We transform 
+                complex challenges into competitive advantages, helping our clients reach new summits of success.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-12 rounded-3xl border border-blue-500/30 scroll-animate-right">
+              <h3 className="text-3xl font-bold text-white mb-6">Our Vision</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                To be the premier technology consulting partner that organizations worldwide trust to navigate 
+                digital transformation, drive innovation, and achieve sustainable competitive advantages in 
+                an increasingly complex technological landscape.
+              </p>
+            </div>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-900/30 to-black p-8 rounded-2xl border border-purple-500/20 scroll-animate-left">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mx-auto mb-6"></div>
-              <h3 className="text-lg font-semibold text-white text-center mb-2">Sarah Johnson</h3>
-              <p className="text-sm text-purple-400 text-center mb-4">Chief Executive Officer</p>
-              <p className="text-xs text-gray-300 text-center leading-relaxed">
-                With over 20 years of experience in strategic consulting, Sarah leads our vision 
-                for transformative business solutions and sustainable growth.
+            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30 scroll-animate-scale">
+              <h3 className="text-2xl font-bold text-white mb-4">Innovation Excellence</h3>
+              <p className="text-gray-300 leading-relaxed">
+                SummitUSA pursues excellence in every project, setting the highest standards for innovation, 
+                quality, and client satisfaction across all our technology solutions.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/30 to-black p-8 rounded-2xl border border-blue-500/20 scroll-animate">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-6"></div>
-              <h3 className="text-lg font-semibold text-white text-center mb-2">Michael Chen</h3>
-              <p className="text-sm text-blue-400 text-center mb-4">Chief Technology Officer</p>
-              <p className="text-xs text-gray-300 text-center leading-relaxed">
-                Michael drives our digital transformation initiatives, bringing cutting-edge 
-                technology solutions to solve complex business challenges.
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30 scroll-animate-scale">
+              <h3 className="text-2xl font-bold text-white mb-4">Trusted Partnership</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Trust is the foundation of every SummitUSA relationship. We operate with complete transparency, 
+                honesty, and ethical practices in all our business dealings and client partnerships.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-900/30 to-black p-8 rounded-2xl border border-purple-500/20 scroll-animate-right">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mx-auto mb-6"></div>
-              <h3 className="text-lg font-semibold text-white text-center mb-2">Emily Rodriguez</h3>
-              <p className="text-sm text-purple-400 text-center mb-4">Head of Operations</p>
-              <p className="text-xs text-gray-300 text-center leading-relaxed">
-                Emily ensures operational excellence across all our client engagements, 
-                maintaining the highest standards of service delivery.
+            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30 scroll-animate-scale">
+              <h3 className="text-2xl font-bold text-white mb-4">Continuous Innovation</h3>
+              <p className="text-gray-300 leading-relaxed">
+                SummitUSA embraces change and continuously evolves our methodologies to stay ahead of 
+                technology trends and deliver cutting-edge solutions to our clients.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30 scroll-animate-scale">
+              <h3 className="text-2xl font-bold text-white mb-4">Client-Centric Approach</h3>
+              <p className="text-gray-300 leading-relaxed">
+                We view our clients as strategic partners, working collaboratively to understand their unique 
+                challenges and co-create solutions that drive lasting business success.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30 scroll-animate-scale">
+              <h3 className="text-2xl font-bold text-white mb-4">Measurable Results</h3>
+              <p className="text-gray-300 leading-relaxed">
+                SummitUSA is committed to delivering measurable outcomes that create real business value and 
+                sustainable competitive advantages for every client we serve.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30 scroll-animate-scale">
+              <h3 className="text-2xl font-bold text-white mb-4">Perpetual Growth</h3>
+              <p className="text-gray-300 leading-relaxed">
+                We believe in continuous learning and development, both for the SummitUSA team and our clients, 
+                fostering an environment of perpetual growth and technological advancement.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Culture & Awards */}
-      <section className="py-20 bg-gradient-to-br from-purple-900/20 to-blue-900/20">
+      {/* Leadership Team */}
+      <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="scroll-animate-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Culture</h2>
-              <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                At SummitUSA, we foster a culture of continuous learning, innovation, and collaboration. 
-                Our team thrives in an environment that encourages creative problem-solving, 
-                professional growth, and meaningful client relationships.
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              SummitUSA Leadership Team
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Meet the visionary leaders driving SummitUSA's mission and technological innovation forward
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-left">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20CEO%20executive%20portrait%2C%20confident%20business%20leader%20in%20dark%20suit%2C%20corporate%20headshot%20with%20purple%20accent%20lighting%2C%20modern%20office%20background%2C%20high-end%20professional%20photography%2C%20sophisticated%20business%20portrait&width=400&height=500&seq=ceo-portrait-summit-1&orientation=portrait"
+                alt="Sarah Mitchell - CEO of SummitUSA"
+                className="w-64 h-80 object-cover object-top rounded-2xl mx-auto mb-6 shadow-2xl"
+              />
+              <h3 className="text-2xl font-bold text-white mb-2">Sarah Mitchell</h3>
+              <p className="text-purple-400 font-semibold mb-4">Chief Executive Officer</p>
+              <p className="text-gray-300 leading-relaxed">
+                With over 20 years of experience in technology consulting and business transformation, 
+                Sarah leads SummitUSA with a vision for sustainable growth, client success, and technological innovation.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-4"></div>
-                  <span className="text-sm text-gray-300">Collaborative and inclusive workplace</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-4"></div>
-                  <span className="text-sm text-gray-300">Continuous learning and development</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-4"></div>
-                  <span className="text-sm text-gray-300">Work-life balance and flexibility</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-4"></div>
-                  <span className="text-sm text-gray-300">Recognition and career advancement</span>
-                </div>
-              </div>
             </div>
             
-            <div className="scroll-animate-right">
-              <h3 className="text-xl font-bold text-white mb-8">Awards & Recognition</h3>
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-purple-900/30 to-black p-6 rounded-2xl border border-purple-500/20">
-                  <h4 className="text-sm font-semibold text-white mb-2">Best Consulting Firm 2023</h4>
-                  <p className="text-xs text-gray-300">Business Excellence Awards</p>
-                </div>
-                <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 rounded-2xl border border-blue-500/20">
-                  <h4 className="text-sm font-semibold text-white mb-2">Top Workplace 2023</h4>
-                  <p className="text-xs text-gray-300">Employee Satisfaction Survey</p>
-                </div>
-                <div className="bg-gradient-to-br from-purple-900/30 to-black p-6 rounded-2xl border border-purple-500/20">
-                  <h4 className="text-sm font-semibold text-white mb-2">Innovation Leader</h4>
-                  <p className="text-xs text-gray-300">Technology Excellence Council</p>
-                </div>
-              </div>
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20 scroll-animate">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20CTO%20technology%20executive%20portrait%2C%20confident%20tech%20leader%20in%20business%20attire%2C%20corporate%20headshot%20with%20blue%20accent%20lighting%2C%20modern%20tech%20office%20background%2C%20high-end%20professional%20photography%2C%20innovative%20business%20portrait&width=400&height=500&seq=cto-portrait-summit-1&orientation=portrait"
+                alt="Michael Chen - CTO of SummitUSA"
+                className="w-64 h-80 object-cover object-top rounded-2xl mx-auto mb-6 shadow-2xl"
+              />
+              <h3 className="text-2xl font-bold text-white mb-2">Michael Chen</h3>
+              <p className="text-blue-400 font-semibold mb-4">Chief Technology Officer</p>
+              <p className="text-gray-300 leading-relaxed">
+                Michael brings deep technical expertise and innovation leadership to SummitUSA, driving our 
+                technology strategy and ensuring we stay at the forefront of digital transformation trends.
+              </p>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-right">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20COO%20operations%20executive%20portrait%2C%20confident%20business%20operations%20leader%20in%20professional%20attire%2C%20corporate%20headshot%20with%20purple%20accent%20lighting%2C%20modern%20corporate%20office%20background%2C%20high-end%20professional%20photography%2C%20executive%20business%20portrait&width=400&height=500&seq=coo-portrait-summit-1&orientation=portrait"
+                alt="Jennifer Rodriguez - COO of SummitUSA"
+                className="w-64 h-80 object-cover object-top rounded-2xl mx-auto mb-6 shadow-2xl"
+              />
+              <h3 className="text-2xl font-bold text-white mb-2">Jennifer Rodriguez</h3>
+              <p className="text-purple-400 font-semibold mb-4">Chief Operating Officer</p>
+              <p className="text-gray-300 leading-relaxed">
+                Jennifer oversees SummitUSA's operational excellence and client delivery, ensuring every 
+                engagement meets our high standards for quality, innovation, and client satisfaction.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
-        <div className="max-w-4xl mx-auto px-6 text-center scroll-animate">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Join Our Journey
-          </h2>
-          <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
-            Ready to be part of something extraordinary? Explore career opportunities or partner with us.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-              View Careers
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300">
-              Become a Partner
-            </button>
+      {/* SummitUSA Global Presence */}
+      <section className="py-24 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              SummitUSA Offices Worldwide
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Strategically positioned to serve our global clientele with local SummitUSA expertise and support
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="space-y-8 scroll-animate-left">
+              <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-8 rounded-3xl border border-purple-500/30">
+                <div 
+                  className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url('https://readdy.ai/api/search-image?query=Modern%20New%20York%20City%20office%20building%20at%20night%20with%20purple%20and%20blue%20lighting%2C%20Manhattan%20skyline%2C%20corporate%20headquarters%20exterior%2C%20professional%20business%20architecture%2C%20urban%20corporate%20environment&width=600&height=300&seq=ny-summit-office-1&orientation=landscape')`
+                  }}
+                ></div>
+                <h3 className="text-2xl font-bold text-white mb-4">SummitUSA New York Headquarters</h3>
+                <p className="text-gray-300 mb-2">1234 Summit Street</p>
+                <p className="text-gray-300 mb-4">New York, NY 10001</p>
+                <p className="text-gray-400">
+                  Our flagship SummitUSA office in Manhattan serves as the global command center for strategic operations and client services.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/30 p-8 rounded-3xl border border-blue-500/30">
+                <div 
+                  className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url('https://readdy.ai/api/search-image?query=San%20Francisco%20modern%20tech%20office%20building%20with%20blue%20accent%20lighting%2C%20Silicon%20Valley%20architecture%2C%20contemporary%20corporate%20building%20exterior%2C%20innovation%20hub%20environment&width=600&height=300&seq=sf-summit-office-1&orientation=landscape')`
+                  }}
+                ></div>
+                <h3 className="text-2xl font-bold text-white mb-4">SummitUSA Innovation Hub</h3>
+                <p className="text-gray-300 mb-2">567 Tech Valley Drive</p>
+                <p className="text-gray-300 mb-4">San Francisco, CA 94105</p>
+                <p className="text-gray-400">
+                  Our West Coast SummitUSA center focuses on emerging technologies, AI solutions, and digital transformation initiatives.
+                </p>
+              </div>
+            </div>
+            
+            <div className="rounded-3xl overflow-hidden shadow-2xl scroll-animate-right">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12091.492959883815!2d-74.005941!3d40.7589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
+                width="100%"
+                height="600"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose SummitUSA */}
+      <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose SummitUSA?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              SummitUSA delivers unmatched value through our comprehensive approach to technology consulting
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-left">
+              <h3 className="text-2xl font-bold text-white mb-4">Proven Track Record</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                SummitUSA has successfully delivered over 500 technology projects across 15+ industries, 
+                with a 98% client satisfaction rate and measurable ROI for every engagement.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• 500+ Successful Project Deliveries</li>
+                <li>• 98% Client Satisfaction Rate</li>
+                <li>• Average 300% ROI for Clients</li>
+                <li>• 95% Client Retention Rate</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20 scroll-animate-right">
+              <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Our SummitUSA team consists of certified professionals, industry experts, and thought leaders 
+                with deep expertise across all major technology platforms and business domains.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• 50+ Certified Technology Experts</li>
+                <li>• Average 12+ Years Industry Experience</li>
+                <li>• Multi-Industry Domain Expertise</li>
+                <li>• Continuous Professional Development</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
