@@ -317,6 +317,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* IT Confusion and Costs Section */}
+      <section className="py-32 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20 scroll-animate">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              Eliminate IT Confusion and Costs
+            </h2>
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
+              Stop downtime and faulty IT before they damage your organization.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-8 rounded-3xl border border-orange-500/30 text-center scroll-animate-scale stagger-1">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
+                76%
+              </div>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                of organizations experience downtime that leads to data loss.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-8 rounded-3xl border border-blue-500/30 text-center scroll-animate-scale stagger-2">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
+                $137-$427
+              </div>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                The costs of IT downtime for SMBs range per minute.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-8 rounded-3xl border border-orange-500/30 text-center scroll-animate-scale stagger-3">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
+                60%
+              </div>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Over 60% of outages cost more than $100,000.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-8 rounded-3xl border border-blue-500/30 text-center scroll-animate-scale stagger-4">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
+                $8,600
+              </div>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                The average internal IT employee costs organizations per month.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-8 rounded-3xl border border-orange-500/30 text-center scroll-animate-scale stagger-5 md:col-span-2 lg:col-span-1">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-4">
+                $250
+              </div>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Total IT budgets average per employee per month in Small/Medium Business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Industries Section */}
       <section className="py-32 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
@@ -429,7 +490,7 @@ export default function Home() {
 
             <div className="rounded-3xl overflow-hidden shadow-2xl scroll-animate-right">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.681139661165!2d-73.98731968459394!3d40.75889897932686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.681139661165!2d-73.98731968459394!3d40.75889797932686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
                 width="100%"
                 height="500"
                 style={{ border: 0 }}
