@@ -318,9 +318,9 @@ export default function Home() {
       </section>
 
       {/* IT Confusion and Costs Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+      <section className="py-12 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12 scroll-animate">
+          <div className="text-center mb-8 scroll-animate">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Eliminate IT Confusion and Costs
             </h2>
@@ -329,60 +329,60 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             {/* Left side - Image */}
             <div className="scroll-animate-left">
               <div
                 className="w-full h-64 rounded-2xl bg-cover bg-center shadow-xl"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+                  backgroundImage: `url('/lovable-uploads/bc834bfb-2a94-4a66-93e2-ac8294200a0f.png')`
                 }}
               ></div>
             </div>
 
             {/* Right side - Statistics */}
-            <div className="space-y-3 scroll-animate-right">
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-3 rounded-xl border border-orange-500/30">
-                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+            <div className="space-y-2 scroll-animate-right">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
+                <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
                   76%
                 </div>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-300 leading-relaxed">
                   of organizations experience downtime that leads to data loss.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-3 rounded-xl border border-blue-500/30">
-                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-2 rounded-xl border border-blue-500/30">
+                <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
                   $137-$427
                 </div>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-300 leading-relaxed">
                   The costs of IT downtime for SMBs range per minute.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-3 rounded-xl border border-orange-500/30">
-                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
+                <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
                   60%
                 </div>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-300 leading-relaxed">
                   Over 60% of outages cost more than $100,000.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-3 rounded-xl border border-blue-500/30">
-                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-2 rounded-xl border border-blue-500/30">
+                <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
                   $8,600
                 </div>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-300 leading-relaxed">
                   The average internal IT employee costs organizations per month.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-3 rounded-xl border border-orange-500/30">
-                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
+                <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
                   $250
                 </div>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-300 leading-relaxed">
                   Total IT budgets average per employee per month in Small/Medium Business.
                 </p>
               </div>
