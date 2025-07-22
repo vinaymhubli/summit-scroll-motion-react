@@ -108,12 +108,12 @@ export default function Contact() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-purple-900 via-blue-900 to-black">
+      <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-600 via-blue-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center scroll-animate">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
               Get In 
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
@@ -130,7 +130,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {/* Contact Form */}
-            <div className="bg-gradient-to-br from-purple-900/30 to-black p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-purple-500/20 scroll-animate-left">
+            <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-orange-500/20 scroll-animate-left">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Send us a Message</h2>
               
               {isSubmitted ? (
@@ -154,7 +154,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-colors text-sm sm:text-base touch-manipulation"
+                      className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-colors text-sm sm:text-base touch-manipulation"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -168,7 +168,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-colors text-sm sm:text-base touch-manipulation"
+                      className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-colors text-sm sm:text-base touch-manipulation"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -181,7 +181,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-colors text-sm sm:text-base touch-manipulation"
+                      className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-colors text-sm sm:text-base touch-manipulation"
                       placeholder="Enter your company name"
                     />
                   </div>
@@ -196,7 +196,7 @@ export default function Contact() {
                       required
                       maxLength={500}
                       rows={5}
-                      className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-colors text-sm sm:text-base resize-none touch-manipulation"
+                      className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-colors text-sm sm:text-base resize-none touch-manipulation"
                       placeholder="Tell us about your project or how we can help..."
                     />
                     <p className="text-gray-400 text-xs sm:text-sm mt-2">{formData.message.length}/500 characters</p>
@@ -204,7 +204,7 @@ export default function Contact() {
                   
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 text-sm sm:text-base touch-manipulation min-h-[48px]"
+                    className="w-full bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-700 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base touch-manipulation min-h-[48px]"
                   >
                     Send Message
                   </button>
@@ -256,16 +256,16 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-900/30 to-black p-6 sm:p-8 rounded-2xl border border-purple-500/20 scroll-animate-scale">
+              <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 rounded-2xl border border-orange-500/20 scroll-animate-scale">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Follow Us</h3>
                 <div className="space-y-3 sm:space-y-4">
-                  <a href="#" className="block text-gray-300 hover:text-purple-400 transition-colors cursor-pointer text-sm sm:text-base">
+                  <a href="#" className="block text-gray-300 hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base">
                     Facebook - Stay updated with our latest insights
                   </a>
-                  <a href="#" className="block text-gray-300 hover:text-purple-400 transition-colors cursor-pointer text-sm sm:text-base">
+                  <a href="#" className="block text-gray-300 hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base">
                     LinkedIn - Connect with our professional network
                   </a>
-                  <a href="#" className="block text-gray-300 hover:text-purple-400 transition-colors cursor-pointer text-sm sm:text-base">
+                  <a href="#" className="block text-gray-300 hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base">
                     Twitter - Follow our industry commentary
                   </a>
                 </div>
@@ -284,7 +284,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 sm:py-16 bg-gradient-to-br from-purple-900/20 to-blue-900/20">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-orange-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 scroll-animate">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Visit Our Office</h2>
