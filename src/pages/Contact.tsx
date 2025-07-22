@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -118,7 +119,7 @@ export default function Contact() {
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Ready to take your business to the next level? Let's start a conversation about 
-              how SummitUSA can help you achieve your goals.
+              how Summit Services Corporation can help you achieve your goals.
             </p>
           </div>
         </div>
@@ -219,20 +220,25 @@ export default function Contact() {
                   <div>
                     <h4 className="text-lg font-semibold text-blue-400 mb-2">Office Address</h4>
                     <p className="text-gray-300">
-                      1234 Summit Street<br />
-                      New York, NY 10001<br />
-                      United States
+                      Summit Services Corporation<br />
+                      20511 61st Place West<br />
+                      Lynnwood, WA 98036 (U.S.A)
                     </p>
                   </div>
                   
                   <div>
                     <h4 className="text-lg font-semibold text-blue-400 mb-2">Phone</h4>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-300">1-206-841-0601 Extension 101 (Voice)</p>
                   </div>
                   
                   <div>
-                    <h4 className="text-lg font-semibold text-blue-400 mb-2">Email</h4>
-                    <p className="text-gray-300">info@summitusa.com</p>
+                    <h4 className="text-lg font-semibold text-blue-400 mb-2">Fax</h4>
+                    <p className="text-gray-300">1-206-339-4838</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-400 mb-2">SIP</h4>
+                    <p className="text-gray-300">101@Sip.SummitUSA.com</p>
                   </div>
                   
                   <div>
@@ -265,7 +271,7 @@ export default function Contact() {
                 <h3 className="text-2xl font-bold text-white mb-4">Quick Response</h3>
                 <p className="text-gray-300 leading-relaxed">
                   We typically respond to all inquiries within 24 hours. For urgent matters, 
-                  please call us directly at +1 (555) 123-4567.
+                  please call us directly at 1-206-841-0601 Extension 101.
                 </p>
               </div>
             </div>
@@ -278,12 +284,12 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 scroll-animate">
             <h2 className="text-4xl font-bold text-white mb-4">Visit Our Office</h2>
-            <p className="text-xl text-gray-300">Located in the heart of New York City</p>
+            <p className="text-xl text-gray-300">Located in Lynnwood, Washington</p>
           </div>
           
           <div className="rounded-2xl overflow-hidden shadow-2xl scroll-animate-scale">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.681139661165!2d-73.98731968459394!3d40.75889897932686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.4567!2d-122.315!3d47.821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDQ5JzE1LjYiTiAxMjLCsDE4JzU0LjAiVw!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
               width="100%"
               height="400"
               style={{ border: 0 }}

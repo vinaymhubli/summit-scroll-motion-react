@@ -1,3 +1,4 @@
+
 const Footer = () => {
   return (
     <footer className="bg-black py-16 border-t border-gray-800">
@@ -50,17 +51,19 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-6">Contact</h3>
             <ul className="space-y-3">
-              <li className="text-gray-400">1234 Summit Street</li>
-              <li className="text-gray-400">New York, NY 10001</li>
-              <li><a href="tel:+1234567890" className="text-gray-400 hover:text-purple-400 transition-colors">+1 (234) 567-8900</a></li>
-              <li><a href="mailto:info@summitusa.com" className="text-gray-400 hover:text-purple-400 transition-colors">info@summitusa.com</a></li>
+              <li className="text-gray-400">Summit Services Corporation</li>
+              <li className="text-gray-400">20511 61st Place West</li>
+              <li className="text-gray-400">Lynnwood, WA 98036 (U.S.A)</li>
+              <li><a href="tel:+12068410601" className="text-gray-400 hover:text-purple-400 transition-colors">1-206-841-0601 Ext. 101</a></li>
+              <li className="text-gray-400">Fax: 1-206-339-4838</li>
+              <li><a href="sip:101@Sip.SummitUSA.com" className="text-gray-400 hover:text-purple-400 transition-colors">SIP: 101@Sip.SummitUSA.com</a></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 SummitUSA. All rights reserved. | Privacy Policy | Terms of Service
+            © 2024 Summit Services Corporation. All rights reserved. | Privacy Policy | Terms of Service
           </p>
         </div>
       </div>
