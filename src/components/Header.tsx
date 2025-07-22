@@ -23,10 +23,10 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <Link to="/" className="text-blue-600 hover:text-blue-800 transition-colors font-medium">Home</Link>
-          <Link to="/services" className="text-blue-600 hover:text-blue-800 transition-colors font-medium">Services</Link>
-          <Link to="/about" className="text-blue-600 hover:text-blue-800 transition-colors font-medium">About</Link>
-          <Link to="/contact" className="text-blue-600 hover:text-blue-800 transition-colors font-medium">Contact</Link>
+          <Link to="/" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">Home</Link>
+          <Link to="/services" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">Services</Link>
+          <Link to="/about" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">About</Link>
+          <Link to="/contact" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">Contact</Link>
         </nav>
         
         {/* Desktop CTA Button */}
@@ -37,7 +37,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button 
           onClick={toggleMenu}
-          className="md:hidden text-blue-600 p-2 rounded-lg hover:bg-blue-50 transition-colors"
+          className="md:hidden text-blue-900 p-2 rounded-lg hover:bg-blue-50 transition-colors"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -50,28 +50,28 @@ const Header = () => {
           <nav className="px-4 py-4 space-y-4">
             <Link 
               to="/" 
-              className="block text-blue-600 hover:text-blue-800 transition-colors py-2 text-lg font-medium"
+              className="block text-blue-900 hover:text-blue-700 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/services" 
-              className="block text-blue-600 hover:text-blue-800 transition-colors py-2 text-lg font-medium"
+              className="block text-blue-900 hover:text-blue-700 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
               to="/about" 
-              className="block text-blue-600 hover:text-blue-800 transition-colors py-2 text-lg font-medium"
+              className="block text-blue-900 hover:text-blue-700 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               to="/contact" 
-              className="block text-blue-600 hover:text-blue-800 transition-colors py-2 text-lg font-medium"
+              className="block text-blue-900 hover:text-blue-700 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
