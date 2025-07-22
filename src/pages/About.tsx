@@ -138,7 +138,7 @@ export default function About() {
             </div>
             <div className="relative scroll-animate-right order-1 lg:order-2">
               <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop&crop=center"
+                src="/lovable-uploads/1767dbfd-faff-487c-9581-18becaa9b4ce.png"
                 alt="SummitUSA Technology Team"
                 className="rounded-2xl shadow-2xl object-cover w-full h-64 sm:h-80 lg:h-96 object-center"
               />
