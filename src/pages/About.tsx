@@ -125,12 +125,12 @@ export default function About() {
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4 sm:gap-8 max-w-md mx-auto lg:mx-0">
-                  <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-4 sm:p-6 rounded-2xl border border-purple-500/20">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">500+</h3>
+                  <div className="text-center bg-gradient-to-br from-orange-900/30 to-black/20 p-4 sm:p-6 rounded-2xl border border-orange-500/20">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">500+</h3>
                     <p className="text-gray-300 text-sm sm:text-base">Successful Projects</p>
                   </div>
-                  <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-4 sm:p-6 rounded-2xl border border-blue-500/20">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-blue-400 mb-2">15+</h3>
+                  <div className="text-center bg-gradient-to-br from-orange-900/30 to-black/20 p-4 sm:p-6 rounded-2xl border border-orange-500/20">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">15+</h3>
                     <p className="text-gray-300 text-sm sm:text-base">Industries Served</p>
                   </div>
                 </div>
