@@ -159,7 +159,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
-            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-6 sm:p-8 lg:p-12 rounded-3xl border border-purple-500/30 scroll-animate-left">
+            <div className="bg-gradient-to-br from-orange-500/50 to-blue-900/40 p-6 sm:p-8 lg:p-12 rounded-3xl border border-orange-500/30 scroll-animate-left">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Our Mission</h3>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 SummitUSA empowers businesses to achieve extraordinary growth through innovative technology 
