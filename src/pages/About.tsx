@@ -139,7 +139,6 @@ export default function About() {
                 alt="SummitUSA Technology Team"
                 className="rounded-2xl shadow-2xl object-cover w-full h-96 lg:h-full object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-blue-900/10 rounded-2xl"></div>
             </div>
           </div>
         </div>
