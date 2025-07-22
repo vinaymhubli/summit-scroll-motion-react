@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img 
@@ -23,10 +23,10 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <Link to="/" className="text-gray-300 hover:text-purple-400 transition-colors">Home</Link>
-          <Link to="/services" className="text-gray-300 hover:text-purple-400 transition-colors">Services</Link>
-          <Link to="/about" className="text-gray-300 hover:text-purple-400 transition-colors">About</Link>
-          <Link to="/contact" className="text-gray-300 hover:text-purple-400 transition-colors">Contact</Link>
+          <Link to="/" className="text-blue-600 hover:text-blue-800 transition-colors font-medium">Home</Link>
+          <Link to="/services" className="text-blue-600 hover:text-blue-800 transition-colors font-medium">Services</Link>
+          <Link to="/about" className="text-blue-600 hover:text-blue-800 transition-colors font-medium">About</Link>
+          <Link to="/contact" className="text-blue-600 hover:text-blue-800 transition-colors font-medium">Contact</Link>
         </nav>
         
         {/* Desktop CTA Button */}
@@ -37,7 +37,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button 
           onClick={toggleMenu}
-          className="md:hidden text-white p-2 rounded-lg hover:bg-gray-800 transition-colors"
+          className="md:hidden text-blue-600 p-2 rounded-lg hover:bg-blue-50 transition-colors"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -46,32 +46,32 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-sm border-t border-gray-800">
+        <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
           <nav className="px-4 py-4 space-y-4">
             <Link 
               to="/" 
-              className="block text-gray-300 hover:text-purple-400 transition-colors py-2 text-lg"
+              className="block text-blue-600 hover:text-blue-800 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/services" 
-              className="block text-gray-300 hover:text-purple-400 transition-colors py-2 text-lg"
+              className="block text-blue-600 hover:text-blue-800 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
               to="/about" 
-              className="block text-gray-300 hover:text-purple-400 transition-colors py-2 text-lg"
+              className="block text-blue-600 hover:text-blue-800 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               to="/contact" 
-              className="block text-gray-300 hover:text-purple-400 transition-colors py-2 text-lg"
+              className="block text-blue-600 hover:text-blue-800 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
