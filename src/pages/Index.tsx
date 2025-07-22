@@ -101,27 +101,27 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
             <div className="space-y-4 scroll-animate-scale stagger-1">
               <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                500+
+                1000+
               </div>
-              <p className="text-xl text-gray-300">Success Stories</p>
+              <p className="text-xl text-gray-300">IT Projects Delivered</p>
             </div>
             <div className="space-y-4 scroll-animate-scale stagger-2">
               <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                98%
+                99.9%
               </div>
-              <p className="text-xl text-gray-300">Client Satisfaction</p>
+              <p className="text-xl text-gray-300">System Uptime</p>
             </div>
             <div className="space-y-4 scroll-animate-scale stagger-3">
               <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                15+
+                50+
               </div>
-              <p className="text-xl text-gray-300">Years Experience</p>
+              <p className="text-xl text-gray-300">IT Specialists</p>
             </div>
             <div className="space-y-4 scroll-animate-scale stagger-4">
               <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 24/7
               </div>
-              <p className="text-xl text-gray-300">Expert Support</p>
+              <p className="text-xl text-gray-300">Technical Support</p>
             </div>
           </div>
         </div>
