@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -108,7 +109,7 @@ export default function Home() {
         .typing-cursor::after {
           content: '|';
           animation: blink 1s infinite;
-          color: #a855f7;
+          color: #fb923c;
         }
 
         @keyframes blink {
@@ -157,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-32 bg-gradient-to-br from-black via-gray-900 to-purple-900/20">
+      <section className="py-32 bg-gradient-to-br from-black via-orange-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
             <div className="space-y-4 scroll-animate-scale stagger-1">
@@ -189,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-black">
+      <section className="py-32 bg-gradient-to-br from-orange-900/20 via-blue-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 scroll-animate">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -201,7 +202,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-12 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-left stagger-1">
+            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-12 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-left stagger-1">
               <div
                 className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
                 style={{
@@ -220,7 +221,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/30 p-12 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
+            <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-12 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
               <div
                 className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
                 style={{
@@ -239,7 +240,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-12 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-right stagger-3">
+            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-12 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-right stagger-3">
               <div
                 className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
                 style={{
@@ -262,7 +263,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-32 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
+      <section className="py-32 bg-gradient-to-br from-black via-orange-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 scroll-animate">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -274,7 +275,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-12 rounded-3xl border border-purple-500/20 scroll-animate-left">
+            <div className="bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-12 rounded-3xl border border-orange-500/20 scroll-animate-left">
               <div className="flex items-start space-x-6">
                 <div
                   className="w-20 h-20 rounded-full bg-cover bg-center flex-shrink-0"
@@ -288,13 +289,13 @@ export default function Home() {
                   </p>
                   <div>
                     <p className="text-white font-bold text-xl">Michael Rodriguez</p>
-                    <p className="text-purple-400">CEO, TechVision Solutions</p>
+                    <p className="text-orange-400">CEO, TechVision Solutions</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-12 rounded-3xl border border-blue-500/20 scroll-animate-right">
+            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 p-12 rounded-3xl border border-blue-500/20 scroll-animate-right">
               <div className="flex items-start space-x-6">
                 <div
                   className="w-20 h-20 rounded-full bg-cover bg-center flex-shrink-0"
@@ -318,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* IT Confusion and Costs Section */}
-      <section className="py-12 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+      <section className="py-12 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8 scroll-animate">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -392,7 +393,7 @@ export default function Home() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-32 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black">
+      <section className="py-32 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 scroll-animate">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -404,51 +405,51 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
               <h3 className="text-xl font-bold text-white mb-4">Cloud Computing</h3>
               <p className="text-gray-400">AWS, Azure, Google Cloud</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
+            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
               <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>
               <p className="text-gray-400">Network Security, Data Protection</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-3">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-3">
               <h3 className="text-xl font-bold text-white mb-4">Software Development</h3>
               <p className="text-gray-400">Custom Apps, Web Development</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
+            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
               <h3 className="text-xl font-bold text-white mb-4">Network Infrastructure</h3>
               <p className="text-gray-400">LAN/WAN, VPN, Wireless</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
               <h3 className="text-xl font-bold text-white mb-4">Data Analytics</h3>
               <p className="text-gray-400">Big Data, Business Intelligence</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
+            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
               <h3 className="text-xl font-bold text-white mb-4">AI & Machine Learning</h3>
               <p className="text-gray-400">Automation, Predictive Analytics</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-3">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-3">
               <h3 className="text-xl font-bold text-white mb-4">DevOps</h3>
               <p className="text-gray-400">CI/CD, Container Management</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
               <h3 className="text-xl font-bold text-white mb-4">Database Management</h3>
               <p className="text-gray-400">SQL, NoSQL, Data Migration</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-5">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-5">
               <h3 className="text-xl font-bold text-white mb-4">Mobile Development</h3>
               <p className="text-gray-400">iOS, Android, Cross-Platform</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-6">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-6">
               <h3 className="text-xl font-bold text-white mb-4">IT Consulting</h3>
               <p className="text-gray-400">Digital Strategy, Tech Advisory</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
               <h3 className="text-xl font-bold text-white mb-4">Backup & Recovery</h3>
               <p className="text-gray-400">Disaster Recovery, Data Backup</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
+            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
               <h3 className="text-xl font-bold text-white mb-4">IT Support</h3>
               <p className="text-gray-400">24/7 Help Desk, Remote Support</p>
             </div>
@@ -457,7 +458,7 @@ export default function Home() {
       </section>
 
       {/* Location & Office Section */}
-      <section className="py-32 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+      <section className="py-32 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 scroll-animate">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -470,7 +471,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-8 rounded-3xl border border-purple-500/30 scroll-animate-left stagger-1">
+              <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-8 rounded-3xl border border-orange-500/30 scroll-animate-left stagger-1">
                 <h3 className="text-2xl font-bold text-white mb-4">New York Headquarters</h3>
                 <p className="text-gray-300 mb-4">
                   1234 Summit Street, New York, NY 10001
@@ -480,7 +481,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/30 p-8 rounded-3xl border border-blue-500/30 scroll-animate-left stagger-2">
+              <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-8 rounded-3xl border border-blue-500/30 scroll-animate-left stagger-2">
                 <h3 className="text-2xl font-bold text-white mb-4">San Francisco Innovation Hub</h3>
                 <p className="text-gray-300 mb-4">
                   567 Tech Valley Drive, San Francisco, CA 94105
@@ -490,7 +491,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-8 rounded-3xl border border-purple-500/30 scroll-animate-left stagger-3">
+              <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-8 rounded-3xl border border-orange-500/30 scroll-animate-left stagger-3">
                 <h3 className="text-2xl font-bold text-white mb-4">London European Office</h3>
                 <p className="text-gray-300 mb-4">
                   890 Canary Wharf, London, UK E14 5HQ
@@ -527,7 +528,7 @@ export default function Home() {
             Let's discuss how we can elevate your business to new heights and unlock unprecedented growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-white text-purple-900 px-16 py-6 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer">
+            <button className="bg-white text-orange-900 px-16 py-6 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer">
               Start Your Journey
             </button>
             <button className="border-2 border-white text-white hover:bg-white hover:text-black px-16 py-6 rounded-full text-xl font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer">
