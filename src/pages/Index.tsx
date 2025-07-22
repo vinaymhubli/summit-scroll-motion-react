@@ -60,18 +60,35 @@ export default function Home() {
         .stagger-4 { transition-delay: 0.4s; }
         .stagger-5 { transition-delay: 0.5s; }
         .stagger-6 { transition-delay: 0.6s; }
+
+        .hero-zoom {
+          animation: zoomIn 20s ease-out infinite alternate;
+        }
+
+        @keyframes zoomIn {
+          0% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.1);
+          }
+        }
         `
       }} />
 
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 hero-zoom"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-purple-900/60 to-blue-900/40"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center py-32">
@@ -297,7 +314,7 @@ export default function Home() {
               <h3 className="text-xl font-bold text-white mb-4">DevOps</h3>
               <p className="text-gray-400">CI/CD, Container Management</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
+            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
               <h3 className="text-xl font-bold text-white mb-4">Database Management</h3>
               <p className="text-gray-400">SQL, NoSQL, Data Migration</p>
             </div>
