@@ -168,7 +168,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-6 sm:p-8 lg:p-12 rounded-3xl border border-blue-500/30 scroll-animate-right">
+            <div className="bg-gradient-to-br from-orange-500/50 to-blue-900/40 p-6 sm:p-8 lg:p-12 rounded-3xl border border-orange-500/30 scroll-animate-right">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Our Vision</h3>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 To be the premier technology consulting partner that organizations worldwide trust to navigate 
