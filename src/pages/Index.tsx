@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [typedText, setTypedText] = useState('');
-  const fullText = 'Summit';
+  const fullText = 'Summit USA';
 
   useEffect(() => {
     let currentIndex = 0;
@@ -120,9 +120,11 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center py-32">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-            <span className="typing-cursor">{typedText}</span>
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              USA
+            <span className="typing-cursor">
+              <span className="text-white">{typedText.slice(0, 6)}</span>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                {typedText.slice(6)}
+              </span>
             </span>
           </h1>
           <p className="text-2xl md:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
