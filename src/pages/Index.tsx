@@ -1,30 +1,29 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { TypeAnimation } from 'react-type-animation';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 
-export default function Home() {
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const [typedText, setTypedText] = useState('');
-  const fullText = 'Summit USA';
+export default function Index() {
+  const [isMobile, setIsMobile] = useState(false);
+  const textRef = useRef(null);
 
   useEffect(() => {
-    let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setTypedText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, 200);
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-    return () => clearInterval(typingInterval);
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
   }, []);
 
   useEffect(() => {
-    observerRef.current = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -41,424 +40,326 @@ export default function Home() {
     const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale');
     elements.forEach((el) => {
       el.classList.remove('animate-in');
-      observerRef.current?.observe(el);
+      observer.observe(el);
     });
 
     return () => {
-      observerRef.current?.disconnect();
+      observer.disconnect();
     };
   }, []);
 
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .scroll-animate,
+      .scroll-animate-left,
+      .scroll-animate-right,
+      .scroll-animate-scale {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .scroll-animate {
+        transform: translateY(50px);
+      }
+
+      .scroll-animate-left {
+        transform: translateX(-50px);
+      }
+
+      .scroll-animate-right {
+        transform: translateX(50px);
+      }
+
+      .scroll-animate-scale {
+        transform: scale(0.9);
+      }
+
+      .scroll-animate.animate-in,
+      .scroll-animate-left.animate-in,
+      .scroll-animate-right.animate-in,
+      .scroll-animate-scale.animate-in {
+        opacity: 1;
+        transform: none;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
+  const particlesInit = async (engine: any) => {
+    await loadFull(engine);
+  };
+
   return (
-    <div className="min-h-screen bg-black text-white">
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        .scroll-animate,
-        .scroll-animate-left,
-        .scroll-animate-right,
-        .scroll-animate-scale {
-          opacity: 0;
-          transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .scroll-animate {
-          transform: translateY(50px);
-        }
-
-        .scroll-animate-left {
-          transform: translateX(-50px);
-        }
-
-        .scroll-animate-right {
-          transform: translateX(50px);
-        }
-
-        .scroll-animate-scale {
-          transform: scale(0.9);
-        }
-
-        .scroll-animate.animate-in,
-        .scroll-animate-left.animate-in,
-        .scroll-animate-right.animate-in,
-        .scroll-animate-scale.animate-in {
-          opacity: 1;
-          transform: none;
-        }
-
-        .stagger-1 { transition-delay: 0.1s; }
-        .stagger-2 { transition-delay: 0.2s; }
-        .stagger-3 { transition-delay: 0.3s; }
-        .stagger-4 { transition-delay: 0.4s; }
-        .stagger-5 { transition-delay: 0.5s; }
-        .stagger-6 { transition-delay: 0.6s; }
-
-        .hero-zoom {
-          animation: zoomIn 20s ease-out infinite alternate;
-        }
-
-        @keyframes zoomIn {
-          0% {
-            transform: scale(1);
-          }
-          100% {
-            transform: scale(1.1);
-          }
-        }
-
-        .typing-cursor::after {
-          content: '|';
-          animation: blink 1s infinite;
-          color: #a855f7;
-        }
-
-        @keyframes blink {
-          0%, 50% { opacity: 1; }
-          51%, 100% { opacity: 0; }
-        }
-        `
-      }} />
-
+    <div className="min-h-screen bg-black">
       <Header />
-
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 hero-zoom"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-black">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          options={{
+            fullScreen: {
+              enable: false,
+            },
+            particles: {
+              number: {
+                value: isMobile ? 30 : 50,
+                density: {
+                  enable: true,
+                  area: 800,
+                },
+              },
+              color: {
+                value: ["#793DFF", "#598BFF"],
+              },
+              shape: {
+                type: "circle",
+              },
+              opacity: {
+                value: 0.5,
+              },
+              size: {
+                value: { min: 1, max: 3 },
+              },
+              links: {
+                enable: true,
+                distance: 150,
+                color: "#808080",
+                opacity: 0.4,
+                width: 1,
+              },
+              move: {
+                enable: true,
+                speed: 1,
+                direction: "none",
+                random: false,
+                straight: false,
+                outModes: {
+                  default: "bounce",
+                },
+                attract: {
+                  enable: false,
+                  distance: 200,
+                  rotate: {
+                    x: 600,
+                    y: 1200,
+                  },
+                },
+              },
+            },
+            interactivity: {
+              detectsOn: "canvas",
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+                onClick: {
+                  enable: true,
+                  mode: "push",
+                },
+                resize: true,
+              },
+              modes: {
+                repulse: {
+                  distance: 100,
+                  duration: 0.4,
+                },
+                push: {
+                  quantity: 4,
+                },
+              },
+            },
+            retina_detect: true,
           }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-purple-900/60 to-blue-900/40"></div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center py-32">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-            <span className="typing-cursor">
-              <span className="text-white">{typedText.slice(0, 6)}</span>
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                {typedText.slice(6)}
+        />
+        
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+          <div className="scroll-animate">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span ref={textRef} className="text-white">
+                <TypeAnimation
+                  sequence={[
+                    'Strategic Consulting',
+                    1000,
+                    'Digital Transformation',
+                    1000,
+                    'Business Intelligence',
+                    1000
+                  ]}
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
+                  style={{ fontSize: '1em', display: 'inline-block' }}
+                />
               </span>
-            </span>
-          </h1>
-          <p className="text-2xl md:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            The Future of IT Starts with Predictable, Scalable Support
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-12 py-4 rounded-full text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50 whitespace-nowrap cursor-pointer">
-              Get Started Today
-            </button>
-            <button className="border-2 border-white text-white px-12 py-4 rounded-full text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap cursor-pointer">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="py-32 bg-gradient-to-br from-black via-gray-900 to-purple-900/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-            <div className="space-y-4 scroll-animate-scale stagger-1">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                1000+
-              </div>
-              <p className="text-xl text-gray-300">IT Projects Delivered</p>
-            </div>
-            <div className="space-y-4 scroll-animate-scale stagger-2">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                99.9%
-              </div>
-              <p className="text-xl text-gray-300">System Uptime</p>
-            </div>
-            <div className="space-y-4 scroll-animate-scale stagger-3">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                50+
-              </div>
-              <p className="text-xl text-gray-300">IT Specialists</p>
-            </div>
-            <div className="space-y-4 scroll-animate-scale stagger-4">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                24/7
-              </div>
-              <p className="text-xl text-gray-300">Technical Support</p>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                SummitUSA
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Transform your business with our cutting-edge consulting services. 
+              We deliver strategic solutions that drive growth, innovation, and lasting success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-32 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-black">
+      {/* Stats Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-animate">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center scroll-animate">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-sm text-gray-300">Projects Completed</div>
+            </div>
+            <div className="text-center scroll-animate">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">98%</div>
+              <div className="text-sm text-gray-300">Client Satisfaction</div>
+            </div>
+            <div className="text-center scroll-animate">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">150+</div>
+              <div className="text-sm text-gray-300">Expert Consultants</div>
+            </div>
+            <div className="text-center scroll-animate">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+              <div className="text-sm text-gray-300">Support Available</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview */}
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Expertise
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Comprehensive solutions tailored to your business needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="bg-gradient-to-br from-purple-900/30 to-black p-8 rounded-2xl border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 scroll-animate-left">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-4a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-3">Strategic Consulting</h3>
+              <p className="text-sm text-gray-300 leading-relaxed">
+                Navigate complex business challenges with our expert strategic guidance and data-driven insights.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-900/30 to-black p-8 rounded-2xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 scroll-animate">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-3">Digital Transformation</h3>
+              <p className="text-sm text-gray-300 leading-relaxed">
+                Modernize your operations with cutting-edge technology solutions and digital innovation strategies.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-900/30 to-black p-8 rounded-2xl border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 scroll-animate-right">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-3">Performance Analytics</h3>
+              <p className="text-sm text-gray-300 leading-relaxed">
+                Optimize your business performance with comprehensive analytics and actionable intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose SummitUSA?
             </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
-              We deliver cutting-edge IT solutions through proven technologies and innovative approaches that transform businesses across every industry
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Experience the difference that comes with working alongside industry leaders
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-12 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-left stagger-1">
-              <div
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                }}
-              ></div>
-              <h3 className="text-3xl font-bold text-white mb-6">Cloud Solutions</h3>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Comprehensive cloud infrastructure and migration services that scale with your business needs, ensuring maximum uptime and performance optimization.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• AWS, Azure, Google Cloud</li>
-                <li>• Cloud migration & optimization</li>
-                <li>• Scalable infrastructure</li>
-                <li>• 24/7 monitoring & support</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/30 p-12 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
-              <div
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                }}
-              ></div>
-              <h3 className="text-3xl font-bold text-white mb-6">Cybersecurity</h3>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Advanced security solutions to protect your digital assets with multi-layered defense strategies and real-time threat monitoring.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Network security & firewalls</li>
-                <li>• Data encryption & protection</li>
-                <li>• Threat detection & response</li>
-                <li>• Compliance & risk management</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-12 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-right stagger-3">
-              <div
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                }}
-              ></div>
-              <h3 className="text-3xl font-bold text-white mb-6">Custom Development</h3>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Tailored software solutions and applications built with modern technologies to streamline your business processes and enhance productivity.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Web & mobile applications</li>
-                <li>• API development & integration</li>
-                <li>• Database design & optimization</li>
-                <li>• Agile development processes</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-32 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-animate">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              What Our Clients Say
-            </h2>
-            <p className="text-2xl text-gray-300 max-w-3xl mx-auto">
-              Hear from business leaders who've transformed their organizations with SummitUSA
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-12 rounded-3xl border border-purple-500/20 scroll-animate-left">
-              <div className="flex items-start space-x-6">
-                <div
-                  className="w-20 h-20 rounded-full bg-cover bg-center flex-shrink-0"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                  }}
-                ></div>
-                <div>
-                  <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                    "SummitUSA transformed our entire business model. Their strategic insights and implementation expertise helped us achieve 300% growth in just 18 months. Absolutely exceptional service."
-                  </p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="scroll-animate-left">
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="text-white font-bold text-xl">Michael Rodriguez</p>
-                    <p className="text-purple-400">CEO, TechVision Solutions</p>
+                    <h3 className="text-lg font-semibold text-white mb-2">Proven Track Record</h3>
+                    <p className="text-sm text-gray-300">Over 500 successful projects delivered across various industries with measurable results.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Innovation Focus</h3>
+                    <p className="text-sm text-gray-300">Cutting-edge solutions that leverage the latest technologies and industry best practices.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
+                    <p className="text-sm text-gray-300">150+ certified consultants with deep industry expertise and proven methodologies.</p>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-12 rounded-3xl border border-blue-500/20 scroll-animate-right">
-              <div className="flex items-start space-x-6">
-                <div
-                  className="w-20 h-20 rounded-full bg-cover bg-center flex-shrink-0"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80')`
-                  }}
-                ></div>
-                <div>
-                  <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                    "The level of expertise and dedication from the SummitUSA team is unmatched. They didn't just consult - they became true partners in our success journey."
-                  </p>
-                  <div>
-                    <p className="text-white font-bold text-xl">Sarah Chen</p>
-                    <p className="text-blue-400">Founder, InnovateNow</p>
-                  </div>
-                </div>
+            
+            <div className="scroll-animate-right">
+              <div className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20">
+                <h3 className="text-xl font-bold text-white mb-6">Ready to Get Started?</h3>
+                <p className="text-sm text-gray-300 mb-6">
+                  Join hundreds of satisfied clients who have transformed their businesses with our expertise.
+                </p>
+                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                  Schedule Free Consultation
+                </button>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-32 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-animate">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              IT Industries We Serve
-            </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
-              Comprehensive IT support and digital transformation across all technology sectors
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
-              <h3 className="text-xl font-bold text-white mb-4">Cloud Computing</h3>
-              <p className="text-gray-400">AWS, Azure, Google Cloud</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
-              <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>
-              <p className="text-gray-400">Network Security, Data Protection</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-3">
-              <h3 className="text-xl font-bold text-white mb-4">Software Development</h3>
-              <p className="text-gray-400">Custom Apps, Web Development</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
-              <h3 className="text-xl font-bold text-white mb-4">Network Infrastructure</h3>
-              <p className="text-gray-400">LAN/WAN, VPN, Wireless</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
-              <h3 className="text-xl font-bold text-white mb-4">Data Analytics</h3>
-              <p className="text-gray-400">Big Data, Business Intelligence</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
-              <h3 className="text-xl font-bold text-white mb-4">AI & Machine Learning</h3>
-              <p className="text-gray-400">Automation, Predictive Analytics</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-3">
-              <h3 className="text-xl font-bold text-white mb-4">DevOps</h3>
-              <p className="text-gray-400">CI/CD, Container Management</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
-              <h3 className="text-xl font-bold text-white mb-4">Database Management</h3>
-              <p className="text-gray-400">SQL, NoSQL, Data Migration</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-5">
-              <h3 className="text-xl font-bold text-white mb-4">Mobile Development</h3>
-              <p className="text-gray-400">iOS, Android, Cross-Platform</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-6">
-              <h3 className="text-xl font-bold text-white mb-4">IT Consulting</h3>
-              <p className="text-gray-400">Digital Strategy, Tech Advisory</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-900/30 to-blue-900/20 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
-              <h3 className="text-xl font-bold text-white mb-4">Backup & Recovery</h3>
-              <p className="text-gray-400">Disaster Recovery, Data Backup</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
-              <h3 className="text-xl font-bold text-white mb-4">IT Support</h3>
-              <p className="text-gray-400">24/7 Help Desk, Remote Support</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location & Office Section */}
-      <section className="py-32 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-animate">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Our Global Presence
-            </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
-              Strategically located to serve clients worldwide with local expertise and global reach
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-8 rounded-3xl border border-purple-500/30 scroll-animate-left stagger-1">
-                <h3 className="text-2xl font-bold text-white mb-4">New York Headquarters</h3>
-                <p className="text-gray-300 mb-4">
-                  1234 Summit Street, New York, NY 10001
-                </p>
-                <p className="text-gray-400">
-                  Our flagship office in the heart of Manhattan, serving as the global command center for strategic operations and client partnerships.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/30 p-8 rounded-3xl border border-blue-500/30 scroll-animate-left stagger-2">
-                <h3 className="text-2xl font-bold text-white mb-4">San Francisco Innovation Hub</h3>
-                <p className="text-gray-300 mb-4">
-                  567 Tech Valley Drive, San Francisco, CA 94105
-                </p>
-                <p className="text-gray-400">
-                  Our West Coast innovation center focused on emerging technologies and digital transformation initiatives.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-8 rounded-3xl border border-purple-500/30 scroll-animate-left stagger-3">
-                <h3 className="text-2xl font-bold text-white mb-4">London European Office</h3>
-                <p className="text-gray-300 mb-4">
-                  890 Canary Wharf, London, UK E14 5HQ
-                </p>
-                <p className="text-gray-400">
-                  Our European headquarters providing strategic consulting services across the UK and continental Europe.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-3xl overflow-hidden shadow-2xl scroll-animate-right">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.681139661165!2d-73.98731968459394!3d40.75889897932686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
-                width="100%"
-                height="500"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900">
-        <div className="max-w-5xl mx-auto px-6 text-center scroll-animate">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-            Ready to Summit Your Goals?
-          </h2>
-          <p className="text-2xl text-gray-200 mb-12 leading-relaxed">
-            Join hundreds of successful businesses who have transformed their operations with SummitUSA. 
-            Let's discuss how we can elevate your business to new heights and unlock unprecedented growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-white text-purple-900 px-16 py-6 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer">
-              Start Your Journey
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-black px-16 py-6 rounded-full text-xl font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer">
-              Schedule Consultation
-            </button>
           </div>
         </div>
       </section>
