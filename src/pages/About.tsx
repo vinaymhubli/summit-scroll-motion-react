@@ -229,64 +229,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 scroll-animate">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              SummitUSA Leadership Team
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Meet the visionary leaders driving SummitUSA's mission and technological innovation forward
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-left">
-              <img
-                src="https://readdy.ai/api/search-image?query=Professional%20CEO%20executive%20portrait%2C%20confident%20business%20leader%20in%20dark%20suit%2C%20corporate%20headshot%20with%20purple%20accent%20lighting%2C%20modern%20office%20background%2C%20high-end%20professional%20photography%2C%20sophisticated%20business%20portrait&width=400&height=500&seq=ceo-portrait-summit-1&orientation=portrait"
-                alt="Sarah Mitchell - CEO of SummitUSA"
-                className="w-64 h-80 object-cover object-top rounded-2xl mx-auto mb-6 shadow-2xl"
-              />
-              <h3 className="text-2xl font-bold text-white mb-2">Sarah Mitchell</h3>
-              <p className="text-purple-400 font-semibold mb-4">Chief Executive Officer</p>
-              <p className="text-gray-300 leading-relaxed">
-                With over 20 years of experience in technology consulting and business transformation, 
-                Sarah leads SummitUSA with a vision for sustainable growth, client success, and technological innovation.
-              </p>
-            </div>
-            
-            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20 scroll-animate">
-              <img
-                src="https://readdy.ai/api/search-image?query=Professional%20CTO%20technology%20executive%20portrait%2C%20confident%20tech%20leader%20in%20business%20attire%2C%20corporate%20headshot%20with%20blue%20accent%20lighting%2C%20modern%20tech%20office%20background%2C%20high-end%20professional%20photography%2C%20innovative%20business%20portrait&width=400&height=500&seq=cto-portrait-summit-1&orientation=portrait"
-                alt="Michael Chen - CTO of SummitUSA"
-                className="w-64 h-80 object-cover object-top rounded-2xl mx-auto mb-6 shadow-2xl"
-              />
-              <h3 className="text-2xl font-bold text-white mb-2">Michael Chen</h3>
-              <p className="text-blue-400 font-semibold mb-4">Chief Technology Officer</p>
-              <p className="text-gray-300 leading-relaxed">
-                Michael brings deep technical expertise and innovation leadership to SummitUSA, driving our 
-                technology strategy and ensuring we stay at the forefront of digital transformation trends.
-              </p>
-            </div>
-            
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-right">
-              <img
-                src="https://readdy.ai/api/search-image?query=Professional%20COO%20operations%20executive%20portrait%2C%20confident%20business%20operations%20leader%20in%20professional%20attire%2C%20corporate%20headshot%20with%20purple%20accent%20lighting%2C%20modern%20corporate%20office%20background%2C%20high-end%20professional%20photography%2C%20executive%20business%20portrait&width=400&height=500&seq=coo-portrait-summit-1&orientation=portrait"
-                alt="Jennifer Rodriguez - COO of SummitUSA"
-                className="w-64 h-80 object-cover object-top rounded-2xl mx-auto mb-6 shadow-2xl"
-              />
-              <h3 className="text-2xl font-bold text-white mb-2">Jennifer Rodriguez</h3>
-              <p className="text-purple-400 font-semibold mb-4">Chief Operating Officer</p>
-              <p className="text-gray-300 leading-relaxed">
-                Jennifer oversees SummitUSA's operational excellence and client delivery, ensuring every 
-                engagement meets our high standards for quality, innovation, and client satisfaction.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose SummitUSA */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
