@@ -1,4 +1,5 @@
 
+
 const Footer = () => {
   return (
     <footer className="bg-black py-12 sm:py-16 border-t border-gray-800">
@@ -16,13 +17,13 @@ const Footer = () => {
               Transforming businesses through strategic innovation and peak performance solutions.
             </p>
             <div className="flex space-x-3 sm:space-x-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-orange-500 to-blue-900 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
                 <span className="text-white text-xs sm:text-sm">f</span>
               </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-orange-500 to-blue-900 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
                 <span className="text-white text-xs sm:text-sm">in</span>
               </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-orange-500 to-blue-900 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
                 <span className="text-white text-xs sm:text-sm">t</span>
               </div>
             </div>
@@ -72,3 +73,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
