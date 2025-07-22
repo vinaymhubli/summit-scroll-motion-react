@@ -1,10 +1,9 @@
-
 import { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { TypeAnimation } from 'react-type-animation';
 import { useCallback } from "react";
-import Particles from "react-particles";
+import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
 export default function Index() {
