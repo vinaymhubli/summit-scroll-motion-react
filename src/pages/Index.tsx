@@ -137,7 +137,7 @@ export default function Home() {
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
             <span className="typing-cursor">
               <span className="text-white">{typedText.slice(0, 6)}</span>
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                 {typedText.slice(6)}
               </span>
             </span>
