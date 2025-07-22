@@ -185,7 +185,7 @@ export default function Home() {
                   backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
                 }}
               ></div>
-              <h3 className="text-2xl font-bold text-white mb-6">Custom Development</h3>
+              <h3 className="text-3xl font-bold text-white mb-6">Custom Development</h3>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 Tailored software solutions and applications built with modern technologies to streamline your business processes and enhance productivity.
               </p>
