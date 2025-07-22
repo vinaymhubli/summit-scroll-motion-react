@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -11,6 +10,75 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale');
+    elements.forEach((el) => {
+      el.classList.remove('animate-in');
+      observerRef.current?.observe(el);
+    });
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .scroll-animate,
+      .scroll-animate-left,
+      .scroll-animate-right,
+      .scroll-animate-scale {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .scroll-animate {
+        transform: translateY(50px);
+      }
+
+      .scroll-animate-left {
+        transform: translateX(-50px);
+      }
+
+      .scroll-animate-right {
+        transform: translateX(50px);
+      }
+
+      .scroll-animate-scale {
+        transform: scale(0.9);
+      }
+
+      .scroll-animate.animate-in,
+      .scroll-animate-left.animate-in,
+      .scroll-animate-right.animate-in,
+      .scroll-animate-scale.animate-in {
+        opacity: 1;
+        transform: none;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -41,7 +109,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 bg-gradient-to-br from-purple-900 via-blue-900 to-black">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center">
+          <div className="text-center scroll-animate">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Get In 
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -61,7 +129,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="bg-gradient-to-br from-purple-900/30 to-black p-12 rounded-3xl border border-purple-500/20">
+            <div className="bg-gradient-to-br from-purple-900/30 to-black p-12 rounded-3xl border border-purple-500/20 scroll-animate-left">
               <h2 className="text-3xl font-bold text-white mb-8">Send us a Message</h2>
               
               {isSubmitted ? (
@@ -144,8 +212,8 @@ export default function Contact() {
             </div>
             
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div className="bg-gradient-to-br from-blue-900/30 to-black p-8 rounded-2xl border border-blue-500/20">
+            <div className="space-y-8 scroll-animate-right">
+              <div className="bg-gradient-to-br from-blue-900/30 to-black p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale">
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div>
@@ -178,7 +246,7 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-900/30 to-black p-8 rounded-2xl border border-purple-500/20">
+              <div className="bg-gradient-to-br from-purple-900/30 to-black p-8 rounded-2xl border border-purple-500/20 scroll-animate-scale">
                 <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
                 <div className="space-y-4">
                   <a href="#" className="block text-gray-300 hover:text-purple-400 transition-colors cursor-pointer">
@@ -193,7 +261,7 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-blue-900/30 to-black p-8 rounded-2xl border border-blue-500/20">
+              <div className="bg-gradient-to-br from-blue-900/30 to-black p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale">
                 <h3 className="text-2xl font-bold text-white mb-4">Quick Response</h3>
                 <p className="text-gray-300 leading-relaxed">
                   We typically respond to all inquiries within 24 hours. For urgent matters, 
@@ -208,12 +276,12 @@ export default function Contact() {
       {/* Map Section */}
       <section className="py-16 bg-gradient-to-br from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 scroll-animate">
             <h2 className="text-4xl font-bold text-white mb-4">Visit Our Office</h2>
             <p className="text-xl text-gray-300">Located in the heart of New York City</p>
           </div>
           
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <div className="rounded-2xl overflow-hidden shadow-2xl scroll-animate-scale">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.681139661165!2d-73.98731968459394!3d40.75889897932686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
               width="100%"

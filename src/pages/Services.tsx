@@ -1,10 +1,80 @@
-
 'use client';
 
+import { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Services() {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale');
+    elements.forEach((el) => {
+      el.classList.remove('animate-in');
+      observerRef.current?.observe(el);
+    });
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .scroll-animate,
+      .scroll-animate-left,
+      .scroll-animate-right,
+      .scroll-animate-scale {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .scroll-animate {
+        transform: translateY(50px);
+      }
+
+      .scroll-animate-left {
+        transform: translateX(-50px);
+      }
+
+      .scroll-animate-right {
+        transform: translateX(50px);
+      }
+
+      .scroll-animate-scale {
+        transform: scale(0.9);
+      }
+
+      .scroll-animate.animate-in,
+      .scroll-animate-left.animate-in,
+      .scroll-animate-right.animate-in,
+      .scroll-animate-scale.animate-in {
+        opacity: 1;
+        transform: none;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-black">
       <Header />
@@ -12,7 +82,7 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 bg-gradient-to-br from-purple-900 via-blue-900 to-black">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center">
+          <div className="text-center scroll-animate">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               SummitUSA 
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -30,7 +100,7 @@ export default function Services() {
       {/* Core Technology Services */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Technology Solutions
             </h2>
@@ -40,7 +110,7 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 scroll-animate-left">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
@@ -58,7 +128,7 @@ export default function Services() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 scroll-animate">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -76,7 +146,7 @@ export default function Services() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 scroll-animate-right">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -96,7 +166,7 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300">
+            <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 scroll-animate-left">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -114,7 +184,7 @@ export default function Services() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+            <div className="bg-gradient-to-br from-purple-900/40 to-black/30 p-8 rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 scroll-animate-right">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
@@ -138,7 +208,7 @@ export default function Services() {
       {/* Industries We Serve */}
       <section className="py-24 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>
@@ -148,42 +218,42 @@ export default function Services() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20 scroll-animate-scale">
               <h3 className="text-xl font-bold text-white mb-3">Financial Services</h3>
               <p className="text-gray-300">Banking, Insurance, Investment Management</p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20">
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale">
               <h3 className="text-xl font-bold text-white mb-3">Healthcare</h3>
               <p className="text-gray-300">Hospitals, Clinics, Health Tech Companies</p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20 scroll-animate-scale">
               <h3 className="text-xl font-bold text-white mb-3">Manufacturing</h3>
               <p className="text-gray-300">Industrial Automation, Supply Chain</p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20">
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale">
               <h3 className="text-xl font-bold text-white mb-3">Retail & E-commerce</h3>
               <p className="text-gray-300">Online Stores, Point-of-Sale Systems</p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20">
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale">
               <h3 className="text-xl font-bold text-white mb-3">Education</h3>
               <p className="text-gray-300">Universities, K-12 Schools, EdTech</p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20 scroll-animate-scale">
               <h3 className="text-xl font-bold text-white mb-3">Government</h3>
               <p className="text-gray-300">Federal, State, and Local Agencies</p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20">
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale">
               <h3 className="text-xl font-bold text-white mb-3">Energy & Utilities</h3>
               <p className="text-gray-300">Power Generation, Smart Grid Solutions</p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-2xl border border-purple-500/20 scroll-animate-scale">
               <h3 className="text-xl font-bold text-white mb-3">Transportation</h3>
               <p className="text-gray-300">Logistics, Fleet Management, Transit</p>
             </div>
@@ -194,7 +264,7 @@ export default function Services() {
       {/* SummitUSA Process */}
       <section className="py-24 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               The SummitUSA Process
             </h2>
@@ -204,7 +274,7 @@ export default function Services() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-left">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
@@ -214,7 +284,7 @@ export default function Services() {
               </p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20">
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20 scroll-animate">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
@@ -224,7 +294,7 @@ export default function Services() {
               </p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
@@ -234,7 +304,7 @@ export default function Services() {
               </p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20">
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20 scroll-animate-right">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
@@ -250,7 +320,7 @@ export default function Services() {
       {/* Technologies */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Technologies We Master
             </h2>
@@ -260,27 +330,27 @@ export default function Services() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10">
+            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10 scroll-animate-scale">
               <h4 className="text-white font-semibold mb-2">React</h4>
               <p className="text-gray-400 text-sm">Frontend Development</p>
             </div>
-            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10">
+            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10 scroll-animate-scale">
               <h4 className="text-white font-semibold mb-2">Node.js</h4>
               <p className="text-gray-400 text-sm">Backend Development</p>
             </div>
-            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10">
+            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10 scroll-animate-scale">
               <h4 className="text-white font-semibold mb-2">Python</h4>
               <p className="text-gray-400 text-sm">AI & Data Science</p>
             </div>
-            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10">
+            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10 scroll-animate-scale">
               <h4 className="text-white font-semibold mb-2">AWS</h4>
               <p className="text-gray-400 text-sm">Cloud Platform</p>
             </div>
-            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10">
+            <div className="text-center bg-gradient-to-br from-purple-900/20 to-blue-900/10 p-6 rounded-2xl border border-purple-500/10 scroll-animate-scale">
               <h4 className="text-white font-semibold mb-2">Docker</h4>
               <p className="text-gray-400 text-sm">Containerization</p>
             </div>
-            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10">
+            <div className="text-center bg-gradient-to-br from-blue-900/20 to-purple-900/10 p-6 rounded-2xl border border-blue-500/10 scroll-animate-scale">
               <h4 className="text-white font-semibold mb-2">Kubernetes</h4>
               <p className="text-gray-400 text-sm">Orchestration</p>
             </div>
@@ -290,7 +360,7 @@ export default function Services() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-6 text-center scroll-animate-scale">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Partner with SummitUSA?
           </h2>

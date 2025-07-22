@@ -1,10 +1,80 @@
-
 'use client';
 
+import { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function About() {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale');
+    elements.forEach((el) => {
+      el.classList.remove('animate-in');
+      observerRef.current?.observe(el);
+    });
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .scroll-animate,
+      .scroll-animate-left,
+      .scroll-animate-right,
+      .scroll-animate-scale {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .scroll-animate {
+        transform: translateY(50px);
+      }
+
+      .scroll-animate-left {
+        transform: translateX(-50px);
+      }
+
+      .scroll-animate-right {
+        transform: translateX(50px);
+      }
+
+      .scroll-animate-scale {
+        transform: scale(0.9);
+      }
+
+      .scroll-animate.animate-in,
+      .scroll-animate-left.animate-in,
+      .scroll-animate-right.animate-in,
+      .scroll-animate-scale.animate-in {
+        opacity: 1;
+        transform: none;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-black">
       <Header />
@@ -12,7 +82,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 bg-gradient-to-br from-purple-900 via-blue-900 to-black">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center">
+          <div className="text-center scroll-animate">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               About 
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -31,37 +101,39 @@ export default function About() {
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">The SummitUSA Story</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Founded in 2015, SummitUSA emerged from a vision to bridge the gap between business ambitions 
-                and technological possibilities. Our founders, seasoned technology executives with decades of 
-                combined experience, recognized that many organizations struggle to harness the full potential 
-                of modern technology solutions.
-              </p>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Today, SummitUSA stands as a trusted technology partner to over 500 companies across various 
-                industries, from innovative startups to Fortune 500 enterprises. Our comprehensive approach 
-                combines strategic thinking, technical expertise, and deep industry knowledge to deliver 
-                solutions that create lasting competitive advantages.
-              </p>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                At SummitUSA, every client engagement is an opportunity to push technological boundaries, 
-                challenge conventional thinking, and unlock new possibilities for growth and innovation.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-8">
-                <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-6 rounded-2xl border border-purple-500/20">
-                  <h3 className="text-3xl font-bold text-purple-400 mb-2">500+</h3>
-                  <p className="text-gray-300">Successful Projects</p>
-                </div>
-                <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-6 rounded-2xl border border-blue-500/20">
-                  <h3 className="text-3xl font-bold text-blue-400 mb-2">15+</h3>
-                  <p className="text-gray-300">Industries Served</p>
+            <div className="scroll-animate-left">
+              <div className="text-center">
+                <h2 className="text-4xl font-bold text-white mb-6">The SummitUSA Story</h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  Founded in 2015, SummitUSA emerged from a vision to bridge the gap between business ambitions 
+                  and technological possibilities. Our founders, seasoned technology executives with decades of 
+                  combined experience, recognized that many organizations struggle to harness the full potential 
+                  of modern technology solutions.
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  Today, SummitUSA stands as a trusted technology partner to over 500 companies across various 
+                  industries, from innovative startups to Fortune 500 enterprises. Our comprehensive approach 
+                  combines strategic thinking, technical expertise, and deep industry knowledge to deliver 
+                  solutions that create lasting competitive advantages.
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                  At SummitUSA, every client engagement is an opportunity to push technological boundaries, 
+                  challenge conventional thinking, and unlock new possibilities for growth and innovation.
+                </p>
+                
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-6 rounded-2xl border border-purple-500/20">
+                    <h3 className="text-3xl font-bold text-purple-400 mb-2">500+</h3>
+                    <p className="text-gray-300">Successful Projects</p>
+                  </div>
+                  <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-6 rounded-2xl border border-blue-500/20">
+                    <h3 className="text-3xl font-bold text-blue-400 mb-2">15+</h3>
+                    <p className="text-gray-300">Industries Served</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative scroll-animate-right">
               <img
                 src="https://readdy.ai/api/search-image?query=Modern%20corporate%20technology%20team%20meeting%20in%20sleek%20boardroom%20with%20city%20skyline%20view%2C%20professional%20business%20people%20collaborating%20around%20conference%20table%20with%20laptops%20and%20displays%2C%20dark%20elegant%20office%20interior%20with%20purple%20accent%20lighting%2C%20contemporary%20business%20environment%2C%20high-end%20corporate%20photography%20style&width=600&height=800&seq=summit-team-1&orientation=portrait"
                 alt="SummitUSA Technology Team"
@@ -76,7 +148,7 @@ export default function About() {
       {/* Mission, Vision & Values */}
       <section className="py-24 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               SummitUSA Mission & Values
             </h2>
@@ -86,7 +158,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-12 rounded-3xl border border-purple-500/30">
+            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-12 rounded-3xl border border-purple-500/30 scroll-animate-left">
               <h3 className="text-3xl font-bold text-white mb-6">Our Mission</h3>
               <p className="text-gray-300 text-lg leading-relaxed">
                 SummitUSA empowers businesses to achieve extraordinary growth through innovative technology 
@@ -95,7 +167,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-12 rounded-3xl border border-blue-500/30">
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-12 rounded-3xl border border-blue-500/30 scroll-animate-right">
               <h3 className="text-3xl font-bold text-white mb-6">Our Vision</h3>
               <p className="text-gray-300 text-lg leading-relaxed">
                 To be the premier technology consulting partner that organizations worldwide trust to navigate 
@@ -106,7 +178,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30">
+            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30 scroll-animate-scale">
               <h3 className="text-2xl font-bold text-white mb-4">Innovation Excellence</h3>
               <p className="text-gray-300 leading-relaxed">
                 SummitUSA pursues excellence in every project, setting the highest standards for innovation, 
@@ -114,7 +186,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30">
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30 scroll-animate-scale">
               <h3 className="text-2xl font-bold text-white mb-4">Trusted Partnership</h3>
               <p className="text-gray-300 leading-relaxed">
                 Trust is the foundation of every SummitUSA relationship. We operate with complete transparency, 
@@ -122,7 +194,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30">
+            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30 scroll-animate-scale">
               <h3 className="text-2xl font-bold text-white mb-4">Continuous Innovation</h3>
               <p className="text-gray-300 leading-relaxed">
                 SummitUSA embraces change and continuously evolves our methodologies to stay ahead of 
@@ -130,7 +202,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30">
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30 scroll-animate-scale">
               <h3 className="text-2xl font-bold text-white mb-4">Client-Centric Approach</h3>
               <p className="text-gray-300 leading-relaxed">
                 We view our clients as strategic partners, working collaboratively to understand their unique 
@@ -138,7 +210,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30">
+            <div className="bg-gradient-to-br from-purple-900/50 to-black/40 p-8 rounded-2xl border border-purple-500/30 scroll-animate-scale">
               <h3 className="text-2xl font-bold text-white mb-4">Measurable Results</h3>
               <p className="text-gray-300 leading-relaxed">
                 SummitUSA is committed to delivering measurable outcomes that create real business value and 
@@ -146,7 +218,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30">
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/40 p-8 rounded-2xl border border-blue-500/30 scroll-animate-scale">
               <h3 className="text-2xl font-bold text-white mb-4">Perpetual Growth</h3>
               <p className="text-gray-300 leading-relaxed">
                 We believe in continuous learning and development, both for the SummitUSA team and our clients, 
@@ -160,7 +232,7 @@ export default function About() {
       {/* Leadership Team */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               SummitUSA Leadership Team
             </h2>
@@ -170,7 +242,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-left">
               <img
                 src="https://readdy.ai/api/search-image?query=Professional%20CEO%20executive%20portrait%2C%20confident%20business%20leader%20in%20dark%20suit%2C%20corporate%20headshot%20with%20purple%20accent%20lighting%2C%20modern%20office%20background%2C%20high-end%20professional%20photography%2C%20sophisticated%20business%20portrait&width=400&height=500&seq=ceo-portrait-summit-1&orientation=portrait"
                 alt="Sarah Mitchell - CEO of SummitUSA"
@@ -184,7 +256,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20">
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20 scroll-animate">
               <img
                 src="https://readdy.ai/api/search-image?query=Professional%20CTO%20technology%20executive%20portrait%2C%20confident%20tech%20leader%20in%20business%20attire%2C%20corporate%20headshot%20with%20blue%20accent%20lighting%2C%20modern%20tech%20office%20background%2C%20high-end%20professional%20photography%2C%20innovative%20business%20portrait&width=400&height=500&seq=cto-portrait-summit-1&orientation=portrait"
                 alt="Michael Chen - CTO of SummitUSA"
@@ -198,7 +270,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20">
+            <div className="text-center bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-right">
               <img
                 src="https://readdy.ai/api/search-image?query=Professional%20COO%20operations%20executive%20portrait%2C%20confident%20business%20operations%20leader%20in%20professional%20attire%2C%20corporate%20headshot%20with%20purple%20accent%20lighting%2C%20modern%20corporate%20office%20background%2C%20high-end%20professional%20photography%2C%20executive%20business%20portrait&width=400&height=500&seq=coo-portrait-summit-1&orientation=portrait"
                 alt="Jennifer Rodriguez - COO of SummitUSA"
@@ -218,7 +290,7 @@ export default function About() {
       {/* SummitUSA Global Presence */}
       <section className="py-24 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               SummitUSA Offices Worldwide
             </h2>
@@ -228,7 +300,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="space-y-8">
+            <div className="space-y-8 scroll-animate-left">
               <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/30 p-8 rounded-3xl border border-purple-500/30">
                 <div 
                   className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
@@ -260,7 +332,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <div className="rounded-3xl overflow-hidden shadow-2xl scroll-animate-right">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12091.492959883815!2d-74.005941!3d40.7589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
                 width="100%"
@@ -278,7 +350,7 @@ export default function About() {
       {/* Why Choose SummitUSA */}
       <section className="py-24 bg-gradient-to-br from-black via-purple-900/10 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose SummitUSA?
             </h2>
@@ -288,7 +360,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20">
+            <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/20 p-8 rounded-3xl border border-purple-500/20 scroll-animate-left">
               <h3 className="text-2xl font-bold text-white mb-4">Proven Track Record</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 SummitUSA has successfully delivered over 500 technology projects across 15+ industries, 
@@ -302,7 +374,7 @@ export default function About() {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20">
+            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/20 p-8 rounded-3xl border border-blue-500/20 scroll-animate-right">
               <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Our SummitUSA team consists of certified professionals, industry experts, and thought leaders 
