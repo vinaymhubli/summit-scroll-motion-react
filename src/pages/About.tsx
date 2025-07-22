@@ -205,7 +205,7 @@ export default function About() {
                 description: "We believe in continuous learning and development, both for the SummitUSA team and our clients, fostering an environment of perpetual growth and technological advancement."
               }
             ].map((value, index) => (
-              <div key={index} className={`bg-gradient-to-br ${index % 2 === 0 ? 'from-purple-900/50' : 'from-blue-900/50'} to-black/40 p-6 sm:p-8 rounded-2xl border ${index % 2 === 0 ? 'border-purple-500/30' : 'border-blue-500/30'} scroll-animate-scale`}>
+              <div key={index} className={`bg-gradient-to-br ${index % 2 === 0 ? 'from-orange-500/50 to-blue-900/40' : 'from-orange-500/50 to-blue-900/40'} p-6 sm:p-8 rounded-2xl border ${index % 2 === 0 ? 'border-orange-500/30' : 'border-orange-500/30'} scroll-animate-scale`}>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{value.title}</h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   {value.description}
