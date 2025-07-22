@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -229,7 +230,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-            <div className="bg-gradient-to-br from-orange-500/50 to-black/40 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left">
+            <div className="bg-gradient-to-br from-orange-500/50 to-blue-900/40 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Proven Track Record</h3>
               <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
                 SummitUSA has successfully delivered over 500 technology projects across 15+ industries, 
