@@ -482,7 +482,7 @@ export default function Home() {
                 <img 
                   src="/lovable-uploads/0e76b27d-7bd6-4859-aa82-4757d8b011c4.png" 
                   alt="IT Subscription Program vs Managed IT Services" 
-                  className="w-full h-96 object-cover"
+                  className="w-full h-[32rem] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
