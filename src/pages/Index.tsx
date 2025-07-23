@@ -690,9 +690,6 @@ export default function Home() {
             <button className="bg-white text-orange-900 px-12 sm:px-16 py-6 rounded-full text-base sm:text-lg lg:text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer">
               Start Your Journey
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-black px-12 sm:px-16 py-6 rounded-full text-base sm:text-lg lg:text-xl font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer">
-              Schedule Consultation
-            </button>
           </div>
         </div>
       </section>
