@@ -552,7 +552,6 @@ export default function Home() {
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
                 Our most comprehensive solution includes our security framework, on-site support, backup and disaster recovery, long-term tech strategy, all the hardware your organization needs and more.
               </p>
-              <button className="text-orange-400 hover:text-orange-300 text-sm font-semibold">Read More →</button>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
@@ -566,7 +565,6 @@ export default function Home() {
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
                 Comprehensive IT management and support services designed to keep your business running smoothly with proactive monitoring and maintenance.
               </p>
-              <button className="text-blue-400 hover:text-blue-300 text-sm font-semibold">Read More →</button>
             </div>
 
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-right stagger-3">
@@ -580,7 +578,6 @@ export default function Home() {
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
                 Scalable cloud infrastructure solutions that grow with your business, providing the foundation for your digital transformation.
               </p>
-              <button className="text-orange-400 hover:text-orange-300 text-sm font-semibold">Read More →</button>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-left stagger-1">
@@ -594,7 +591,7 @@ export default function Home() {
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
                 Advanced cybersecurity solutions to protect your business from evolving threats with comprehensive monitoring and response capabilities.
               </p>
-              <button className="text-blue-400 hover:text-blue-300 text-sm font-semibold">Read More →</button>
+              
             </div>
 
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
@@ -608,7 +605,7 @@ export default function Home() {
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
                 Ensure your organization meets industry regulations and standards with our comprehensive compliance management solutions.
               </p>
-              <button className="text-orange-400 hover:text-orange-300 text-sm font-semibold">Read More →</button>
+              
             </div>
           </div>
         </div>
