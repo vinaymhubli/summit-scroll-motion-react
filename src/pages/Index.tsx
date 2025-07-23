@@ -457,6 +457,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* IT Subscription Program Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-blue-900/20 via-black to-orange-900/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Container - Content */}
+            <div className="scroll-animate">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
+                Why an IT Subscription Program Beats Managed IT Services​
+              </h2>
+              <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
+                <p>
+                  A surprise bill lands on your desk for an IT problem that should never have happened in the first place. An employee approaches you with a tech problem you had last month – it's happening again. You find yourself picking up the phone and calling your managed IT services provider more often than you ever expected.
+                </p>
+                <p>
+                  Our team at Net-Tech thinks this approach to IT support is outdated and unsustainable. We provide an IT Subscription Program that covers all of your IT needs at one predictable cost. Whether it's making sure your systems work, increasing your cybersecurity measures or offering long-term tech strategic guidance, Net-Tech has the expertise to make your IT goals a reality.
+                </p>
+              </div>
+            </div>
+            
+            {/* Right Container - Image */}
+            <div className="scroll-animate-right">
+              <div className="relative rounded-2xl overflow-hidden border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/bc834bfb-2a94-4a66-93e2-ac8294200a0f.png" 
+                  alt="IT Subscription Program vs Managed IT Services" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Location & Office Section */}
       <section className="py-20 sm:py-32 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
