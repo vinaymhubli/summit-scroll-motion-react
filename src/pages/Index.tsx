@@ -334,7 +334,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 scroll-animate">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
-              IT Industries We Serve
+              The Right IT Support for Your Industry
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
               Comprehensive IT support and digital transformation across all technology sectors
