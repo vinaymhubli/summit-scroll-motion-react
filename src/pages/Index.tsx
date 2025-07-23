@@ -252,7 +252,7 @@ export default function Home() {
               Why Choose SummitUSA?
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
-              We deliver cutting-edge IT solutions through proven technologies and innovative approaches that transform businesses across every industry
+              SummitUSA is your trusted technology partner delivering dependable, cost-effective, and forward-thinking IT solutions tailored to fuel your business success. With us, you don't just get support you gain a team committed to your growth, security, and long-term vision.
             </p>
           </div>
 
