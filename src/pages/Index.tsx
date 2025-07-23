@@ -499,7 +499,7 @@ export default function Home() {
             <div className="scroll-animate-left">
               <div className="relative rounded-2xl overflow-hidden border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300">
                 <img 
-                  src="/lovable-uploads/c06908fd-29e6-4b5c-9036-ad02cecd4549.png" 
+                  src="/lovable-uploads/73d8cd9a-9ac5-48a9-9259-5f8a806841bd.png" 
                   alt="Intentional Change is Our Difference" 
                   className="w-full h-[32rem] object-cover"
                 />
