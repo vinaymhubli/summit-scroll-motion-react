@@ -235,6 +235,12 @@ export default function Home() {
               Don't allow downtime to impact employee productivity and derail your organization. Get the IT support you need to reduce and stop these interruptions before they occur.
             </p>
           </div>
+          
+          <div className="text-center mt-8 scroll-animate">
+            <Link to="/contact" className="bg-gradient-to-r from-orange-500 to-blue-900 text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 whitespace-nowrap cursor-pointer inline-block">
+              Get a competitive advantage now
+            </Link>
+          </div>
         </div>
       </section>
 
