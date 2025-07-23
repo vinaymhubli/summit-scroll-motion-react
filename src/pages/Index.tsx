@@ -334,7 +334,7 @@ export default function Home() {
             {/* Left side - Image */}
             <div className="scroll-animate-left">
               <div
-                className="w-full h-64 rounded-2xl bg-cover bg-center shadow-xl"
+                className="w-full h-96 rounded-2xl bg-cover bg-center shadow-xl"
                 style={{
                   backgroundImage: `url('/lovable-uploads/f212d01b-3ea0-4e98-87ad-f3b35877416c.png')`
                 }}
