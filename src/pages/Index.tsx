@@ -148,9 +148,9 @@ export default function Home() {
             The Future of IT Starts with Predictable, Scalable Support
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-orange-500 to-blue-900 text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg lg:text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 whitespace-nowrap cursor-pointer">
+            <Link to="/contact" className="bg-gradient-to-r from-orange-500 to-blue-900 text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg lg:text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 whitespace-nowrap cursor-pointer">
               Get Started Today
-            </button>
+            </Link>
             <button className="border-2 border-white text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg lg:text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap cursor-pointer">
               Learn More
             </button>
