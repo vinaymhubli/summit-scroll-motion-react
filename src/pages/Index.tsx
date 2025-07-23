@@ -452,6 +452,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+          
+          {/* CTA Button */}
+          <div className="text-center mt-16 scroll-animate">
+            <Link to="/contact" className="bg-gradient-to-r from-orange-500 to-blue-900 text-white px-12 sm:px-16 py-6 rounded-full text-base sm:text-lg lg:text-xl font-bold hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 whitespace-nowrap cursor-pointer inline-block">
+              Get Industry-Specific IT Solutions
+            </Link>
+          </div>
         </div>
       </section>
 
