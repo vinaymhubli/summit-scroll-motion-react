@@ -249,10 +249,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8 scroll-animate">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-              Eliminate IT Confusion and Costs
+              Is Poor IT Support Draining Your Business Resources?
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto">
-              Stop downtime and faulty IT before they damage your organization.
+              Downtime and inefficient IT can silently erode your revenue, customer trust, and team productivity.
             </p>
           </div>
 
@@ -271,46 +271,46 @@ export default function Home() {
             <div className="space-y-2 scroll-animate-right">
               <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
                 <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
-                  76%
+                  91%
                 </div>
                 <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
-                  of organizations experience downtime that leads to data loss.
+                  of businesses report that a single hour of downtime costs over $300,000. (Source: ITIC)
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-2 rounded-xl border border-blue-500/30">
                 <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
-                  $137-$427
+                  $5600/min
                 </div>
                 <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
-                  The costs of IT downtime for SMBs range per minute.
+                  is the average cost of downtime for large enterprises. (Source: Gartner)
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
                 <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
-                  60%
+                  43%
                 </div>
                 <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
-                  Over 60% of outages cost more than $100,000.
+                  of cyberattacks target small businesses, with downtime averaging 18.5 hours. (Source: Accenture)
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-2 rounded-xl border border-blue-500/30">
                 <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
-                  $8,600
+                  $142,000
                 </div>
                 <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
-                  The average internal IT employee costs organizations per month.
+                  is the average cost to recover from a ransomware attack for SMBs. (Source: Sophos)
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
                 <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
-                  $250
+                  28%
                 </div>
                 <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
-                  Total IT budgets average per employee per month in Small/Medium Business.
+                  of IT leaders say lack of proactive monitoring is the leading cause of system failures. (Source: LogicMonitor)
                 </p>
               </div>
             </div>
