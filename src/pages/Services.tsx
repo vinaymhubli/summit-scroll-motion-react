@@ -85,7 +85,8 @@ export default function Services() {
           <div className="text-center scroll-animate">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               SummitUSA 
-              <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+              <br />
+              <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent mt-4 block">
                 Services
               </span>
             </h1>
