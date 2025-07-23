@@ -337,7 +337,7 @@ export default function Home() {
               The Right IT Support for Your Industry
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
-              Comprehensive IT support and digital transformation across all technology sectors
+              Every industry has unique technology needs and at SummitUSA, we get that. From healthcare practices needing HIPAA-compliant systems to construction firms requiring reliable support across job sites, we tailor our IT solutions to fit your world. Whether you're in finance, education, legal, or nonprofit sectors, we bring the experience, tools, and strategic guidance needed to keep your business running smoothly and securely. No matter your field, SummitUSA is the IT partner you can trust to deliver real results.
             </p>
           </div>
 
