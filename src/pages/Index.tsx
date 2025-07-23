@@ -171,64 +171,6 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-8 sm:p-12 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-left stagger-1">
-              <div
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                }}
-              ></div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-6">Cloud Solutions</h3>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-6">
-                Comprehensive cloud infrastructure and migration services that scale with your business needs, ensuring maximum uptime and performance optimization.
-              </p>
-              <ul className="text-xs sm:text-sm lg:text-base text-gray-300 space-y-2">
-                <li>• AWS, Azure, Google Cloud</li>
-                <li>• Cloud migration & optimization</li>
-                <li>• Scalable infrastructure</li>
-                <li>• 24/7 monitoring & support</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-8 sm:p-12 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
-              <div
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                }}
-              ></div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-6">Cybersecurity</h3>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-6">
-                Advanced security solutions to protect your digital assets with multi-layered defense strategies and real-time threat monitoring.
-              </p>
-              <ul className="text-xs sm:text-sm lg:text-base text-gray-300 space-y-2">
-                <li>• Network security & firewalls</li>
-                <li>• Data encryption & protection</li>
-                <li>• Threat detection & response</li>
-                <li>• Compliance & risk management</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-8 sm:p-12 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-right stagger-3">
-              <div
-                className="w-full h-48 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                }}
-              ></div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-6">Custom Development</h3>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-6">
-                Tailored software solutions and applications built with modern technologies to streamline your business processes and enhance productivity.
-              </p>
-              <ul className="text-xs sm:text-sm lg:text-base text-gray-300 space-y-2">
-                <li>• Web & mobile applications</li>
-                <li>• API development & integration</li>
-                <li>• Database design & optimization</li>
-                <li>• Agile development processes</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
 
