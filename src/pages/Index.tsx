@@ -2,6 +2,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -687,9 +688,9 @@ export default function Home() {
             Let's discuss how we can elevate your business to new heights and unlock unprecedented growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-white text-orange-900 px-12 sm:px-16 py-6 rounded-full text-base sm:text-lg lg:text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer">
+            <Link to="/contact" className="bg-white text-orange-900 px-12 sm:px-16 py-6 rounded-full text-base sm:text-lg lg:text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer">
               Start Your Journey
-            </button>
+            </Link>
           </div>
         </div>
       </section>
