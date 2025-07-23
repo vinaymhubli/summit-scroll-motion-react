@@ -151,9 +151,9 @@ export default function Home() {
             <Link to="/contact" className="bg-gradient-to-r from-orange-500 to-blue-900 text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg lg:text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 whitespace-nowrap cursor-pointer">
               Get Started Today
             </Link>
-            <button className="border-2 border-white text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg lg:text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap cursor-pointer">
+            <Link to="/about" className="border-2 border-white text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg lg:text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap cursor-pointer">
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
       </section>
