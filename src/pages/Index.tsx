@@ -471,7 +471,7 @@ export default function Home() {
                   You're hit with another unexpected IT expense for a problem that should've been avoided. A recurring tech issue is back, frustrating your team and slowing down productivity. You find yourself reaching out to IT support far more often than you'd like.
                 </p>
                 <p>
-                  Our team at Net-Tech thinks this approach to IT support is outdated and unsustainable. We provide an IT Subscription Program that covers all of your IT needs at one predictable cost. Whether it's making sure your systems work, increasing your cybersecurity measures or offering long-term tech strategic guidance, Net-Tech has the expertise to make your IT goals a reality.
+                  At SummitUSA, we believe there's a better way. Our IT Subscription Program takes the guesswork and surprise costs out of managing your technology. With one flat monthly rate, we handle everything—from system reliability and proactive cybersecurity to long-term IT planning. Let SummitUSA take care of your IT, so you can stay focused on growing your business.
                 </p>
               </div>
             </div>
