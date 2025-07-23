@@ -580,19 +580,6 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-left stagger-1">
-              <div
-                className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                }}
-              ></div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">IT SECURITY</h3>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
-                Advanced cybersecurity solutions to protect your business from evolving threats with comprehensive monitoring and response capabilities.
-              </p>
-              
-            </div>
 
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
               <div
