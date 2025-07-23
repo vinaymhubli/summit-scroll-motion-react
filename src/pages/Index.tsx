@@ -491,6 +491,174 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Intentional Change Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Container - Image */}
+            <div className="scroll-animate-left">
+              <div className="relative rounded-2xl overflow-hidden border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/c06908fd-29e6-4b5c-9036-ad02cecd4549.png" 
+                  alt="Intentional Change is Our Difference" 
+                  className="w-full h-[32rem] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+            </div>
+            
+            {/* Right Container - Content */}
+            <div className="scroll-animate-right">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
+                Intentional Change is Our Difference
+              </h2>
+              <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
+                <p>
+                  Total Care Cloud, our IT Subscription Program, takes a long-term view of your technology. As a Professional Technology Organization (PTO), we intentionally plan change with goals, objectives and outcomes laid out to measure progress. Our program typically looks 48 months ahead for planning, whereas typical MSP service plans only look ahead 12 to 18 months.
+                </p>
+                <p>
+                  Our goal is to understand your needs, so we can align them with your network capabilities to continually improve your IT experience without major capital expenditures. Here at SummitUSA, we don't simply "take the keys" to your network, we sit down with you to make sure your goals and objectives are supported by your IT infrastructure.
+                </p>
+                <p>
+                  While a "take the keys" approach may address your current needs, it doesn't allow for scalability. With a SummitUSA IT Subscription Program, your IT support is built around enabling business growth and achieving your objectives, so your network is continuously evolving to meet your ever-changing needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IT Services Options Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-blue-900/20 via-black to-orange-900/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+              Robust IT Services Options from SummitUSA
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
+              No two organizations are exactly alike. SummitUSA wants you to reach your business goals, and choosing the right level of IT support is key. We offer several IT subscription solutions to choose from so that you pay for the IT services that you need – no more and no less.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-left stagger-1">
+              <div
+                className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/lovable-uploads/d1105cf6-ae27-4ffa-862c-fc0c1e1ce355.png')`
+                }}
+              ></div>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">TOTAL CARE CLOUD</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
+                Our most comprehensive solution includes our security framework, on-site support, backup and disaster recovery, long-term tech strategy, all the hardware your organization needs and more.
+              </p>
+              <button className="text-orange-400 hover:text-orange-300 text-sm font-semibold">Read More →</button>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
+              <div
+                className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/lovable-uploads/5b4c32a0-57f9-4a9a-9716-66ae356fde0f.png')`
+                }}
+              ></div>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">TOTAL CARE</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
+                Comprehensive IT management and support services designed to keep your business running smoothly with proactive monitoring and maintenance.
+              </p>
+              <button className="text-blue-400 hover:text-blue-300 text-sm font-semibold">Read More →</button>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-right stagger-3">
+              <div
+                className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/lovable-uploads/1767dbfd-faff-487c-9581-18becaa9b4ce.png')`
+                }}
+              ></div>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">INFRASTRUCTURE AS A SERVICE</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
+                Scalable cloud infrastructure solutions that grow with your business, providing the foundation for your digital transformation.
+              </p>
+              <button className="text-orange-400 hover:text-orange-300 text-sm font-semibold">Read More →</button>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-left stagger-1">
+              <div
+                className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+                }}
+              ></div>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">IT SECURITY</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
+                Advanced cybersecurity solutions to protect your business from evolving threats with comprehensive monitoring and response capabilities.
+              </p>
+              <button className="text-blue-400 hover:text-blue-300 text-sm font-semibold">Read More →</button>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
+              <div
+                className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+                }}
+              ></div>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">IT COMPLIANCE</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
+                Ensure your organization meets industry regulations and standards with our comprehensive compliance management solutions.
+              </p>
+              <button className="text-orange-400 hover:text-orange-300 text-sm font-semibold">Read More →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+              Choose an IT Subscription Program, Not Just a Service
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
+              Don't rely on partial solutions for complex technology needs. Here's how managed IT services stack up to our IT Subscription Program.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto scroll-animate">
+            <div className="min-w-full bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-3xl border border-blue-500/20 p-8">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-600">
+                    <th className="text-left py-4 px-6 text-lg font-bold text-white">Comparison</th>
+                    <th className="text-center py-4 px-6 text-lg font-bold text-orange-400">Managed IT Services</th>
+                    <th className="text-center py-4 px-6 text-lg font-bold text-blue-400">IT Subscription Program</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-300">
+                  <tr className="border-b border-gray-700">
+                    <td className="py-4 px-6 font-semibold">Approach to Problems</td>
+                    <td className="py-4 px-6 text-center">Reacts to problems with your tech</td>
+                    <td className="py-4 px-6 text-center">Uses proactive planning to reduce or eliminate tech problems</td>
+                  </tr>
+                  <tr className="border-b border-gray-700">
+                    <td className="py-4 px-6 font-semibold">Planning Horizon</td>
+                    <td className="py-4 px-6 text-center">Focuses on the here and now</td>
+                    <td className="py-4 px-6 text-center">Collaborates with you to plan for your goals and objectives 3-4 years in the future</td>
+                  </tr>
+                  <tr>
+                    <td className="py-4 px-6 font-semibold">Billing Structure</td>
+                    <td className="py-4 px-6 text-center">Bills you for additional projects and upgrades to your IT system</td>
+                    <td className="py-4 px-6 text-center">No surprise bills - you can expect one predictable IT cost</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Location & Office Section */}
       <section className="py-20 sm:py-32 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
