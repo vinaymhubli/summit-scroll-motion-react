@@ -545,7 +545,7 @@ export default function Home() {
               <div
                 className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('/lovable-uploads/d1105cf6-ae27-4ffa-862c-fc0c1e1ce355.png')`
+                  backgroundImage: `url('/lovable-uploads/266fa4d5-08fa-4738-a871-4d1494b331c4.png')`
                 }}
               ></div>
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">TOTAL CARE CLOUD</h3>
