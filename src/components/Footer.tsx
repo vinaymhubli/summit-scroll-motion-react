@@ -64,7 +64,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
           <p className="text-gray-400 text-sm sm:text-base">
-            © 2024 Summit Services Corporation. All rights reserved. | Privacy Policy | Terms of Service
+            © 2025 Summit Services Corporation. All rights reserved.
           </p>
         </div>
       </div>
