@@ -581,19 +581,6 @@ export default function Home() {
             </div>
 
 
-            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate stagger-2">
-              <div
-                className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                }}
-              ></div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">IT COMPLIANCE</h3>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4">
-                Ensure your organization meets industry regulations and standards with our comprehensive compliance management solutions.
-              </p>
-              
-            </div>
           </div>
         </div>
       </section>
