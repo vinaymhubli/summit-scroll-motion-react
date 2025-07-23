@@ -229,6 +229,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+          
+          <div className="text-center mt-8 scroll-animate">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Don't allow downtime to impact employee productivity and derail your organization. Get the IT support you need to reduce and stop these interruptions before they occur.
+            </p>
+          </div>
         </div>
       </section>
 
