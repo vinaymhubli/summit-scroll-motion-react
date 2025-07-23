@@ -468,7 +468,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
                 <p>
-                  A surprise bill lands on your desk for an IT problem that should never have happened in the first place. An employee approaches you with a tech problem you had last month – it's happening again. You find yourself picking up the phone and calling your managed IT services provider more often than you ever expected.
+                  You're hit with another unexpected IT expense for a problem that should've been avoided. A recurring tech issue is back, frustrating your team and slowing down productivity. You find yourself reaching out to IT support far more often than you'd like.
                 </p>
                 <p>
                   Our team at Net-Tech thinks this approach to IT support is outdated and unsustainable. We provide an IT Subscription Program that covers all of your IT needs at one predictable cost. Whether it's making sure your systems work, increasing your cybersecurity measures or offering long-term tech strategic guidance, Net-Tech has the expertise to make your IT goals a reality.
