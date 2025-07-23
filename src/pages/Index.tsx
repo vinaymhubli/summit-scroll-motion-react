@@ -336,7 +336,7 @@ export default function Home() {
               <div
                 className="w-full h-64 rounded-2xl bg-cover bg-center shadow-xl"
                 style={{
-                  backgroundImage: `url('/lovable-uploads/bc834bfb-2a94-4a66-93e2-ac8294200a0f.png')`
+                  backgroundImage: `url('/lovable-uploads/f212d01b-3ea0-4e98-87ad-f3b35877416c.png')`
                 }}
               ></div>
             </div>
