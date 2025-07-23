@@ -480,7 +480,7 @@ export default function Home() {
             <div className="scroll-animate-right">
               <div className="relative rounded-2xl overflow-hidden border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
                 <img 
-                  src="/lovable-uploads/bc834bfb-2a94-4a66-93e2-ac8294200a0f.png" 
+                  src="/lovable-uploads/0e76b27d-7bd6-4859-aa82-4757d8b011c4.png" 
                   alt="IT Subscription Program vs Managed IT Services" 
                   className="w-full h-auto object-cover"
                 />
