@@ -559,7 +559,7 @@ export default function Home() {
               <div
                 className="w-full h-32 rounded-2xl mb-6 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('/lovable-uploads/5b4c32a0-57f9-4a9a-9716-66ae356fde0f.png')`
+                  backgroundImage: `url('/lovable-uploads/209d7ecf-83ca-4ac9-83f8-2d8eb14ee518.png')`
                 }}
               ></div>
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">TOTAL CARE</h3>
