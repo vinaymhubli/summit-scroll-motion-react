@@ -113,7 +113,7 @@ export default function Services() {
               Technology Solutions
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
-              SummitUSA delivers cutting-edge technology services that transform your business operations
+              At Summit USA, we deliver measurable returns through strategic IT services tailored to your business. Our deep industry expertise ensures we provide customized solutions that solve your operational challenges
             </p>
           </div>
 
