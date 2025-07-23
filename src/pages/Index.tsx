@@ -1,8 +1,9 @@
 
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import useEmblaCarousel from 'embla-carousel-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -21,6 +22,80 @@ export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [typedText, setTypedText] = useState('');
   const fullText = 'Summit USA';
+
+  // Testimonials data
+  const testimonials = [
+    {
+      id: 1,
+      name: "Sarah Johnson",
+      position: "CEO",
+      company: "Healthcare Solutions Inc.",
+      content: "SummitUSA transformed our IT infrastructure completely. Their proactive approach prevented multiple potential disasters and their 24/7 support gives us peace of mind.",
+      rating: 5
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      position: "Operations Manager",
+      company: "Construction Dynamics LLC",
+      content: "Working with remote teams across multiple job sites was a nightmare until SummitUSA stepped in. Now our technology just works, everywhere.",
+      rating: 5
+    },
+    {
+      id: 3,
+      name: "Emily Rodriguez",
+      position: "Finance Director",
+      company: "Regional Bank & Trust",
+      content: "Security and compliance are everything in our industry. SummitUSA's expertise has kept us ahead of regulations and completely secure.",
+      rating: 5
+    },
+    {
+      id: 4,
+      name: "David Thompson",
+      position: "Principal",
+      company: "Metro Education District",
+      content: "The digital transformation of our schools seemed impossible until we partnered with SummitUSA. They made it seamless for both staff and students.",
+      rating: 5
+    },
+    {
+      id: 5,
+      name: "Lisa Martinez",
+      position: "Managing Partner",
+      company: "Martinez & Associates Law",
+      content: "Client confidentiality is paramount in our practice. SummitUSA's secure systems and reliable support have been invaluable to our success.",
+      rating: 5
+    }
+  ];
+
+  // Carousel setup
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    align: 'center',
+    slidesToScroll: 1
+  });
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback((emblaApi: any) => {
+    setPrevBtnDisabled(!emblaApi.canScrollPrev());
+    setNextBtnDisabled(!emblaApi.canScrollNext());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect(emblaApi);
+    emblaApi.on('reInit', onSelect);
+    emblaApi.on('select', onSelect);
+  }, [emblaApi, onSelect]);
 
   useEffect(() => {
     let currentIndex = 0;
@@ -684,6 +759,82 @@ export default function Home() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 sm:py-32 bg-gradient-to-br from-blue-900/20 via-black to-orange-900/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20 scroll-animate">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+              What Our Clients Say
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
+              Don't just take our word for it. Hear from the businesses who have transformed their operations with SummitUSA.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {testimonials.map((testimonial) => (
+                  <div key={testimonial.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-4">
+                    <div className="bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-8 rounded-3xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 h-full">
+                      <div className="flex items-center mb-6">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <svg key={i} className="w-5 h-5 text-orange-400 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6">
+                        "{testimonial.content}"
+                      </blockquote>
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-blue-900 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                          {testimonial.name.charAt(0)}
+                        </div>
+                        <div>
+                          <div className="font-bold text-white">{testimonial.name}</div>
+                          <div className="text-sm text-gray-400">{testimonial.position}</div>
+                          <div className="text-sm text-orange-400">{testimonial.company}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full border-2 border-orange-500 flex items-center justify-center transition-all duration-300 ${
+                prevBtnDisabled 
+                  ? 'bg-gray-800 text-gray-500 cursor-not-allowed' 
+                  : 'bg-orange-500 text-white hover:bg-orange-600 hover:scale-110'
+              }`}
+              onClick={scrollPrev}
+              disabled={prevBtnDisabled}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <button
+              className={`absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full border-2 border-orange-500 flex items-center justify-center transition-all duration-300 ${
+                nextBtnDisabled 
+                  ? 'bg-gray-800 text-gray-500 cursor-not-allowed' 
+                  : 'bg-orange-500 text-white hover:bg-orange-600 hover:scale-110'
+              }`}
+              onClick={scrollNext}
+              disabled={nextBtnDisabled}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
