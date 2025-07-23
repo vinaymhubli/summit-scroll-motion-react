@@ -256,44 +256,44 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-            <div className="bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate-scale stagger-1">
-              <h3 className="text-lg font-bold text-white mb-3">True Partnership Mindset</h3>
+          <div className="max-w-4xl mx-auto mt-16 space-y-6">
+            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-1">
+              <h3 className="text-lg font-bold text-white mb-3">• True Partnership Mindset</h3>
               <p className="text-sm text-gray-300 leading-relaxed">We work as an extension of your team, aligning IT strategies with your business goals.</p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate-scale stagger-2">
-              <h3 className="text-lg font-bold text-white mb-3">Predictable Costs</h3>
+            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-2">
+              <h3 className="text-lg font-bold text-white mb-3">• Predictable Costs</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Our fixed monthly pricing eliminates surprise bills and helps you manage your IT budget with confidence.</p>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate-scale stagger-3">
-              <h3 className="text-lg font-bold text-white mb-3">Proactive Support</h3>
+            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-3">
+              <h3 className="text-lg font-bold text-white mb-3">• Proactive Support</h3>
               <p className="text-sm text-gray-300 leading-relaxed">We solve issues before they become problems, minimizing downtime and disruption.</p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate-scale stagger-4">
-              <h3 className="text-lg font-bold text-white mb-3">Trusted by Businesses</h3>
+            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-4">
+              <h3 className="text-lg font-bold text-white mb-3">• Trusted by Businesses</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Decades of experience and long-term client relationships speak to our consistent results and reliability.</p>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate-scale stagger-1">
-              <h3 className="text-lg font-bold text-white mb-3">Focus on Growth</h3>
+            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-5">
+              <h3 className="text-lg font-bold text-white mb-3">• Focus on Growth</h3>
               <p className="text-sm text-gray-300 leading-relaxed">We provide strategic guidance to help you scale efficiently with the right technology foundation.</p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate-scale stagger-2">
-              <h3 className="text-lg font-bold text-white mb-3">Always Available</h3>
+            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-6">
+              <h3 className="text-lg font-bold text-white mb-3">• Always Available</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Our team is responsive, reliable, and ready to support you whenever you need us—24/7.</p>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate-scale stagger-3">
-              <h3 className="text-lg font-bold text-white mb-3">Security-First Approach</h3>
+            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-1">
+              <h3 className="text-lg font-bold text-white mb-3">• Security-First Approach</h3>
               <p className="text-sm text-gray-300 leading-relaxed">We prioritize your data and system security with proactive protection and staff training.</p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate-scale stagger-4">
-              <h3 className="text-lg font-bold text-white mb-3">Peace of Mind</h3>
+            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-2">
+              <h3 className="text-lg font-bold text-white mb-3">• Peace of Mind</h3>
               <p className="text-sm text-gray-300 leading-relaxed">With SummitUSA, you can focus on your business while we handle the complexities of IT.</p>
             </div>
           </div>
