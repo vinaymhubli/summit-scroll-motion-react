@@ -301,63 +301,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 sm:py-32 bg-gradient-to-br from-black via-orange-900/10 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-animate">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
-              What Our Clients Say
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
-              Hear from business leaders who've transformed their organizations with SummitUSA
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-8 sm:p-12 rounded-3xl border border-orange-500/20 scroll-animate-left">
-              <div className="flex items-start space-x-6">
-                <div
-                  className="w-20 h-20 rounded-full bg-cover bg-center flex-shrink-0"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-                  }}
-                ></div>
-                <div>
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-6">
-                    "SummitUSA transformed our entire business model. Their strategic insights and implementation expertise helped us achieve 300% growth in just 18 months. Absolutely exceptional service."
-                  </p>
-                  <div>
-                    <p className="text-white font-bold text-base sm:text-lg lg:text-xl">Michael Rodriguez</p>
-                    <p className="text-orange-400 text-xs sm:text-sm lg:text-base">CEO, TechVision Solutions</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 p-8 sm:p-12 rounded-3xl border border-blue-500/20 scroll-animate-right">
-              <div className="flex items-start space-x-6">
-                <div
-                  className="w-20 h-20 rounded-full bg-cover bg-center flex-shrink-0"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80')`
-                  }}
-                ></div>
-                <div>
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-6">
-                    "The level of expertise and dedication from the SummitUSA team is unmatched. They didn't just consult - they became true partners in our success journey."
-                  </p>
-                  <div>
-                    <p className="text-white font-bold text-base sm:text-lg lg:text-xl">Sarah Chen</p>
-                    <p className="text-blue-400 text-xs sm:text-sm lg:text-base">Founder, InnovateNow</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
       {/* Industries Section */}
       <section className="py-20 sm:py-32 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
