@@ -301,6 +301,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CTA Banner Section */}
+      <section className="py-20 sm:py-32 relative overflow-hidden">
+        <Link to="/contact" className="block group cursor-pointer">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80')`
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80"></div>
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 group-hover:scale-105 transition-transform duration-300">
+              Transform Your Business with Expert IT Solutions
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Join hundreds of successful businesses who trust SummitUSA for their technology needs. Get started today and experience the difference.
+            </p>
+            <div className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-blue-900 text-white px-12 sm:px-16 py-6 rounded-full text-base sm:text-lg lg:text-xl font-bold group-hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50">
+              <span>Get Your Free Consultation</span>
+              <svg className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </Link>
+      </section>
+
       {/* Industries Section */}
       <section className="py-20 sm:py-32 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black">
         <div className="max-w-7xl mx-auto px-6">
