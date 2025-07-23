@@ -125,17 +125,6 @@ export default function About() {
                     just dependable support when you need it.
                   </p>
                 </div>
-                
-                <div className="grid grid-cols-2 gap-4 sm:gap-8 max-w-md mx-auto lg:mx-0">
-                  <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 p-4 sm:p-6 rounded-2xl border border-orange-500/20">
-                    <h3 className="text-xl sm:text-2xl font-bold text-orange-400 mb-2">500+</h3>
-                    <p className="text-gray-300 text-xs sm:text-sm">Successful Projects</p>
-                  </div>
-                  <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 p-4 sm:p-6 rounded-2xl border border-blue-500/20">
-                    <h3 className="text-xl sm:text-2xl font-bold text-blue-400 mb-2">15+</h3>
-                    <p className="text-gray-300 text-xs sm:text-sm">Industries Served</p>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="relative scroll-animate-right order-1 lg:order-2">
