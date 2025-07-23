@@ -94,7 +94,7 @@ export default function Services() {
               SummitUSA 
               <br />
               <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent mt-4 block">
-                Services
+                What we offer
               </span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">

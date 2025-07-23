@@ -24,7 +24,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           <Link to="/" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">Home</Link>
-          <Link to="/services" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">Services</Link>
+          <Link to="/services" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">What we offer</Link>
           <Link to="/about" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">About</Link>
           <Link to="/contact" className="text-blue-900 hover:text-blue-700 transition-colors font-medium">Contact</Link>
         </nav>
@@ -60,7 +60,7 @@ const Header = () => {
               className="block text-blue-900 hover:text-blue-700 transition-colors py-2 text-lg font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              Services
+              What we offer
             </Link>
             <Link 
               to="/about" 
