@@ -245,7 +245,17 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 sm:py-32 bg-gradient-to-br from-orange-900/20 via-blue-900/20 to-black">
+      <section className="py-20 sm:py-32 relative overflow-hidden">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black/80"></div>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 scroll-animate">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
