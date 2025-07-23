@@ -107,8 +107,15 @@ export default function Contact() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-600 via-blue-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-600 via-blue-900 to-black overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="Contact background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center scroll-animate">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
               Get In 
@@ -125,12 +132,26 @@ export default function Contact() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img 
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="Office background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {/* Contact Form */}
-            <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-orange-500/20 scroll-animate-left">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Send us a Message</h2>
+            <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-orange-500/20 scroll-animate-left overflow-hidden relative">
+              <div className="absolute top-4 right-4 opacity-15">
+                <img 
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Contact form" 
+                  className="w-24 h-24 object-cover rounded-xl"
+                />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 relative z-10">Send us a Message</h2>
               
               {isSubmitted ? (
                 <div className="text-center py-8 sm:py-12">
@@ -213,9 +234,16 @@ export default function Contact() {
             
             {/* Contact Information */}
             <div className="space-y-6 sm:space-y-8 scroll-animate-right">
-              <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Contact Information</h3>
-                <div className="space-y-4 sm:space-y-6">
+              <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale overflow-hidden relative">
+                <div className="absolute top-4 right-4 opacity-15">
+                  <img 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                    alt="Contact info" 
+                    className="w-20 h-20 object-cover rounded-xl"
+                  />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 relative z-10">Contact Information</h3>
+                <div className="space-y-4 sm:space-y-6 relative z-10">
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">Office Address</h4>
                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
@@ -255,9 +283,16 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 rounded-2xl border border-orange-500/20 scroll-animate-scale">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Follow Us</h3>
-                <div className="space-y-3 sm:space-y-4">
+              <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 rounded-2xl border border-orange-500/20 scroll-animate-scale overflow-hidden relative">
+                <div className="absolute top-4 right-4 opacity-15">
+                  <img 
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                    alt="Social" 
+                    className="w-20 h-20 object-cover rounded-xl"
+                  />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 relative z-10">Follow Us</h3>
+                <div className="space-y-3 sm:space-y-4 relative z-10">
                   <a href="#" className="block text-gray-300 hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base">
                     Facebook - Stay updated with our latest insights
                   </a>
@@ -270,9 +305,16 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Quick Response</h3>
-                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+              <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale overflow-hidden relative">
+                <div className="absolute top-4 right-4 opacity-15">
+                  <img 
+                    src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                    alt="Quick response" 
+                    className="w-20 h-20 object-cover rounded-xl"
+                  />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 relative z-10">Quick Response</h3>
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base relative z-10">
                   We typically respond to all inquiries within 24 hours. For urgent matters, 
                   please call us directly at 1-206-841-0601 Extension 101.
                 </p>
@@ -283,8 +325,15 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 sm:py-16 bg-gradient-to-br from-orange-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-orange-900/20 to-blue-900/20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img 
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="Office location background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-8 sm:mb-12 scroll-animate">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Visit Our Office</h2>
           </div>
