@@ -158,37 +158,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-20 sm:py-32 bg-gradient-to-br from-black via-orange-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-            <div className="space-y-4 scroll-animate-scale stagger-1">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent">
-                1000+
-              </div>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300">IT Projects Delivered</p>
-            </div>
-            <div className="space-y-4 scroll-animate-scale stagger-2">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent">
-                99.9%
-              </div>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300">System Uptime</p>
-            </div>
-            <div className="space-y-4 scroll-animate-scale stagger-3">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent">
-                50+
-              </div>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300">IT Specialists</p>
-            </div>
-            <div className="space-y-4 scroll-animate-scale stagger-4">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent">
-                24/7
-              </div>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300">Technical Support</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
       <section className="py-20 sm:py-32 bg-gradient-to-br from-orange-900/20 via-blue-900/20 to-black">
