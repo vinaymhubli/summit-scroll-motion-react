@@ -537,39 +537,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* IT Subscription Program Section */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-blue-900/20 via-black to-orange-900/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Container - Content */}
-            <div className="scroll-animate">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
-                Why an IT Subscription Program Beats Managed IT Services​
-              </h2>
-              <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
-                <p>
-                  You're hit with another unexpected IT expense for a problem that should've been avoided. A recurring tech issue is back, frustrating your team and slowing down productivity. You find yourself reaching out to IT support far more often than you'd like.
-                </p>
-                <p>
-                  At SummitUSA, we believe there's a better way. Our IT Subscription Program takes the guesswork and surprise costs out of managing your technology. With one flat monthly rate, we handle everything—from system reliability and proactive cybersecurity to long-term IT planning. Let SummitUSA take care of your IT, so you can stay focused on growing your business.
-                </p>
-              </div>
-            </div>
-            
-            {/* Right Container - Image */}
-            <div className="scroll-animate-right">
-              <div className="relative rounded-2xl overflow-hidden border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
-                <img 
-                  src="/lovable-uploads/0e76b27d-7bd6-4859-aa82-4757d8b011c4.png" 
-                  alt="IT Subscription Program vs Managed IT Services" 
-                  className="w-full h-[32rem] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Intentional Change Section */}
       <section className="py-16 sm:py-24 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
