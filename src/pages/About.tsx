@@ -111,23 +111,18 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="scroll-animate-left order-2 lg:order-1">
               <div className="text-center lg:text-left">
-                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">The SummitUSA Story</h2>
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">Stop Losing Time and Money on Patchy IT Support</h2>
                 <div className="space-y-4 sm:space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
                   <p>
-                    Founded in 2015, SummitUSA emerged from a vision to bridge the gap between business ambitions 
-                    and technological possibilities. Our founders, seasoned technology executives with decades of 
-                    combined experience, recognized that many organizations struggle to harness the full potential 
-                    of modern technology solutions.
+                    At SummitUSA, we don't just fix IT issues—we partner with you to build a long-term technology strategy, 
+                    all for one flat monthly fee. Our commitment to transparent pricing, personalized service, and reliable 
+                    expertise sets us apart from the typical IT providers.
                   </p>
                   <p>
-                    Today, SummitUSA stands as a trusted technology partner to over 500 companies across various 
-                    industries, from innovative startups to Fortune 500 enterprises. Our comprehensive approach 
-                    combines strategic thinking, technical expertise, and deep industry knowledge to deliver 
-                    solutions that create lasting competitive advantages.
-                  </p>
-                  <p className="mb-6 sm:mb-8">
-                    At SummitUSA, every client engagement is an opportunity to push technological boundaries, 
-                    challenge conventional thinking, and unlock new possibilities for growth and innovation.
+                    Most managed IT services lock you into confusing contracts and "either-or" situations. Either you pay 
+                    extra for unexpected issues, or you're left scrambling to handle them yourself. SummitUSA does things 
+                    differently. Our all-inclusive IT Subscription Program covers everything—no hidden fees, no surprises, 
+                    just dependable support when you need it.
                   </p>
                 </div>
                 
