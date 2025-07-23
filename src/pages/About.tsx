@@ -290,6 +290,110 @@ export default function About() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img 
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="Professional workspace background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-16 scroll-animate">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
+              What Our Clients Say
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto px-4">
+              Don't just take our word for it - hear from businesses who trust SummitUSA for their IT needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left overflow-hidden relative">
+              <div className="absolute top-4 right-4 opacity-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Client testimonial" 
+                  className="w-16 h-16 object-cover rounded-full"
+                />
+              </div>
+              <div className="relative z-10">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-orange-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
+                  "SummitUSA transformed our IT infrastructure completely. No more downtime, no more surprises. 
+                  Their flat-rate pricing gives us peace of mind and predictable budgeting."
+                </p>
+                <div>
+                  <p className="text-white font-semibold text-sm sm:text-base">Sarah Mitchell</p>
+                  <p className="text-orange-400 text-xs sm:text-sm">CEO, TechFlow Solutions</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 scroll-animate-scale overflow-hidden relative">
+              <div className="absolute top-4 right-4 opacity-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Client testimonial" 
+                  className="w-16 h-16 object-cover rounded-full"
+                />
+              </div>
+              <div className="relative z-10">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-blue-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
+                  "The proactive monitoring and 24/7 support from SummitUSA has been a game-changer. 
+                  They catch issues before they become problems. Best IT investment we've made."
+                </p>
+                <div>
+                  <p className="text-white font-semibold text-sm sm:text-base">Michael Rodriguez</p>
+                  <p className="text-blue-400 text-xs sm:text-sm">Operations Director, GreenSpace Industries</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-right overflow-hidden relative md:col-span-2 lg:col-span-1">
+              <div className="absolute top-4 right-4 opacity-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Client testimonial" 
+                  className="w-16 h-16 object-cover rounded-full"
+                />
+              </div>
+              <div className="relative z-10">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-orange-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
+                  "SummitUSA's all-inclusive approach means we never worry about unexpected IT costs. 
+                  Their team feels like an extension of our company - always there when we need them."
+                </p>
+                <div>
+                  <p className="text-white font-semibold text-sm sm:text-base">Jennifer Adams</p>
+                  <p className="text-orange-400 text-xs sm:text-sm">COO, Sterling Financial Group</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
