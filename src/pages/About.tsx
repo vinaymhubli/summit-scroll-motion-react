@@ -268,6 +268,15 @@ export default function About() {
                     and long-term strategic guidance to help your business grow with confidence.
                   </p>
                 </div>
+                
+                <div className="mt-8">
+                  <Link 
+                    to="/contact" 
+                    className="inline-block bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25"
+                  >
+                    Get The IT Support you Deserve
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="relative scroll-animate-right">
