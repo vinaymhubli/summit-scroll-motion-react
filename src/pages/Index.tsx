@@ -6,6 +6,17 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+// Industry images
+import healthcareImg from '../assets/industry-healthcare.jpg';
+import constructionImg from '../assets/industry-construction.jpg';
+import financeImg from '../assets/industry-finance.jpg';
+import educationImg from '../assets/industry-education.jpg';
+import legalImg from '../assets/industry-legal.jpg';
+import nonprofitImg from '../assets/industry-nonprofit.jpg';
+import manufacturingImg from '../assets/industry-manufacturing.jpg';
+import retailImg from '../assets/industry-retail.jpg';
+import realestateImg from '../assets/industry-realestate.jpg';
+
 export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [typedText, setTypedText] = useState('');
@@ -341,54 +352,104 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">Cloud Computing</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">AWS, Azure, Google Cloud</p>
+          <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-1">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${healthcareImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Healthcare</h3>
+                <p className="text-sm text-gray-400">HIPAA-compliant systems & secure patient data management</p>
+              </div>
             </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">Cybersecurity</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">Network Security, Data Protection</p>
+
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-2">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${constructionImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Construction</h3>
+                <p className="text-sm text-gray-400">Reliable support across job sites & mobile workforce</p>
+              </div>
             </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-3">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">Software Development</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">Custom Apps, Web Development</p>
+
+            <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-3">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${financeImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Finance</h3>
+                <p className="text-sm text-gray-400">Secure financial systems & regulatory compliance</p>
+              </div>
             </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">Network Infrastructure</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">LAN/WAN, VPN, Wireless</p>
+
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-4">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${educationImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Education</h3>
+                <p className="text-sm text-gray-400">Digital learning platforms & student data protection</p>
+              </div>
             </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">Data Analytics</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">Big Data, Business Intelligence</p>
+
+            <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-5">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${legalImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Legal</h3>
+                <p className="text-sm text-gray-400">Confidential case management & secure communications</p>
+              </div>
             </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">AI & Machine Learning</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">Automation, Predictive Analytics</p>
+
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-6">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${nonprofitImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Nonprofit</h3>
+                <p className="text-sm text-gray-400">Cost-effective solutions & donor management systems</p>
+              </div>
             </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-3">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">DevOps</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">CI/CD, Container Management</p>
+
+            <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-1">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${manufacturingImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Manufacturing</h3>
+                <p className="text-sm text-gray-400">Industrial automation & production system integration</p>
+              </div>
             </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-4">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">Database Management</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">SQL, NoSQL, Data Migration</p>
+
+            <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-2">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${retailImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Retail</h3>
+                <p className="text-sm text-gray-400">POS systems & inventory management solutions</p>
+              </div>
             </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-5">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">Mobile Development</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">iOS, Android, Cross-Platform</p>
-            </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-6">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">IT Consulting</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">Digital Strategy, Tech Advisory</p>
-            </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-1">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">Backup & Recovery</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">Disaster Recovery, Data Backup</p>
-            </div>
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer scroll-animate-scale stagger-2">
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white mb-4">IT Support</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">24/7 Help Desk, Remote Support</p>
+
+            <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-3">
+              <div 
+                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                style={{ backgroundImage: `url(${realestateImg})` }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-white mb-2">Real Estate</h3>
+                <p className="text-sm text-gray-400">CRM systems & property management platforms</p>
+              </div>
             </div>
           </div>
         </div>
