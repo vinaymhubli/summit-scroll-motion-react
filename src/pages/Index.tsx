@@ -644,15 +644,6 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left stagger-1">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">New York Headquarters</h3>
-                <p className="text-xs sm:text-sm lg:text-base text-gray-300 mb-4">
-                  1234 Summit Street, New York, NY 10001
-                </p>
-                <p className="text-xs sm:text-sm lg:text-base text-gray-400">
-                  Our flagship office in the heart of Manhattan, serving as the global command center for strategic operations and client partnerships.
-                </p>
-              </div>
 
               <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 scroll-animate-left stagger-2">
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">San Francisco Innovation Hub</h3>
