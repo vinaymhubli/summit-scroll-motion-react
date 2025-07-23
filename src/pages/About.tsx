@@ -239,7 +239,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why Choose SummitUSA */}
+      {/* How SummitUSA Supports Your Business */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <img 
@@ -249,56 +249,33 @@ export default function About() {
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center mb-12 sm:mb-16 scroll-animate">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
-              Why Choose SummitUSA?
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto px-4">
-              SummitUSA delivers unmatched value through our comprehensive approach to technology consulting
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left overflow-hidden relative">
-              <div className="absolute top-4 right-4 opacity-20">
-                <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                  alt="Track Record" 
-                  className="w-20 h-20 object-cover rounded-xl"
-                />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="scroll-animate-left">
+              <div className="text-center lg:text-left">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">How SummitUSA Supports Your Business</h2>
+                <div className="space-y-4 sm:space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+                  <p>
+                    Say goodbye to hardware headaches. At SummitUSA, we ensure your team always has the devices they need 
+                    with regular upgrades every three years so you're never stuck with outdated technology.
+                  </p>
+                  <p>
+                    But we don't stop at hardware. We proactively maintain your systems, monitor for cybersecurity threats, 
+                    and train your staff on best practices to stay secure. From multi-cloud architecture to reliable backups, 
+                    disaster recovery, and remote work software, we've got every angle covered.
+                  </p>
+                  <p>
+                    With decades of experience delivering trusted IT services, SummitUSA provides around-the-clock support 
+                    and long-term strategic guidance to help your business grow with confidence.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-3 sm:mb-4 relative z-10">Proven Track Record</h3>
-              <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-xs sm:text-sm relative z-10">
-                SummitUSA has successfully delivered over 500 technology projects across 15+ industries, 
-                with a 98% client satisfaction rate and measurable ROI for every engagement.
-              </p>
-              <ul className="space-y-1 sm:space-y-2 text-gray-300 text-xs sm:text-sm relative z-10">
-                <li>• 500+ Successful Project Deliveries</li>
-                <li>• 98% Client Satisfaction Rate</li>
-                <li>• Average 300% ROI for Clients</li>
-                <li>• 95% Client Retention Rate</li>
-              </ul>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 scroll-animate-right overflow-hidden relative">
-              <div className="absolute top-4 right-4 opacity-20">
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                  alt="Expert Team" 
-                  className="w-20 h-20 object-cover rounded-xl"
-                />
-              </div>
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-3 sm:mb-4 relative z-10">Expert Team</h3>
-              <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-xs sm:text-sm relative z-10">
-                Our SummitUSA team consists of certified professionals, industry experts, and thought leaders 
-                with deep expertise across all major technology platforms and business domains.
-              </p>
-              <ul className="space-y-1 sm:space-y-2 text-gray-300 text-xs sm:text-sm relative z-10">
-                <li>• 50+ Certified Technology Experts</li>
-                <li>• Average 12+ Years Industry Experience</li>
-                <li>• Multi-Industry Domain Expertise</li>
-                <li>• Continuous Professional Development</li>
-              </ul>
+            <div className="relative scroll-animate-right">
+              <img
+                src="/lovable-uploads/266fa4d5-08fa-4738-a871-4d1494b331c4.png"
+                alt="SummitUSA IT Support Services"
+                className="rounded-2xl shadow-2xl object-cover w-full h-64 sm:h-80 lg:h-96 object-center"
+              />
             </div>
           </div>
         </div>
