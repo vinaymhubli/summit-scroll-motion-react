@@ -651,34 +651,80 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="overflow-x-auto scroll-animate">
-            <div className="min-w-full bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-3xl border border-blue-500/20 p-8">
+          {/* Desktop Table */}
+          <div className="hidden md:block overflow-x-auto scroll-animate">
+            <div className="min-w-full bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-3xl border border-blue-500/20 p-4 md:p-8">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-600">
-                    <th className="text-left py-4 px-6 text-lg font-bold text-white">Comparison</th>
-                    <th className="text-center py-4 px-6 text-lg font-bold text-orange-400">Managed IT Services</th>
-                    <th className="text-center py-4 px-6 text-lg font-bold text-blue-400">IT Subscription Program</th>
+                    <th className="text-left py-3 px-2 md:py-4 md:px-6 text-sm md:text-lg font-bold text-white">Comparison</th>
+                    <th className="text-center py-3 px-2 md:py-4 md:px-6 text-sm md:text-lg font-bold text-orange-400">Managed IT Services</th>
+                    <th className="text-center py-3 px-2 md:py-4 md:px-6 text-sm md:text-lg font-bold text-blue-400">IT Subscription Program</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
                   <tr className="border-b border-gray-700">
-                    <td className="py-4 px-6 font-semibold">Approach to Problems</td>
-                    <td className="py-4 px-6 text-center">Reacts to problems with your tech</td>
-                    <td className="py-4 px-6 text-center">Uses proactive planning to reduce or eliminate tech problems</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 font-semibold text-sm md:text-base">Approach to Problems</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 text-center text-sm md:text-base">Reacts to problems with your tech</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 text-center text-sm md:text-base">Uses proactive planning to reduce or eliminate tech problems</td>
                   </tr>
                   <tr className="border-b border-gray-700">
-                    <td className="py-4 px-6 font-semibold">Planning Horizon</td>
-                    <td className="py-4 px-6 text-center">Focuses on the here and now</td>
-                    <td className="py-4 px-6 text-center">Collaborates with you to plan for your goals and objectives 3-4 years in the future</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 font-semibold text-sm md:text-base">Planning Horizon</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 text-center text-sm md:text-base">Focuses on the here and now</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 text-center text-sm md:text-base">Collaborates with you to plan for your goals and objectives 3-4 years in the future</td>
                   </tr>
                   <tr>
-                    <td className="py-4 px-6 font-semibold">Billing Structure</td>
-                    <td className="py-4 px-6 text-center">Bills you for additional projects and upgrades to your IT system</td>
-                    <td className="py-4 px-6 text-center">No surprise bills - you can expect one predictable IT cost</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 font-semibold text-sm md:text-base">Billing Structure</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 text-center text-sm md:text-base">Bills you for additional projects and upgrades to your IT system</td>
+                    <td className="py-3 px-2 md:py-4 md:px-6 text-center text-sm md:text-base">No surprise bills - you can expect one predictable IT cost</td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+
+          {/* Mobile Cards */}
+          <div className="md:hidden space-y-6 scroll-animate">
+            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 p-4">
+              <h3 className="text-lg font-bold text-white mb-4">Approach to Problems</h3>
+              <div className="space-y-3">
+                <div className="bg-orange-900/20 p-3 rounded-lg">
+                  <h4 className="text-orange-400 font-semibold text-sm mb-1">Managed IT Services</h4>
+                  <p className="text-gray-300 text-sm">Reacts to problems with your tech</p>
+                </div>
+                <div className="bg-blue-900/20 p-3 rounded-lg">
+                  <h4 className="text-blue-400 font-semibold text-sm mb-1">IT Subscription Program</h4>
+                  <p className="text-gray-300 text-sm">Uses proactive planning to reduce or eliminate tech problems</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 p-4">
+              <h3 className="text-lg font-bold text-white mb-4">Planning Horizon</h3>
+              <div className="space-y-3">
+                <div className="bg-orange-900/20 p-3 rounded-lg">
+                  <h4 className="text-orange-400 font-semibold text-sm mb-1">Managed IT Services</h4>
+                  <p className="text-gray-300 text-sm">Focuses on the here and now</p>
+                </div>
+                <div className="bg-blue-900/20 p-3 rounded-lg">
+                  <h4 className="text-blue-400 font-semibold text-sm mb-1">IT Subscription Program</h4>
+                  <p className="text-gray-300 text-sm">Collaborates with you to plan for your goals and objectives 3-4 years in the future</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 p-4">
+              <h3 className="text-lg font-bold text-white mb-4">Billing Structure</h3>
+              <div className="space-y-3">
+                <div className="bg-orange-900/20 p-3 rounded-lg">
+                  <h4 className="text-orange-400 font-semibold text-sm mb-1">Managed IT Services</h4>
+                  <p className="text-gray-300 text-sm">Bills you for additional projects and upgrades to your IT system</p>
+                </div>
+                <div className="bg-blue-900/20 p-3 rounded-lg">
+                  <h4 className="text-blue-400 font-semibold text-sm mb-1">IT Subscription Program</h4>
+                  <p className="text-gray-300 text-sm">No surprise bills - you can expect one predictable IT cost</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
