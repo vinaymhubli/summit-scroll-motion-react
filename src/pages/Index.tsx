@@ -221,8 +221,8 @@ export default function Home() {
         ></div>
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center py-32">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-8 leading-tight">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center py-16 sm:py-24 md:py-32">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight">
             <span className="typing-cursor">
               <span className="text-white">{typedText.slice(0, 6)}</span>
               <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
@@ -230,14 +230,14 @@ export default function Home() {
               </span>
             </span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed font-light px-4">
             The Future of IT Starts with Predictable, Scalable Support
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Link to="/contact" className="bg-gradient-to-r from-orange-500 to-blue-900 text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg lg:text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 whitespace-nowrap cursor-pointer">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-16 px-4">
+            <Link to="/contact" className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-blue-900 text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 rounded-full text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 text-center cursor-pointer">
               Get Started Today
             </Link>
-            <Link to="/about" className="border-2 border-white text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg lg:text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap cursor-pointer">
+            <Link to="/about" className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 rounded-full text-sm sm:text-base lg:text-lg font-semibold hover:bg-white hover:text-black transition-all duration-300 text-center cursor-pointer">
               Learn More
             </Link>
           </div>
@@ -245,22 +245,22 @@ export default function Home() {
       </section>
 
       {/* IT Confusion and Costs Section */}
-      <section className="py-12 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 scroll-animate">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-6 sm:mb-8 scroll-animate">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 px-4">
               Is Poor IT Support Draining Your Business Resources?
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4">
               Downtime and inefficient IT can silently erode your revenue, customer trust, and team productivity.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
             {/* Left side - Image */}
-            <div className="scroll-animate-left">
+            <div className="scroll-animate-left order-2 lg:order-1">
               <div
-                className="w-full h-96 rounded-2xl bg-cover bg-center shadow-xl"
+                className="w-full h-64 sm:h-80 lg:h-96 rounded-2xl bg-cover bg-center shadow-xl"
                 style={{
                   backgroundImage: `url('/lovable-uploads/f212d01b-3ea0-4e98-87ad-f3b35877416c.png')`
                 }}
@@ -268,62 +268,62 @@ export default function Home() {
             </div>
 
             {/* Right side - Statistics */}
-            <div className="space-y-2 scroll-animate-right">
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
-                <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+            <div className="space-y-3 sm:space-y-4 scroll-animate-right order-1 lg:order-2">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-4 sm:p-6 rounded-xl border border-orange-500/30">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   91%
                 </div>
-                <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                   of businesses report that a single hour of downtime costs over $300,000. (Source: ITIC)
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-2 rounded-xl border border-blue-500/30">
-                <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-4 sm:p-6 rounded-xl border border-blue-500/30">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   $5600/min
                 </div>
-                <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                   is the average cost of downtime for large enterprises. (Source: Gartner)
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
-                <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-4 sm:p-6 rounded-xl border border-orange-500/30">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   43%
                 </div>
-                <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                   of cyberattacks target small businesses, with downtime averaging 18.5 hours. (Source: Accenture)
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-2 rounded-xl border border-blue-500/30">
-                <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+              <div className="bg-gradient-to-br from-blue-900/30 to-orange-500/20 p-4 sm:p-6 rounded-xl border border-blue-500/30">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   $142,000
                 </div>
-                <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                   is the average cost to recover from a ransomware attack for SMBs. (Source: Sophos)
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-2 rounded-xl border border-orange-500/30">
-                <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-1">
+              <div className="bg-gradient-to-br from-orange-500/20 to-blue-900/30 p-4 sm:p-6 rounded-xl border border-orange-500/30">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-900 bg-clip-text text-transparent mb-2">
                   28%
                 </div>
-                <p className="text-xs lg:text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                   of IT leaders say lack of proactive monitoring is the leading cause of system failures. (Source: LogicMonitor)
                 </p>
               </div>
             </div>
           </div>
           
-          <div className="text-center mt-8 scroll-animate">
-            <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <div className="text-center mt-6 sm:mt-8 scroll-animate">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
               Don't allow downtime to impact employee productivity and derail your organization. Get the IT support you need to reduce and stop these interruptions before they occur.
             </p>
           </div>
           
-          <div className="text-center mt-8 scroll-animate">
-            <Link to="/contact" className="bg-gradient-to-r from-orange-500 to-blue-900 text-white px-8 sm:px-12 py-4 rounded-full text-base sm:text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 whitespace-nowrap cursor-pointer inline-block">
+          <div className="text-center mt-6 sm:mt-8 scroll-animate px-4">
+            <Link to="/contact" className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-blue-900 text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 rounded-full text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 cursor-pointer inline-block">
               Get a competitive advantage now
             </Link>
           </div>
@@ -331,56 +331,56 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 sm:py-32 bg-gradient-to-br from-orange-900/20 via-blue-900/20 to-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-animate">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-900/20 via-blue-900/20 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20 scroll-animate">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 px-4">
               Why Choose SummitUSA?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
               SummitUSA is your trusted technology partner delivering dependable, cost-effective, and forward-thinking IT solutions tailored to fuel your business success. With us, you don't just get support you gain a team committed to your growth, security, and long-term vision.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto mt-16 space-y-6">
-            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-1">
-              <h3 className="text-lg font-bold text-white mb-3">• True Partnership Mindset</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">We work as an extension of your team, aligning IT strategies with your business goals.</p>
+          <div className="max-w-4xl mx-auto mt-8 sm:mt-12 lg:mt-16 space-y-4 sm:space-y-6">
+            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-4 sm:p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-1">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">• True Partnership Mindset</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">We work as an extension of your team, aligning IT strategies with your business goals.</p>
             </div>
             
-            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-2">
-              <h3 className="text-lg font-bold text-white mb-3">• Predictable Costs</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">Our fixed monthly pricing eliminates surprise bills and helps you manage your IT budget with confidence.</p>
+            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-4 sm:p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-2">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">• Predictable Costs</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">Our fixed monthly pricing eliminates surprise bills and helps you manage your IT budget with confidence.</p>
             </div>
             
-            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-3">
-              <h3 className="text-lg font-bold text-white mb-3">• Proactive Support</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">We solve issues before they become problems, minimizing downtime and disruption.</p>
+            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-4 sm:p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-3">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">• Proactive Support</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">We solve issues before they become problems, minimizing downtime and disruption.</p>
             </div>
             
-            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-4">
-              <h3 className="text-lg font-bold text-white mb-3">• Trusted by Businesses</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">Decades of experience and long-term client relationships speak to our consistent results and reliability.</p>
+            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-4 sm:p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-4">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">• Trusted by Businesses</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">Decades of experience and long-term client relationships speak to our consistent results and reliability.</p>
             </div>
             
-            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-5">
-              <h3 className="text-lg font-bold text-white mb-3">• Focus on Growth</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">We provide strategic guidance to help you scale efficiently with the right technology foundation.</p>
+            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-4 sm:p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-5">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">• Focus on Growth</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">We provide strategic guidance to help you scale efficiently with the right technology foundation.</p>
             </div>
             
-            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-6">
-              <h3 className="text-lg font-bold text-white mb-3">• Always Available</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">Our team is responsive, reliable, and ready to support you whenever you need us—24/7.</p>
+            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-4 sm:p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-6">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">• Always Available</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">Our team is responsive, reliable, and ready to support you whenever you need us—24/7.</p>
             </div>
             
-            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-1">
-              <h3 className="text-lg font-bold text-white mb-3">• Security-First Approach</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">We prioritize your data and system security with proactive protection and staff training.</p>
+            <div className="bg-gradient-to-r from-orange-900/30 to-blue-900/20 p-4 sm:p-6 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 scroll-animate stagger-1">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">• Security-First Approach</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">We prioritize your data and system security with proactive protection and staff training.</p>
             </div>
             
-            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-2">
-              <h3 className="text-lg font-bold text-white mb-3">• Peace of Mind</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">With SummitUSA, you can focus on your business while we handle the complexities of IT.</p>
+            <div className="bg-gradient-to-r from-blue-900/30 to-orange-900/20 p-4 sm:p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 scroll-animate stagger-2">
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">• Peace of Mind</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">With SummitUSA, you can focus on your business while we handle the complexities of IT.</p>
             </div>
           </div>
 
@@ -388,7 +388,7 @@ export default function Home() {
       </section>
 
       {/* CTA Banner Section */}
-      <section className="py-20 sm:py-32 relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
         <Link to="/contact" className="block group cursor-pointer">
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -398,16 +398,16 @@ export default function Home() {
           ></div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80"></div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 group-hover:scale-105 transition-transform duration-300">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300 px-4">
               Transform Your Business with Expert IT Solutions
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
               Join hundreds of successful businesses who trust SummitUSA for their technology needs. Get started today and experience the difference.
             </p>
-            <div className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-blue-900 text-white px-12 sm:px-16 py-6 rounded-full text-base sm:text-lg lg:text-xl font-bold group-hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50">
+            <div className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-blue-900 text-white px-8 sm:px-12 md:px-16 py-4 sm:py-6 rounded-full text-sm sm:text-base lg:text-lg font-bold group-hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 mx-4">
               <span>Get Your Free Consultation</span>
-              <svg className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="ml-2 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>
@@ -416,121 +416,121 @@ export default function Home() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-20 sm:py-32 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-animate">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20 scroll-animate">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 px-4">
               The Right IT Support for Your Industry
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
               Every industry has unique technology needs and at SummitUSA, we get that. From healthcare practices needing HIPAA-compliant systems to construction firms requiring reliable support across job sites, we tailor our IT solutions to fit your world. Whether you're in finance, education, legal, or nonprofit sectors, we bring the experience, tools, and strategic guidance needed to keep your business running smoothly and securely. No matter your field, SummitUSA is the IT partner you can trust to deliver real results.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
             <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-1">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${healthcareImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Healthcare</h3>
-                <p className="text-sm text-gray-400">HIPAA-compliant systems & secure patient data management</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Healthcare</h3>
+                <p className="text-xs sm:text-sm text-gray-400">HIPAA-compliant systems & secure patient data management</p>
               </div>
             </div>
 
             <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-2">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${constructionImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Construction</h3>
-                <p className="text-sm text-gray-400">Reliable support across job sites & mobile workforce</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Construction</h3>
+                <p className="text-xs sm:text-sm text-gray-400">Reliable support across job sites & mobile workforce</p>
               </div>
             </div>
 
             <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-3">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${financeImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Finance</h3>
-                <p className="text-sm text-gray-400">Secure financial systems & regulatory compliance</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Finance</h3>
+                <p className="text-xs sm:text-sm text-gray-400">Secure financial systems & regulatory compliance</p>
               </div>
             </div>
 
             <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-4">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${educationImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Education</h3>
-                <p className="text-sm text-gray-400">Digital learning platforms & student data protection</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Education</h3>
+                <p className="text-xs sm:text-sm text-gray-400">Digital learning platforms & student data protection</p>
               </div>
             </div>
 
             <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-5">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${legalImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Legal</h3>
-                <p className="text-sm text-gray-400">Confidential case management & secure communications</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Legal</h3>
+                <p className="text-xs sm:text-sm text-gray-400">Confidential case management & secure communications</p>
               </div>
             </div>
 
             <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-6">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${nonprofitImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Nonprofit</h3>
-                <p className="text-sm text-gray-400">Cost-effective solutions & donor management systems</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Nonprofit</h3>
+                <p className="text-xs sm:text-sm text-gray-400">Cost-effective solutions & donor management systems</p>
               </div>
             </div>
 
             <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-1">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${manufacturingImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Manufacturing</h3>
-                <p className="text-sm text-gray-400">Industrial automation & production system integration</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Manufacturing</h3>
+                <p className="text-xs sm:text-sm text-gray-400">Industrial automation & production system integration</p>
               </div>
             </div>
 
             <div className="text-center bg-gradient-to-br from-blue-900/30 to-orange-900/20 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-2">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${retailImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Retail</h3>
-                <p className="text-sm text-gray-400">POS systems & inventory management solutions</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Retail</h3>
+                <p className="text-xs sm:text-sm text-gray-400">POS systems & inventory management solutions</p>
               </div>
             </div>
 
             <div className="text-center bg-gradient-to-br from-orange-900/30 to-blue-900/20 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:transform hover:scale-105 scroll-animate-scale stagger-3">
               <div 
-                className="w-full h-48 rounded-t-2xl bg-cover bg-center mb-4"
+                className="w-full h-32 sm:h-40 lg:h-48 rounded-t-2xl bg-cover bg-center mb-3 sm:mb-4"
                 style={{ backgroundImage: `url(${realestateImg})` }}
               ></div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">Real Estate</h3>
-                <p className="text-sm text-gray-400">CRM systems & property management platforms</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Real Estate</h3>
+                <p className="text-xs sm:text-sm text-gray-400">CRM systems & property management platforms</p>
               </div>
             </div>
           </div>
           
           {/* CTA Button */}
-          <div className="text-center mt-16 scroll-animate">
-            <Link to="/contact" className="bg-gradient-to-r from-orange-500 to-blue-900 text-white px-12 sm:px-16 py-6 rounded-full text-base sm:text-lg lg:text-xl font-bold hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 whitespace-nowrap cursor-pointer inline-block">
+          <div className="text-center mt-8 sm:mt-12 lg:mt-16 scroll-animate px-4">
+            <Link to="/contact" className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-blue-900 text-white px-8 sm:px-12 md:px-16 py-4 sm:py-6 rounded-full text-sm sm:text-base lg:text-lg font-bold hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 cursor-pointer inline-block">
               Get Industry-Specific IT Solutions
             </Link>
           </div>
