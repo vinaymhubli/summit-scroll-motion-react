@@ -30,9 +30,9 @@ const Header = () => {
         </nav>
         
         {/* Desktop CTA Button */}
-        <button className="hidden md:block bg-gradient-to-r from-orange-500 to-blue-900 text-white px-6 py-2 rounded-full hover:scale-105 transition-all duration-300 text-sm">
+        <Link to="/contact" className="hidden md:block bg-gradient-to-r from-orange-500 to-blue-900 text-white px-6 py-2 rounded-full hover:scale-105 transition-all duration-300 text-sm">
           Get Started
-        </button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button 
