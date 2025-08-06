@@ -303,34 +303,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-12 sm:py-16 bg-gradient-to-br from-orange-900/20 to-blue-900/20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-            alt="Office location background" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center mb-8 sm:mb-12 scroll-animate">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Visit Our Office</h2>
-          </div>
-          
-          <div className="rounded-2xl overflow-hidden shadow-2xl scroll-animate-scale">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.4567!2d-122.315!3d47.821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDQ5JzE1LjYiTiAxMjLCsDE4JzU0LjAiVw!5e0!3m2!1sen!2sus!4v1635959384843!5m2!1sen!2sus"
-              width="100%"
-              height="300"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="sm:h-[400px]"
-            ></iframe>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
