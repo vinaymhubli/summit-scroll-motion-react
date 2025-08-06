@@ -1,0 +1,48 @@
+IMPORTANT: CORRECT IIS DEPLOYMENT FILES
+==========================================
+
+Dear Client,
+
+We apologize for the confusion. The previous package contained source code files that needed to be compiled first. 
+
+THIS PACKAGE CONTAINS THE CORRECT STATIC FILES FOR IIS:
+
+✅ WHAT YOU SHOULD SEE IN THIS PACKAGE:
+- index.html           (Main website file)
+- web.config           (IIS configuration - CRITICAL!)
+- assets/ folder       (Contains CSS, JavaScript, and images)
+- favicon.ico          (Website icon)
+- robots.txt           (Search engine instructions)
+- placeholder.svg      (Default image)
+- lovable-uploads/     (Additional images)
+
+✅ SIMPLE DEPLOYMENT STEPS:
+
+1. Extract ALL files from the ZIP to your IIS website directory
+   Example: C:\inetpub\wwwroot\yourwebsite\
+
+2. Make sure ALL files are copied, especially:
+   - web.config (this is critical for routing)
+   - assets/ folder (contains the website code)
+
+3. In IIS Manager:
+   - Point your website to the folder containing these files
+   - Make sure "URL Rewrite Module" is installed in IIS
+   - Start the website
+
+4. Test by visiting:
+   - http://yourwebsite.com/
+   - http://yourwebsite.com/about
+   - http://yourwebsite.com/services
+   - http://yourwebsite.com/contact
+
+✅ THIS IS NOW A SIMPLE STATIC WEBSITE:
+- No compilation needed
+- No Node.js required on server
+- Just copy files to IIS and it works
+- All routing handled automatically by web.config
+
+If you have any issues, please let us know immediately.
+
+Best regards,
+Your Development Team

@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:iis": "vite build && npm run copy-web-config",
+    "copy-web-config": "copy public\\web.config dist\\web.config",
     "lint": "eslint .",
     "preview": "vite preview"
   },
