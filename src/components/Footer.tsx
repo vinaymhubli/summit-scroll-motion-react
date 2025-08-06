@@ -16,17 +16,6 @@ const Footer = () => {
             <p className="text-gray-400 mb-6 text-sm sm:text-base">
               Transforming businesses through strategic innovation and peak performance solutions.
             </p>
-            <div className="flex space-x-3 sm:space-x-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-orange-500 to-blue-900 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-                <span className="text-white text-xs sm:text-sm">f</span>
-              </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-orange-500 to-blue-900 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-                <span className="text-white text-xs sm:text-sm">in</span>
-              </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-orange-500 to-blue-900 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-                <span className="text-white text-xs sm:text-sm">t</span>
-              </div>
-            </div>
           </div>
           
           <div>
