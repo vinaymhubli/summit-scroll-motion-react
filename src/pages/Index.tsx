@@ -742,25 +742,20 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-
-
-              <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left stagger-3">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">Summit Services Corporation</h3>
-                <div className="text-xs sm:text-sm lg:text-base text-gray-300 mb-4 space-y-1">
-                  <p>20511 61st Place West</p>
-                  <p>Lynnwood, WA 98036 (U.S.A)</p>
-                  <p>Phone: 1-206-841-0601 Extension 101</p>
-                  <p>Fax: 1-206-339-4838</p>
-                  <p>SIP: 101@Sip.SummitUSA.com</p>
-                </div>
-                <p className="text-xs sm:text-sm lg:text-base text-gray-400">
-                  Our headquarters providing comprehensive IT services and technology solutions across the Pacific Northwest and beyond.
-                </p>
+          <div className="w-full">
+            <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left stagger-3">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">Summit Services Corporation</h3>
+              <div className="text-xs sm:text-sm lg:text-base text-gray-300 mb-4 space-y-1">
+                <p>20511 61st Place West</p>
+                <p>Lynnwood, WA 98036 (U.S.A)</p>
+                <p>Phone: 1-206-841-0601 Extension 101</p>
+                <p>Fax: 1-206-339-4838</p>
+                <p>SIP: 101@Sip.SummitUSA.com</p>
               </div>
+              <p className="text-xs sm:text-sm lg:text-base text-gray-400">
+                Our headquarters providing comprehensive IT services and technology solutions across the Pacific Northwest and beyond.
+              </p>
             </div>
-
           </div>
         </div>
       </section>
