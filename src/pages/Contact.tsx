@@ -283,27 +283,6 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 rounded-2xl border border-orange-500/20 scroll-animate-scale overflow-hidden relative">
-                <div className="absolute top-4 right-4 opacity-15">
-                  <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                    alt="Social" 
-                    className="w-20 h-20 object-cover rounded-xl"
-                  />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 relative z-10">Follow Us</h3>
-                <div className="space-y-3 sm:space-y-4 relative z-10">
-                  <a href="#" className="block text-gray-300 hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base">
-                    Facebook - Stay updated with our latest insights
-                  </a>
-                  <a href="#" className="block text-gray-300 hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base">
-                    LinkedIn - Connect with our professional network
-                  </a>
-                  <a href="#" className="block text-gray-300 hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base">
-                    Twitter - Follow our industry commentary
-                  </a>
-                </div>
-              </div>
               
               <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale overflow-hidden relative">
                 <div className="absolute top-4 right-4 opacity-15">
