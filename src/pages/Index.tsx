@@ -752,7 +752,7 @@ export default function Home() {
                 <p>Fax: 1-206-339-4838</p>
                 <p>SIP: 101@Sip.SummitUSA.com</p>
               </div>
-              <p className="text-xs sm:text-sm lg:text-base text-gray-400">
+              <p className="text-xs sm:text-sm lg:text-base text-gray-400 text-center">
                 Our headquarters providing comprehensive IT services and technology solutions across the Pacific Northwest and beyond.
               </p>
             </div>
