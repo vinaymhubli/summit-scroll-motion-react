@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -418,9 +419,9 @@ export default function Services() {
             Let's discuss how SummitUSA can transform your business with our comprehensive technology solutions. 
             Contact us today for a free consultation.
           </p>
-          <button className="bg-white text-orange-900 px-12 py-4 rounded-full text-sm sm:text-base lg:text-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer">
+          <Link to="/contact" className="bg-white text-orange-900 px-12 py-4 rounded-full text-sm sm:text-base lg:text-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl whitespace-nowrap cursor-pointer inline-block">
             Start Your Project
-          </button>
+          </Link>
         </div>
       </section>
 
