@@ -745,7 +745,7 @@ export default function Home() {
           <div className="w-full">
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left stagger-3">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 text-center">Summit Services Corporation</h3>
-              <div className="text-xs sm:text-sm lg:text-base text-gray-300 mb-4 space-y-1">
+              <div className="text-xs sm:text-sm lg:text-base text-gray-300 mb-4 space-y-1 text-center">
                 <p>20511 61st Place West</p>
                 <p>Lynnwood, WA 98036 (U.S.A)</p>
                 <p>Phone: 1-206-841-0601 Extension 101</p>
