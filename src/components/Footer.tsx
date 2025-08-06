@@ -55,6 +55,9 @@ const Footer = () => {
           <p className="text-gray-400 text-sm sm:text-base">
             © 2025 Summit Services Corporation. All rights reserved.
           </p>
+          <p className="text-gray-400 text-sm sm:text-base mt-2">
+            Designed and developed by <a href="https://www.awdinfotech.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">AWD Infotech</a>
+          </p>
         </div>
       </div>
     </footer>
