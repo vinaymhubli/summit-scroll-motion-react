@@ -96,10 +96,6 @@ export default function Contact() {
     }
     
     setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', company: '', message: '' });
-    }, 3000);
   };
 
   return (
