@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <!-- Enable URL rewriting -->
+    <rewrite>
+      <rules>
+        <!-- Handle client-side routing - redirect all requests to index.html -->
+        <rule name="React Routes" stopProcessing="true">
+          <match url=".*" />
+          <conditions logicalGrouping="MatchAll">
+            <!-- Don't rewrite requests for actual files -->
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <!-- Don't rewrite requests for directories -->
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+            <!-- Don't rewrite API requests -->
+            <add input="{REQUEST_URI}" pattern="^/api/" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="/" />
+        </rule>
+        
+        <!-- Security headers -->
+        <rule name="Security Headers" stopProcessing="false">
+          <match url=".*" />
+          <serverVariables>
+            <set name="RESPONSE_X_Content_Type_Options" value="nosniff" />
+            <set name="RESPONSE_X_Frame_Options" value="DENY" />
+            <set name="RESPONSE_X_XSS_Protection" value="1; mode=block" />
+            <set name="RESPONSE_Referrer_Policy" value="strict-origin-when-cross-origin" />
+          </serverVariables>
+          <action type="None" />
+        </rule>
+      </rules>
+    </rewrite>
+    
+    <!-- Configure MIME types for modern web assets -->
+    <staticContent>
+      <mimeMap fileExtension=".json" mimeType="application/json" />
+      <mimeMap fileExtension=".woff" mimeType="font/woff" />
+      <mimeMap fileExtension=".woff2" mimeType="font/woff2" />
+      <mimeMap fileExtension=".js" mimeType="application/javascript" />
+      <mimeMap fileExtension=".mjs" mimeType="application/javascript" />
+      <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
+      <mimeMap fileExtension=".webp" mimeType="image/webp" />
+      <mimeMap fileExtension=".avif" mimeType="image/avif" />
+    </staticContent>
+    
+    <!-- Configure compression for better performance -->
+    <httpCompression>
+      <dynamicTypes>
+        <add mimeType="application/javascript" enabled="true" />
+        <add mimeType="application/json" enabled="true" />
+        <add mimeType="text/css" enabled="true" />
+        <add mimeType="text/html" enabled="true" />
+        <add mimeType="text/plain" enabled="true" />
+        <add mimeType="text/xml" enabled="true" />
+        <add mimeType="image/svg+xml" enabled="true" />
+      </dynamicTypes>
+      <staticTypes>
+        <add mimeType="application/javascript" enabled="true" />
+        <add mimeType="application/json" enabled="true" />
+        <add mimeType="text/css" enabled="true" />
+        <add mimeType="text/html" enabled="true" />
+        <add mimeType="text/plain" enabled="true" />
+        <add mimeType="text/xml" enabled="true" />
+        <add mimeType="image/svg+xml" enabled="true" />
+      </staticTypes>
+    </httpCompression>
+    
+    <!-- Set cache headers for different file types -->
+    <httpProtocol>
+      <customHeaders>
+        <!-- Security headers -->
+        <add name="X-Content-Type-Options" value="nosniff" />
+        <add name="X-Frame-Options" value="DENY" />
+        <add name="X-XSS-Protection" value="1; mode=block" />
+        <add name="Referrer-Policy" value="strict-origin-when-cross-origin" />
+        
+        <!-- Default cache control for HTML -->
+        <add name="Cache-Control" value="no-cache, no-store, must-revalidate" />
+      </customHeaders>
+    </httpProtocol>
+    
+    <!-- Override cache headers for specific file types -->
+    <location path="assets">
+      <system.webServer>
+        <httpProtocol>
+          <customHeaders>
+            <!-- Long-term caching for assets with hashes -->
+            <add name="Cache-Control" value="public, max-age=31536000, immutable" />
+          </customHeaders>
+        </httpProtocol>
+      </system.webServer>
+    </location>
+    
+    <!-- Cache static files -->
+    <location path="favicon.ico">
+      <system.webServer>
+        <httpProtocol>
+          <customHeaders>
+            <add name="Cache-Control" value="public, max-age=86400" />
+          </customHeaders>
+        </httpProtocol>
+      </system.webServer>
+    </location>
+    
+    <!-- Performance optimizations -->
+    <httpErrors errorMode="Custom" existingResponse="PassThrough" />
+    
+    <!-- Enable HTTP/2 if available -->
+    <serverRuntime enabled="true" />
+    
+    <!-- Optimize for static content -->
+    <staticContent>
+      <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="365.00:00:00" />
+    </staticContent>
+  </system.webServer>
+</configuration> 
