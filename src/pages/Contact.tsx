@@ -102,17 +102,56 @@ export default function Contact() {
     
     try {
       // Use relative URL to work across different devices
-      const apiUrl = window.location.hostname === 'localhost' 
-        ? 'http://localhost:3001/api/send-email'
-        : `${window.location.protocol}//${window.location.hostname}:3001/api/send-email`;
+      let apiUrl;
       
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // Try multiple URL strategies to ensure it works
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        apiUrl = 'http://localhost:3001/api/send-email';
+      } else if (window.location.hostname.includes('192.168.0.126')) {
+        apiUrl = 'http://192.168.0.126:3001/api/send-email';
+      } else {
+        // For network access, try to use the same hostname but different port
+        apiUrl = `${window.location.protocol}//${window.location.hostname}:3001/api/send-email`;
+      }
+      
+      console.log('Attempting to send email to:', apiUrl);
+      console.log('Form data:', formData);
+      
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
+      let response;
+      try {
+        response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+          signal: controller.signal,
+        });
+      } catch (fetchError) {
+        console.log('First attempt failed, trying fallback URL...');
+        // Try fallback URL if first attempt fails
+        const fallbackUrl = window.location.hostname === 'localhost' 
+          ? 'http://192.168.0.126:3001/api/send-email'
+          : 'http://localhost:3001/api/send-email';
+        
+        console.log('Trying fallback URL:', fallbackUrl);
+        response = await fetch(fallbackUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+          signal: controller.signal,
+        });
+      }
+      
+      clearTimeout(timeoutId);
+      
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
       
       const result = await response.json();
       
@@ -124,7 +163,14 @@ export default function Contact() {
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      setSubmitError('Network error. Please check your connection and try again.');
+      
+      if (error.name === 'AbortError') {
+        setSubmitError('Request timed out. Please try again.');
+      } else if (error.message.includes('Failed to fetch')) {
+        setSubmitError('Cannot connect to server. Please check your connection and try again.');
+      } else {
+        setSubmitError('Network error. Please check your connection and try again.');
+      }
     } finally {
       setIsSubmitting(false);
     }
