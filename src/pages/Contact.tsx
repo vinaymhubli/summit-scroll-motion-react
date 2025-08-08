@@ -101,7 +101,12 @@ export default function Contact() {
     setSubmitError('');
     
     try {
-      const response = await fetch('http://localhost:3001/api/send-email', {
+      // Use relative URL to work across different devices
+      const apiUrl = window.location.hostname === 'localhost' 
+        ? 'http://localhost:3001/api/send-email'
+        : `${window.location.protocol}//${window.location.hostname}:3001/api/send-email`;
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
