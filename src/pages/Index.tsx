@@ -84,7 +84,7 @@ export default function Home() {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  const onSelect = useCallback((emblaApi: any) => {
+  const onSelect = useCallback((emblaApi: { canScrollPrev: () => boolean; canScrollNext: () => boolean }) => {
     setPrevBtnDisabled(!emblaApi.canScrollPrev());
     setNextBtnDisabled(!emblaApi.canScrollNext());
   }, []);

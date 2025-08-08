@@ -10,6 +10,8 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -87,15 +89,40 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (formData.message.length > 500) {
-      alert('Message must be 500 characters or less');
+      setSubmitError('Message must be 500 characters or less');
       return;
     }
     
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError('');
+    
+    try {
+      const response = await fetch('http://localhost:3001/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        setSubmitError(result.message || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitError('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -218,11 +245,28 @@ export default function Contact() {
                     <p className="text-gray-400 text-xs sm:text-sm mt-2">{formData.message.length}/500 characters</p>
                   </div>
                   
+                  {submitError && (
+                    <div className="bg-red-900/30 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg text-sm">
+                      {submitError}
+                    </div>
+                  )}
+                  
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-700 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base touch-manipulation min-h-[48px]"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-700 hover:to-blue-700 disabled:from-gray-600 disabled:to-gray-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:transform-none shadow-lg hover:shadow-orange-500/25 text-sm sm:text-base touch-manipulation min-h-[48px] flex items-center justify-center"
                   >
-                    Send Message
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Message'
+                    )}
                   </button>
                 </form>
               )}
