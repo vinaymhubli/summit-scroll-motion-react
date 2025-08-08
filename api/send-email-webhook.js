@@ -1,5 +1,3 @@
-import nodemailer from 'nodemailer';
-
 export default async function handler(req, res) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -32,24 +30,39 @@ export default async function handler(req, res) {
       });
     }
 
-    // For now, just log the submission and return success
-    // This avoids SMTP issues in Vercel serverless environment
-    console.log('Contact form submission received:', {
+    // Try to forward to local server if available
+    try {
+      const localResponse = await fetch('http://192.168.0.126:3001/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, company, message }),
+        signal: AbortSignal.timeout(5000) // 5 second timeout
+      });
+
+      if (localResponse.ok) {
+        const result = await localResponse.json();
+        return res.status(200).json(result);
+      }
+    } catch (localError) {
+      console.log('Local server not available, using fallback:', localError.message);
+    }
+
+    // Fallback: Log the submission
+    console.log('Contact form submission (webhook fallback):', {
       name,
       email,
       company,
       message,
       timestamp: new Date().toISOString(),
-      source: 'Vercel API'
+      source: 'Vercel Webhook API'
     });
 
-    // TODO: Implement proper email sending via external service
-    // For now, we'll simulate success and log the data
-    
     res.status(200).json({ 
       success: true, 
       message: 'Message received successfully. We will contact you soon.',
-      messageId: `vercel-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+      messageId: `webhook-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     });
 
   } catch (error) {

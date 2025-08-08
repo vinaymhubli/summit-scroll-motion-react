@@ -107,7 +107,7 @@ export default function Contact() {
       // Check if we're on the deployed Vercel site
       if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('summit-usa-website')) {
         // Use the deployed API endpoint
-        apiUrl = '/api/send-email';
+        apiUrl = '/api/send-email-webhook';
       } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         apiUrl = 'http://localhost:3001/api/send-email';
       } else if (window.location.hostname.includes('192.168.0.126')) {
@@ -138,7 +138,7 @@ export default function Contact() {
         // Try fallback URL if first attempt fails
         let fallbackUrl;
         if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('summit-usa-website')) {
-          fallbackUrl = '/api/send-email';
+          fallbackUrl = '/api/send-email-webhook';
         } else if (window.location.hostname === 'localhost') {
           fallbackUrl = 'http://192.168.0.126:3001/api/send-email';
         } else {
