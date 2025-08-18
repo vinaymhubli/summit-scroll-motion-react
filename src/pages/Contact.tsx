@@ -101,44 +101,31 @@ export default function Contact() {
     setSubmitError('');
 
     try {
-      // Smart API URL detection for different environments
+      // Production-ready API URL configuration
       let apiUrl;
 
-      // Production IIS deployment - Point to your hosted backend
-      if (window.location.hostname.includes('summitusa.com') ||
-        window.location.hostname.includes('your-domain.com')) {
-        // TODO: Replace with your actual hosted backend URL
-        // Examples:
-        // apiUrl = 'https://summit-email-api.herokuapp.com/api/send-email';
-        // apiUrl = 'https://summit-email-api.railway.app/api/send-email';
-        // apiUrl = 'https://your-backend-server.com/api/send-email';
-
-        // Temporary fallback to local network for testing
-        apiUrl = 'http://192.168.0.126:3001/api/send-email';
-      }
-      // Vercel deployment (if still using)
-      else if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('summit-usa-website')) {
-        apiUrl = '/api/send-email-webhook';
-      }
-      // Local development
-      else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      // For local development only
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         apiUrl = 'http://localhost:3001/api/send-email';
       }
-      // Network testing (your local development server)
-      else if (window.location.hostname.includes('192.168.0.126')) {
-        apiUrl = 'http://192.168.0.126:3001/api/send-email';
-      }
-      // Default fallback for any other hostname
+      // For all production deployments (IIS, etc.)
       else {
-        // Try same hostname with port 3001 (if backend is on same server)
-        apiUrl = `${window.location.protocol}//${window.location.hostname}:3001/api/send-email`;
+        // TODO: Replace with your actual Railway/Heroku backend URL after deployment
+        // Example: apiUrl = 'https://summit-email-api.railway.app/api/send-email';
+
+        // TEMPORARY: For testing with your local backend server
+        // REMOVE THIS LINE after deploying to Railway/Heroku
+        apiUrl = 'http://192.168.0.126:3001/api/send-email';
+
+        // UNCOMMENT the line below after deploying your backend:
+        // apiUrl = 'https://your-backend-url.railway.app/api/send-email';
       }
 
       console.log('Attempting to send email to:', apiUrl);
       console.log('Form data:', formData);
 
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout for production
 
       let response;
       try {
@@ -151,26 +138,8 @@ export default function Contact() {
           signal: controller.signal,
         });
       } catch (fetchError) {
-        console.log('First attempt failed, trying fallback URL...');
-        // Try fallback URL if first attempt fails
-        let fallbackUrl;
-        if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('summit-usa-website')) {
-          fallbackUrl = '/api/send-email-webhook';
-        } else if (window.location.hostname === 'localhost') {
-          fallbackUrl = 'http://192.168.0.126:3001/api/send-email';
-        } else {
-          fallbackUrl = 'http://localhost:3001/api/send-email';
-        }
-
-        console.log('Trying fallback URL:', fallbackUrl);
-        response = await fetch(fallbackUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-          signal: controller.signal,
-        });
+        console.log('Request failed:', fetchError.message);
+        throw fetchError; // No fallback - direct failure reporting
       }
 
       clearTimeout(timeoutId);
