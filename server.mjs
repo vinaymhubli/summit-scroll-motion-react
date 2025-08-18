@@ -39,9 +39,9 @@ app.post('/api/send-email', async (req, res) => {
 
     // Validate required fields
     if (!name || !email || !message) {
-      return res.status(400).json({ 
-        success: false, 
-        message: 'Name, email, and message are required' 
+      return res.status(400).json({
+        success: false,
+        message: 'Name, email, and message are required'
       });
     }
 
@@ -74,19 +74,19 @@ app.post('/api/send-email', async (req, res) => {
 
     // Send email
     const info = await transporter.sendMail(mailOptions);
-    
+
     console.log('Email sent successfully:', info.messageId);
-    
-    res.json({ 
-      success: true, 
+
+    res.json({
+      success: true,
       message: 'Email sent successfully',
       messageId: info.messageId
     });
 
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ 
-      success: false, 
+    res.status(500).json({
+      success: false,
       message: 'Failed to send email. Please try again later.',
       error: error.message
     });
@@ -95,7 +95,17 @@ app.post('/api/send-email', async (req, res) => {
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', timestamp: new Date().toISOString() });
+  res.json({
+    status: 'OK',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    memory: process.memoryUsage()
+  });
+});
+
+// Keep-alive endpoint for monitoring services
+app.get('/ping', (req, res) => {
+  res.status(200).send('pong');
 });
 
 // Serve React app for all other routes
@@ -107,4 +117,23 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Email API available at http://localhost:${PORT}/api/send-email`);
   console.log(`Network access: http://0.0.0.0:${PORT}/api/send-email`);
+
+  // Keep-alive mechanism - ping self every 5 minutes to prevent sleep
+  const keepAlive = () => {
+    fetch('https://summit-scroll-motion-react.onrender.com/ping')
+      .then(response => {
+        if (response.ok) {
+          console.log(`Keep-alive ping successful at ${new Date().toISOString()}`);
+        } else {
+          console.log(`Keep-alive ping failed with status: ${response.status}`);
+        }
+      })
+      .catch(error => {
+        console.log(`Keep-alive ping error: ${error.message}`);
+      });
+  };
+
+  // Ping every 5 minutes (300000ms) to keep app awake
+  setInterval(keepAlive, 5 * 60 * 1000);
+  console.log('Keep-alive mechanism started - pinging https://summit-scroll-motion-react.onrender.com/ping every 5 minutes');
 }); 
