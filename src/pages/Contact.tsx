@@ -1,17 +1,17 @@
-import { useState, useEffect, useRef } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { useState, useEffect, useRef } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState('');
+  const [submitError, setSubmitError] = useState("");
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -19,19 +19,21 @@ export default function Contact() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
+            entry.target.classList.add("animate-in");
           }
         });
       },
       {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: "0px 0px -50px 0px",
       }
     );
 
-    const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale');
+    const elements = document.querySelectorAll(
+      ".scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale"
+    );
     elements.forEach((el) => {
-      el.classList.remove('animate-in');
+      el.classList.remove("animate-in");
       observerRef.current?.observe(el);
     });
 
@@ -41,7 +43,7 @@ export default function Contact() {
   }, []);
 
   useEffect(() => {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = `
       .scroll-animate,
       .scroll-animate-left,
@@ -82,10 +84,12 @@ export default function Contact() {
     };
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -93,29 +97,20 @@ export default function Contact() {
     e.preventDefault();
 
     if (formData.message.length > 500) {
-      setSubmitError('Message must be 500 characters or less');
+      setSubmitError("Message must be 500 characters or less");
       return;
     }
 
     setIsSubmitting(true);
-    setSubmitError('');
+    setSubmitError("");
 
     try {
-      // Production-ready API URL configuration
-      let apiUrl;
+      // Production backend URL - Your Render deployment
+      const apiUrl =
+        "https://summit-scroll-motion-react.onrender.com/api/send-email";
 
-      // For local development only
-      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        apiUrl = 'http://localhost:3001/api/send-email';
-      }
-      // For all production deployments (IIS, etc.)
-      else {
-        // Production backend URL - Your Render deployment
-        apiUrl = 'https://summit-scroll-motion-react.onrender.com/api/send-email';
-      }
-
-      console.log('Attempting to send email to:', apiUrl);
-      console.log('Form data:', formData);
+      console.log("Attempting to send email to:", apiUrl);
+      console.log("Form data:", formData);
 
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout for production
@@ -123,40 +118,46 @@ export default function Contact() {
       let response;
       try {
         response = await fetch(apiUrl, {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
           signal: controller.signal,
         });
       } catch (fetchError) {
-        console.log('Request failed:', fetchError.message);
+        console.log("Request failed:", fetchError.message);
         throw fetchError; // No fallback - direct failure reporting
       }
 
       clearTimeout(timeoutId);
 
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
 
       const result = await response.json();
 
       if (result.success) {
         setIsSubmitted(true);
-        setFormData({ name: '', email: '', company: '', message: '' });
+        setFormData({ name: "", email: "", company: "", message: "" });
       } else {
-        setSubmitError(result.message || 'Failed to send message. Please try again.');
+        setSubmitError(
+          result.message || "Failed to send message. Please try again."
+        );
       }
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error("Error sending email:", error);
 
-      if (error.name === 'AbortError') {
-        setSubmitError('Request timed out. Please try again.');
-      } else if (error.message.includes('Failed to fetch')) {
-        setSubmitError('Cannot connect to server. Please check your connection and try again.');
+      if (error.name === "AbortError") {
+        setSubmitError("Request timed out. Please try again.");
+      } else if (error.message.includes("Failed to fetch")) {
+        setSubmitError(
+          "Cannot connect to server. Please check your connection and try again."
+        );
       } else {
-        setSubmitError('Network error. Please check your connection and try again.');
+        setSubmitError(
+          "Network error. Please check your connection and try again."
+        );
       }
     } finally {
       setIsSubmitting(false);
@@ -185,8 +186,9 @@ export default function Contact() {
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
-              Ready to take your business to the next level? Let's start a conversation about
-              how Summit Services Corporation can help you achieve your goals.
+              Ready to take your business to the next level? Let's start a
+              conversation about how Summit Services Corporation can help you
+              achieve your goals.
             </p>
           </div>
         </div>
@@ -212,22 +214,48 @@ export default function Contact() {
                   className="w-24 h-24 object-cover rounded-xl"
                 />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 relative z-10">Send us a Message</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 relative z-10">
+                Send us a Message
+              </h2>
 
               {isSubmitted ? (
                 <div className="text-center py-8 sm:py-12">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Message Sent!</h3>
-                  <p className="text-sm sm:text-base text-gray-300 px-4">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
+                    Message Sent!
+                  </h3>
+                  <p className="text-sm sm:text-base text-gray-300 px-4">
+                    Thank you for contacting us. We'll get back to you within 24
+                    hours.
+                  </p>
                 </div>
               ) : (
-                <form id="contact-summit" onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <form
+                  id="contact-summit"
+                  onSubmit={handleSubmit}
+                  className="space-y-4 sm:space-y-6"
+                >
                   <div>
-                    <label htmlFor="name" className="block text-white font-semibold mb-2 text-sm sm:text-base">Full Name</label>
+                    <label
+                      htmlFor="name"
+                      className="block text-white font-semibold mb-2 text-sm sm:text-base"
+                    >
+                      Full Name
+                    </label>
                     <input
                       type="text"
                       id="name"
@@ -241,7 +269,12 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-white font-semibold mb-2 text-sm sm:text-base">Email Address</label>
+                    <label
+                      htmlFor="email"
+                      className="block text-white font-semibold mb-2 text-sm sm:text-base"
+                    >
+                      Email Address
+                    </label>
                     <input
                       type="email"
                       id="email"
@@ -255,7 +288,12 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-white font-semibold mb-2 text-sm sm:text-base">Company</label>
+                    <label
+                      htmlFor="company"
+                      className="block text-white font-semibold mb-2 text-sm sm:text-base"
+                    >
+                      Company
+                    </label>
                     <input
                       type="text"
                       id="company"
@@ -268,7 +306,12 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-white font-semibold mb-2 text-sm sm:text-base">Message</label>
+                    <label
+                      htmlFor="message"
+                      className="block text-white font-semibold mb-2 text-sm sm:text-base"
+                    >
+                      Message
+                    </label>
                     <textarea
                       id="message"
                       name="message"
@@ -280,7 +323,9 @@ export default function Contact() {
                       className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-colors text-sm sm:text-base resize-none touch-manipulation"
                       placeholder="Tell us about your project or how we can help..."
                     />
-                    <p className="text-gray-400 text-xs sm:text-sm mt-2">{formData.message.length}/500 characters</p>
+                    <p className="text-gray-400 text-xs sm:text-sm mt-2">
+                      {formData.message.length}/500 characters
+                    </p>
                   </div>
 
                   {submitError && (
@@ -296,14 +341,30 @@ export default function Contact() {
                   >
                     {isSubmitting ? (
                       <>
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        <svg
+                          className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
                         </svg>
                         Sending...
                       </>
                     ) : (
-                      'Send Message'
+                      "Send Message"
                     )}
                   </button>
                 </form>
@@ -320,47 +381,70 @@ export default function Contact() {
                     className="w-20 h-20 object-cover rounded-xl"
                   />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 relative z-10">Contact Information</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 relative z-10">
+                  Contact Information
+                </h3>
                 <div className="space-y-4 sm:space-y-6 relative z-10">
                   <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">Office Address</h4>
+                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">
+                      Office Address
+                    </h4>
                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                      Summit Services Corporation<br />
-                      20511 61st Place West<br />
+                      Summit Services Corporation
+                      <br />
+                      20511 61st Place West
+                      <br />
                       Lynnwood, WA 98036 (U.S.A)
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">Phone</h4>
-                    <a href="tel:+12068410601" className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base">
+                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">
+                      Phone
+                    </h4>
+                    <a
+                      href="tel:+12068410601"
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base"
+                    >
                       1-206-841-0601 Extension 101 (Voice)
                     </a>
                   </div>
 
                   <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">Fax</h4>
-                    <p className="text-gray-300 text-sm sm:text-base">1-206-339-4838</p>
+                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">
+                      Fax
+                    </h4>
+                    <p className="text-gray-300 text-sm sm:text-base">
+                      1-206-339-4838
+                    </p>
                   </div>
 
                   <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">SIP</h4>
-                    <a href="sip:101@Sip.SummitUSA.com" className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-all">
+                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">
+                      SIP
+                    </h4>
+                    <a
+                      href="sip:101@Sip.SummitUSA.com"
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-all"
+                    >
                       101@Sip.SummitUSA.com
                     </a>
                   </div>
 
                   <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">Business Hours</h4>
+                    <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">
+                      Business Hours
+                    </h4>
                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 10:00 AM - 4:00 PM<br />
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                      <br />
+                      Saturday: 10:00 AM - 4:00 PM
+                      <br />
                       Sunday: Closed
                     </p>
                   </div>
                 </div>
               </div>
-
 
               <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale overflow-hidden relative">
                 <div className="absolute top-4 right-4 opacity-15">
@@ -370,17 +454,19 @@ export default function Contact() {
                     className="w-20 h-20 object-cover rounded-xl"
                   />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 relative z-10">Quick Response</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 relative z-10">
+                  Quick Response
+                </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base relative z-10">
-                  We typically respond to all inquiries within 24 hours. For urgent matters,
-                  please call us directly at 1-206-841-0601 Extension 101.
+                  We typically respond to all inquiries within 24 hours. For
+                  urgent matters, please call us directly at 1-206-841-0601
+                  Extension 101.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
 
       <Footer />
     </div>
