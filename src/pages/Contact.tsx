@@ -110,15 +110,8 @@ export default function Contact() {
       }
       // For all production deployments (IIS, etc.)
       else {
-        // TODO: Replace with your actual Railway/Heroku backend URL after deployment
-        // Example: apiUrl = 'https://summit-email-api.railway.app/api/send-email';
-
-        // TEMPORARY: For testing with your local backend server
-        // REMOVE THIS LINE after deploying to Railway/Heroku
-        apiUrl = 'http://192.168.0.126:3001/api/send-email';
-
-        // UNCOMMENT the line below after deploying your backend:
-        // apiUrl = 'https://your-backend-url.railway.app/api/send-email';
+        // Production backend URL - Your Render deployment
+        apiUrl = 'https://summit-scroll-motion-react.onrender.com/api/send-email';
       }
 
       console.log('Attempting to send email to:', apiUrl);
