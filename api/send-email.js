@@ -1,5 +1,19 @@
 import nodemailer from 'nodemailer';
 
+// SMTP Configuration
+const transporter = nodemailer.createTransporter({
+  host: 'mxout.summitusa.com',
+  port: 8115,
+  secure: false, // true for 465, false for other ports
+  auth: {
+    user: 'mailsender',
+    pass: 'muji2315'
+  },
+  tls: {
+    rejectUnauthorized: false
+  }
+});
+
 export default async function handler(req, res) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -26,37 +40,55 @@ export default async function handler(req, res) {
 
     // Validate required fields
     if (!name || !email || !message) {
-      return res.status(400).json({ 
-        success: false, 
-        message: 'Name, email, and message are required' 
+      return res.status(400).json({
+        success: false,
+        message: 'Name, email, and message are required'
       });
     }
 
-    // For now, just log the submission and return success
-    // This avoids SMTP issues in Vercel serverless environment
-    console.log('Contact form submission received:', {
-      name,
-      email,
-      company,
-      message,
-      timestamp: new Date().toISOString(),
-      source: 'Vercel API'
-    });
+    // Email content
+    const mailOptions = {
+      from: 'mailsender@summitusa.com',
+      to: 'info@summitusa.com', // Change this to your desired recipient
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Company:</strong> ${company || 'Not provided'}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+        <hr>
+        <p><small>Sent from Summit USA Contact Form</small></p>
+      `,
+      text: `
+        New Contact Form Submission
+        
+        Name: ${name}
+        Email: ${email}
+        Company: ${company || 'Not provided'}
+        Message: ${message}
+        
+        Sent from Summit USA Contact Form
+      `
+    };
 
-    // TODO: Implement proper email sending via external service
-    // For now, we'll simulate success and log the data
-    
-    res.status(200).json({ 
-      success: true, 
-      message: 'Message received successfully. We will contact you soon.',
-      messageId: `vercel-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+    // Send email
+    const info = await transporter.sendMail(mailOptions);
+
+    console.log('Email sent successfully via Vercel:', info.messageId);
+
+    res.status(200).json({
+      success: true,
+      message: 'Email sent successfully',
+      messageId: info.messageId
     });
 
   } catch (error) {
-    console.error('Error processing contact form:', error);
-    res.status(500).json({ 
-      success: false, 
-      message: 'Failed to process message. Please try again later.',
+    console.error('Error sending email:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to send email. Please try again later.',
       error: error.message
     });
   }

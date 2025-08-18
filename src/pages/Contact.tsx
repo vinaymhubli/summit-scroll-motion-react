@@ -91,38 +91,55 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (formData.message.length > 500) {
       setSubmitError('Message must be 500 characters or less');
       return;
     }
-    
+
     setIsSubmitting(true);
     setSubmitError('');
-    
+
     try {
-      // Use relative URL to work across different devices
+      // Smart API URL detection for different environments
       let apiUrl;
-      
-      // Check if we're on the deployed Vercel site
-      if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('summit-usa-website')) {
-        // Use the deployed API endpoint
-        apiUrl = '/api/send-email-webhook';
-      } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        apiUrl = 'http://localhost:3001/api/send-email';
-      } else if (window.location.hostname.includes('192.168.0.126')) {
+
+      // Production IIS deployment - Point to your hosted backend
+      if (window.location.hostname.includes('summitusa.com') ||
+        window.location.hostname.includes('your-domain.com')) {
+        // TODO: Replace with your actual hosted backend URL
+        // Examples:
+        // apiUrl = 'https://summit-email-api.herokuapp.com/api/send-email';
+        // apiUrl = 'https://summit-email-api.railway.app/api/send-email';
+        // apiUrl = 'https://your-backend-server.com/api/send-email';
+
+        // Temporary fallback to local network for testing
         apiUrl = 'http://192.168.0.126:3001/api/send-email';
-      } else {
-        // For network access, try to use the same hostname but different port
+      }
+      // Vercel deployment (if still using)
+      else if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('summit-usa-website')) {
+        apiUrl = '/api/send-email-webhook';
+      }
+      // Local development
+      else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        apiUrl = 'http://localhost:3001/api/send-email';
+      }
+      // Network testing (your local development server)
+      else if (window.location.hostname.includes('192.168.0.126')) {
+        apiUrl = 'http://192.168.0.126:3001/api/send-email';
+      }
+      // Default fallback for any other hostname
+      else {
+        // Try same hostname with port 3001 (if backend is on same server)
         apiUrl = `${window.location.protocol}//${window.location.hostname}:3001/api/send-email`;
       }
-      
+
       console.log('Attempting to send email to:', apiUrl);
       console.log('Form data:', formData);
-      
+
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
-      
+
       let response;
       try {
         response = await fetch(apiUrl, {
@@ -144,7 +161,7 @@ export default function Contact() {
         } else {
           fallbackUrl = 'http://localhost:3001/api/send-email';
         }
-        
+
         console.log('Trying fallback URL:', fallbackUrl);
         response = await fetch(fallbackUrl, {
           method: 'POST',
@@ -155,14 +172,14 @@ export default function Contact() {
           signal: controller.signal,
         });
       }
-      
+
       clearTimeout(timeoutId);
-      
+
       console.log('Response status:', response.status);
       console.log('Response headers:', response.headers);
-      
+
       const result = await response.json();
-      
+
       if (result.success) {
         setIsSubmitted(true);
         setFormData({ name: '', email: '', company: '', message: '' });
@@ -171,7 +188,7 @@ export default function Contact() {
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      
+
       if (error.name === 'AbortError') {
         setSubmitError('Request timed out. Please try again.');
       } else if (error.message.includes('Failed to fetch')) {
@@ -187,26 +204,26 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-black">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-600 via-blue-900 to-black overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img 
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-            alt="Contact background" 
+          <img
+            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Contact background"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center scroll-animate">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              Get In 
+              Get In
               <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
-              Ready to take your business to the next level? Let's start a conversation about 
+              Ready to take your business to the next level? Let's start a conversation about
               how Summit Services Corporation can help you achieve your goals.
             </p>
           </div>
@@ -216,9 +233,9 @@ export default function Contact() {
       {/* Contact Form & Info */}
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-            alt="Office background" 
+          <img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Office background"
             className="w-full h-full object-cover"
           />
         </div>
@@ -227,14 +244,14 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-orange-500/20 scroll-animate-left overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-15">
-                <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                  alt="Contact form" 
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Contact form"
                   className="w-24 h-24 object-cover rounded-xl"
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 relative z-10">Send us a Message</h2>
-              
+
               {isSubmitted ? (
                 <div className="text-center py-8 sm:py-12">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
@@ -260,7 +277,7 @@ export default function Contact() {
                       placeholder="Enter your full name"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-white font-semibold mb-2 text-sm sm:text-base">Email Address</label>
                     <input
@@ -274,7 +291,7 @@ export default function Contact() {
                       placeholder="Enter your email address"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="company" className="block text-white font-semibold mb-2 text-sm sm:text-base">Company</label>
                     <input
@@ -287,7 +304,7 @@ export default function Contact() {
                       placeholder="Enter your company name"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-white font-semibold mb-2 text-sm sm:text-base">Message</label>
                     <textarea
@@ -303,13 +320,13 @@ export default function Contact() {
                     />
                     <p className="text-gray-400 text-xs sm:text-sm mt-2">{formData.message.length}/500 characters</p>
                   </div>
-                  
+
                   {submitError && (
                     <div className="bg-red-900/30 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg text-sm">
                       {submitError}
                     </div>
                   )}
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -330,14 +347,14 @@ export default function Contact() {
                 </form>
               )}
             </div>
-            
+
             {/* Contact Information */}
             <div className="space-y-6 sm:space-y-8 scroll-animate-right">
               <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale overflow-hidden relative">
                 <div className="absolute top-4 right-4 opacity-15">
-                  <img 
-                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                    alt="Contact info" 
+                  <img
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    alt="Contact info"
                     className="w-20 h-20 object-cover rounded-xl"
                   />
                 </div>
@@ -351,26 +368,26 @@ export default function Contact() {
                       Lynnwood, WA 98036 (U.S.A)
                     </p>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">Phone</h4>
                     <a href="tel:+12068410601" className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base">
                       1-206-841-0601 Extension 101 (Voice)
                     </a>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">Fax</h4>
                     <p className="text-gray-300 text-sm sm:text-base">1-206-339-4838</p>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">SIP</h4>
                     <a href="sip:101@Sip.SummitUSA.com" className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-all">
                       101@Sip.SummitUSA.com
                     </a>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">Business Hours</h4>
                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
@@ -381,19 +398,19 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              
-              
+
+
               <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale overflow-hidden relative">
                 <div className="absolute top-4 right-4 opacity-15">
-                  <img 
-                    src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                    alt="Quick response" 
+                  <img
+                    src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    alt="Quick response"
                     className="w-20 h-20 object-cover rounded-xl"
                   />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 relative z-10">Quick Response</h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base relative z-10">
-                  We typically respond to all inquiries within 24 hours. For urgent matters, 
+                  We typically respond to all inquiries within 24 hours. For urgent matters,
                   please call us directly at 1-206-841-0601 Extension 101.
                 </p>
               </div>
