@@ -48,7 +48,7 @@ export default async function handler(req, res) {
 
     // Try to forward to local server if available
     try {
-      const localResponse = await fetch('http://192.168.0.126:3001/api/send-email', {
+      const localResponse = await fetch('https://summit-scroll-motion-react.onrender.com/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
