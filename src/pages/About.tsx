@@ -84,7 +84,7 @@ export default function About() {
       <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-600 via-blue-900 to-black overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            src="/lovable-uploads/photo-1486312338219-ce68d2c6f44d.webp" 
             alt="Technology workspace background" 
             className="w-full h-full object-cover"
           />
@@ -152,7 +152,7 @@ export default function About() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            src="/lovable-uploads/photo-1581091226825-a6a2a5aee158.webp" 
             alt="Professional workspace background" 
             className="w-full h-full object-cover"
           />
@@ -171,7 +171,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 lg:p-12 rounded-3xl border border-orange-500/30 scroll-animate-left overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/photo-1461749280684-dccba630e2f6.webp" 
                   alt="Mission" 
                   className="w-20 h-20 object-cover rounded-xl"
                 />
@@ -187,7 +187,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 lg:p-12 rounded-3xl border border-blue-500/30 scroll-animate-right overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/photo-1498050108023-c5249f4df085.webp" 
                   alt="Vision" 
                   className="w-20 h-20 object-cover rounded-xl"
                 />
@@ -243,7 +243,7 @@ export default function About() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-orange-900/20 via-black to-blue-900/20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <img 
-            src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            src="/lovable-uploads/photo-1483058712412-4245e9b90334.webp" 
             alt="Technology office background" 
             className="w-full h-full object-cover"
           />
@@ -294,7 +294,7 @@ export default function About() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-900/20 via-orange-900/20 to-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <img 
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            src="/lovable-uploads/photo-1519389950473-47ba0277781c.webp" 
             alt="Professional workspace background" 
             className="w-full h-full object-cover"
           />
@@ -313,7 +313,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-left overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/photo-1472099645785-5658abf4ff4e.webp" 
                   alt="Client testimonial" 
                   className="w-16 h-16 object-cover rounded-full"
                 />
@@ -340,7 +340,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-blue-900/40 to-orange-900/30 p-6 sm:p-8 rounded-3xl border border-blue-500/30 scroll-animate-scale overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/photo-1507003211169-0a1dd7228f2d.webp" 
                   alt="Client testimonial" 
                   className="w-16 h-16 object-cover rounded-full"
                 />
@@ -367,7 +367,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-orange-900/40 to-blue-900/30 p-6 sm:p-8 rounded-3xl border border-orange-500/30 scroll-animate-right overflow-hidden relative md:col-span-2 lg:col-span-1">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/testimonial3.webp" 
                   alt="Client testimonial" 
                   className="w-16 h-16 object-cover rounded-full"
                 />

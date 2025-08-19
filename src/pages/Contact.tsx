@@ -172,7 +172,7 @@ export default function Contact() {
       <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-orange-600 via-blue-900 to-black overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            src="/lovable-uploads/photo-1486312338219-ce68d2c6f44d.webp"
             alt="Contact background"
             className="w-full h-full object-cover"
           />
@@ -198,7 +198,7 @@ export default function Contact() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <img
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            src="/lovable-uploads/photo-1581091226825-a6a2a5aee158.webp"
             alt="Office background"
             className="w-full h-full object-cover"
           />
@@ -209,7 +209,7 @@ export default function Contact() {
             <div className="bg-gradient-to-br from-orange-900/30 to-black p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-orange-500/20 scroll-animate-left overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-15">
                 <img
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  src="/lovable-uploads/photo-1498050108023-c5249f4df085.webp"
                   alt="Contact form"
                   className="w-24 h-24 object-cover rounded-xl"
                 />
@@ -376,7 +376,7 @@ export default function Contact() {
               <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale overflow-hidden relative">
                 <div className="absolute top-4 right-4 opacity-15">
                   <img
-                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    src="/lovable-uploads/photo-1461749280684-dccba630e2f6.webp"
                     alt="Contact info"
                     className="w-20 h-20 object-cover rounded-xl"
                   />
@@ -449,7 +449,7 @@ export default function Contact() {
               <div className="bg-gradient-to-br from-blue-900/30 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/20 scroll-animate-scale overflow-hidden relative">
                 <div className="absolute top-4 right-4 opacity-15">
                   <img
-                    src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    src="/lovable-uploads/photo-1483058712412-4245e9b90334.webp"
                     alt="Quick response"
                     className="w-20 h-20 object-cover rounded-xl"
                   />
