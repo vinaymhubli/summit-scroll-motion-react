@@ -84,7 +84,7 @@ export default function Services() {
       <section className="relative pt-24 pb-16 bg-gradient-to-br from-orange-600 via-blue-900 to-black overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            src="/lovable-uploads/photo-1487058792275-0ad4aaf24ca7.webp" 
             alt="Code background" 
             className="w-full h-full object-cover"
           />
@@ -122,7 +122,7 @@ export default function Services() {
             <div className="bg-gradient-to-br from-orange-900/40 to-black/30 p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 scroll-animate-left overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  src="/lovable-uploads/photo-1498050108023-c5249f4df085.webp" 
                   alt="Software Development" 
                   className="w-24 h-24 object-cover rounded-xl"
                 />
@@ -147,7 +147,7 @@ export default function Services() {
             <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 scroll-animate overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  src="/lovable-uploads/photo-1518770660439-4636190af475.webp" 
                   alt="Cloud Solutions" 
                   className="w-24 h-24 object-cover rounded-xl"
                 />
@@ -172,7 +172,7 @@ export default function Services() {
             <div className="bg-gradient-to-br from-orange-900/40 to-black/30 p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 scroll-animate-right overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  src="/lovable-uploads/photo-1488590528505-98d2b5aba04b.webp" 
                   alt="Cybersecurity" 
                   className="w-24 h-24 object-cover rounded-xl"
                 />
@@ -199,7 +199,7 @@ export default function Services() {
             <div className="bg-gradient-to-br from-blue-900/40 to-black/30 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 scroll-animate-left overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  src="/lovable-uploads/photo-1461749280684-dccba630e2f6.webp" 
                   alt="Data Analytics" 
                   className="w-24 h-24 object-cover rounded-xl"
                 />
@@ -224,7 +224,7 @@ export default function Services() {
             <div className="bg-gradient-to-br from-orange-900/40 to-black/30 p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 scroll-animate-right overflow-hidden relative">
               <div className="absolute top-4 right-4 opacity-20">
                 <img 
-                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  src="/lovable-uploads/photo-1483058712412-4245e9b90334.webp" 
                   alt="IT Infrastructure" 
                   className="w-24 h-24 object-cover rounded-xl"
                 />
@@ -406,7 +406,7 @@ export default function Services() {
       <section className="py-24 bg-gradient-to-r from-orange-900 via-blue-900 to-orange-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <img 
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            src="/lovable-uploads/photo-1486312338219-ce68d2c6f44d.webp" 
             alt="Technology background" 
             className="w-full h-full object-cover"
           />
