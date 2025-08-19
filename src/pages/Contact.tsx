@@ -105,15 +105,22 @@ export default function Contact() {
     setSubmitError("");
 
     try {
-      // Production backend URL - Your Render deployment
-      const apiUrl =
-        "https://summit-scroll-motion-react.onrender.com/api/send-email";
+      // Summit USA Email API - Client specified configuration
+      const apiUrl = "http://summitusa.com/emailapi2.cfm";
 
       console.log("Attempting to send email to:", apiUrl);
       console.log("Form data:", formData);
 
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 60000); // 60 second timeout for cold starts
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+
+      // Prepare JSON data for Summit USA API (requires JSON format)
+      const jsonData = {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        message: formData.message
+      };
 
       let response;
       try {
@@ -122,12 +129,36 @@ export default function Contact() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(jsonData),
           signal: controller.signal,
+          mode: 'cors', // Explicitly set CORS mode
         });
       } catch (fetchError) {
         console.log("Request failed:", fetchError.message);
-        throw fetchError; // No fallback - direct failure reporting
+        console.log("Error details:", fetchError);
+
+        // If HTTPS fails, try HTTP as fallback
+        if (apiUrl.startsWith('https://')) {
+          console.log("HTTPS failed, trying HTTP fallback...");
+          const httpUrl = apiUrl.replace('https://', 'http://');
+          try {
+            response = await fetch(httpUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(jsonData),
+              signal: controller.signal,
+              mode: 'cors',
+            });
+            console.log("HTTP fallback successful");
+          } catch (httpError) {
+            console.log("HTTP fallback also failed:", httpError.message);
+            throw fetchError; // Throw original error
+          }
+        } else {
+          throw fetchError;
+        }
       }
 
       clearTimeout(timeoutId);
@@ -135,14 +166,28 @@ export default function Contact() {
       console.log("Response status:", response.status);
       console.log("Response headers:", response.headers);
 
-      const result = await response.json();
+      // Handle Summit USA API JSON response
+      if (response.ok) {
+        const result = await response.json();
+        console.log("API Response:", result);
 
-      if (result.success) {
-        setIsSubmitted(true);
-        setFormData({ name: "", email: "", company: "", message: "" });
+        // Check if the API indicates success (API returns lowercase "success")
+        if (result.success === "YES" || result.Success === "YES" || result.message?.includes("sent") || result.message?.includes("success")) {
+          setIsSubmitted(true);
+          setFormData({ name: "", email: "", company: "", message: "" });
+          console.log("Email sent successfully via Summit USA API");
+        } else {
+          // API responded but email was not sent
+          console.log("Email not sent:", result.message);
+          setSubmitError(
+            result.message || "Email was not sent. Please contact support."
+          );
+        }
       } else {
+        const errorText = await response.text();
+        console.log("API Error:", errorText);
         setSubmitError(
-          result.message || "Failed to send message. Please try again."
+          "Failed to send message. Please try again."
         );
       }
     } catch (error) {
@@ -150,13 +195,21 @@ export default function Contact() {
 
       if (error.name === "AbortError") {
         setSubmitError("Request timed out. Please try again.");
+      } else if (error.message.includes("ERR_CONNECTION_RESET")) {
+        setSubmitError(
+          "Connection was reset by the server. This may be due to CORS policy or server configuration. Please contact support."
+        );
       } else if (error.message.includes("Failed to fetch")) {
         setSubmitError(
-          "Cannot connect to server. Please check your connection and try again."
+          "Cannot connect to email server. Please check your connection and try again."
+        );
+      } else if (error.message.includes("CORS")) {
+        setSubmitError(
+          "Cross-origin request blocked. Please contact support for API configuration."
         );
       } else {
         setSubmitError(
-          "Network error. Please check your connection and try again."
+          `Network error: ${error.message}. Please contact support if this persists.`
         );
       }
     } finally {
